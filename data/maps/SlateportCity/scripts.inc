@@ -136,6 +136,30 @@ SlateportCity_Movement_ScottExit:
 	walk_left
 	step_end
 
+SlateportCity_EventScript_ApricotGirl::
+	lock
+	faceplayer
+	message SlateportCity_Text_ApricotGirlPleaseBuy
+	waitmessage
+	pokemart SlateportCity_Pokemart_ApricotGirl
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_ApricotGirl:
+	.2byte ITEM_LEVEL_BALL
+	.2byte ITEM_LURE_BALL
+	.2byte ITEM_MOON_BALL
+	.2byte ITEM_FRIEND_BALL
+	.2byte ITEM_LOVE_BALL
+	.2byte ITEM_FAST_BALL
+	.2byte ITEM_HEAVY_BALL
+	.2byte ITEM_NONE
+	release
+	end
+
+
 SlateportCity_EventScript_EnergyGuru::
 	lock
 	faceplayer
@@ -949,6 +973,10 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	waitstate
 	releaseall
 	end
+
+SlateportCity_Text_ApricotGirlPleaseBuy:
+	.string "Hello! Please buy some special\n"
+	.string "POKé BALLS my Grandpa made!$"
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
 	.string "I'm the ENERGY GURU! I'll go for it and\n"
