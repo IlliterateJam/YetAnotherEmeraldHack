@@ -261,8 +261,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 28,
-      "y": 13,
+      "x": 31,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -845,8 +845,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 31,
-      "y": 8,
+      "x": 23,
+      "y": 22,
       "elevation": 3,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_REVIVE"
