@@ -263,24 +263,24 @@ Route124_DivingTreasureHuntersHouse_EventScript_TradeRYGShard::
 	setvar VAR_0x8008, ITEM_RED_SHARD
 	setvar VAR_0x8009, ITEM_YELLOW_SHARD
 	setvar VAR_0x800A, ITEM_GREEN_SHARD
-	setvar VAR_0x8009, ITEM_SHINY_STONE
-	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeShard
+	setvar VAR_0x800B, ITEM_SHINY_STONE
+	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeThreeShards
 
 Route124_DivingTreasureHuntersHouse_EventScript_TradeRBGShard::
 	setvar VAR_0x8007, ITEM_YELLOW_SHARD
 	setvar VAR_0x8008, ITEM_RED_SHARD
 	setvar VAR_0x8009, ITEM_BLUE_SHARD
 	setvar VAR_0x800A, ITEM_GREEN_SHARD
-	setvar VAR_0x8009, ITEM_ICE_STONE
-	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeShard
+	setvar VAR_0x800B, ITEM_DAWN_STONE
+	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeThreeShards
 
 Route124_DivingTreasureHuntersHouse_EventScript_TradeYBGShard::
 	setvar VAR_0x8007, ITEM_RED_SHARD
 	setvar VAR_0x8008, ITEM_YELLOW_SHARD
 	setvar VAR_0x8009, ITEM_BLUE_SHARD
 	setvar VAR_0x800A, ITEM_GREEN_SHARD
-	setvar VAR_0x8009, ITEM_DAWN_STONE
-	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeShard
+	setvar VAR_0x800B, ITEM_ICE_STONE
+	goto Route124_DivingTreasureHuntersHouse_EventScript_TryTradeThreeShards
 
 
 
@@ -395,7 +395,7 @@ Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
 	.string "my {STR_VAR_2}, then?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeThreeShardsForStone:
-	.string "You'll trade three shards that are not a\n"
+	.string "You'll trade three shards that are NOT a\n"
 	.string "{STR_VAR_1} for my {STR_VAR_2}, then?$"
 
 Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
