@@ -2819,15 +2819,15 @@ void CreateContestMonFromParty(u8 partyIndex)
     smart  = gContestMons[gContestPlayerMonIndex].smart;
     tough  = gContestMons[gContestPlayerMonIndex].tough;
     if      (heldItem == ITEM_RED_SCARF)
-        cool += 20;
+        cool += 80;
     else if (heldItem == ITEM_BLUE_SCARF)
-        beauty += 20;
+        beauty += 80;
     else if (heldItem == ITEM_PINK_SCARF)
-        cute += 20;
+        cute += 80;
     else if (heldItem == ITEM_GREEN_SCARF)
-        smart += 20;
+        smart += 80;
     else if (heldItem == ITEM_YELLOW_SCARF)
-        tough += 20;
+        tough += 80;
     if (cool > 255)
         cool = 255;
     if (beauty > 255)
