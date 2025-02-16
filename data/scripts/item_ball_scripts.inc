@@ -450,8 +450,12 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemScanner::
 	finditem ITEM_SCANNER
 	end
 
-AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone::
+Route1185_EventScript_ItemWaterStone::
 	finditem ITEM_WATER_STONE
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_ItemShinyStone::
+	finditem ITEM_SHINY_STONE
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_ItemTMRainDance::
@@ -490,12 +494,12 @@ MtPyre_3F_EventScript_ItemSuperRepel::
 	finditem ITEM_SUPER_REPEL
 	end
 
-MtPyre_4F_EventScript_ItemSeaIncense::
-	finditem ITEM_SEA_INCENSE
+MtPyre_4F_EventScript_ItemDuskStone::
+	finditem ITEM_DUSK_STONE
 	end
 
-MtPyre_5F_EventScript_ItemLaxIncense::
-	finditem ITEM_LAX_INCENSE
+MtPyre_5F_EventScript_ItemProtein::
+	finditem ITEM_PROTEIN
 	end
 
 MtPyre_6F_EventScript_ItemTMShadowBall::

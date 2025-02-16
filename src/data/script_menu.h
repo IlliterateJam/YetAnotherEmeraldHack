@@ -368,6 +368,7 @@ static const struct MenuAction MultichoiceList_ShardsRYB[] =
     {gText_RedShard},
     {gText_YellowShard},
     {gText_BlueShard},
+    {gText_RYBShard},
     {gText_Exit},
 };
 
@@ -396,6 +397,7 @@ static const struct MenuAction MultichoiceList_ShardsRYG[] =
     {gText_RedShard},
     {gText_YellowShard},
     {gText_GreenShard},
+    {gText_RYGShard},
     {gText_Exit},
 };
 
@@ -411,6 +413,7 @@ static const struct MenuAction MultichoiceList_ShardsRBG[] =
     {gText_RedShard},
     {gText_BlueShard},
     {gText_GreenShard},
+    {gText_RBGShard},
     {gText_Exit},
 };
 
@@ -419,6 +422,7 @@ static const struct MenuAction MultichoiceList_ShardsYBG[] =
     {gText_YellowShard},
     {gText_BlueShard},
     {gText_GreenShard},
+    {gText_YBGShard},
     {gText_Exit},
 };
 
@@ -428,6 +432,10 @@ static const struct MenuAction MultichoiceList_ShardsRYBG[] =
     {gText_YellowShard},
     {gText_BlueShard},
     {gText_GreenShard},
+    {gText_RYBShard},
+    {gText_RYGShard},
+    {gText_RBGShard},
+    {gText_YBGShard},
     {gText_Exit},
 };
 

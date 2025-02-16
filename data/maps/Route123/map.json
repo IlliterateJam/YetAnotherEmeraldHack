@@ -686,7 +686,7 @@
     {
       "type": "weather",
       "x": 19,
-      "y": 15,
+      "y": 22,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_ROUTE123_CYCLE"
     },
