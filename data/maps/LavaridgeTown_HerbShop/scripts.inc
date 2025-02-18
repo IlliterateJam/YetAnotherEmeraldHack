@@ -6,13 +6,18 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 	faceplayer
 	message LavaridgeTown_HerbShop_Text_WelcomeToHerbShop
 	waitmessage
-	pokemart LavaridgeTown_HerbShop_Pokemart
+	goto_if_unset FLAG_BADGE08_GET, LavaridgeTown_HerbShop_EventScript_PokemartBasic
+	goto_if_set FLAG_BADGE08_GET, LavaridgeTown_HerbShop_EventScript_PokemartExpanded
+	end
+
+LavaridgeTown_HerbShop_EventScript_PokemartBasic::
+	pokemart LavaridgeTown_HerbShop_PokemartBasic
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-LavaridgeTown_HerbShop_Pokemart:
+LavaridgeTown_HerbShop_PokemartBasic:
 	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_ENERGY_ROOT
 	.2byte ITEM_HEAL_POWDER
@@ -20,6 +25,42 @@ LavaridgeTown_HerbShop_Pokemart:
 	.2byte ITEM_NONE
 	release
 	end
+
+
+LavaridgeTown_HerbShop_EventScript_PokemartExpanded::
+	pokemart LavaridgeTown_HerbShop_PokemartExpanded
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LavaridgeTown_HerbShop_PokemartExpanded:
+	.2byte ITEM_ENERGY_POWDER
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_REVIVAL_HERB
+	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_POWER_HERB
+	.2byte ITEM_MIRROR_HERB
+	.2byte ITEM_NONE
+	release
+	end
+
+LavaridgeTown_HerbShop_EventScript_Woman::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE08_GET, LavaridgeTown_HerbShop_EventScript_NewHerbsInStock
+	msgbox LavaridgeTown_HerbShop_Text_WaitingForStock, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_HerbShop_EventScript_NewHerbsInStock::
+	msgbox LavaridgeTown_HerbShop_Text_NewHerbsInStock, MSGBOX_DEFAULT
+	release
+	end
+
+
 
 LavaridgeTown_HerbShop_EventScript_ExpertM::
 	msgbox LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike, MSGBOX_NPC
@@ -41,9 +82,22 @@ LavaridgeTown_HerbShop_EventScript_ExplainCharcoal::
 	release
 	end
 
+
 LavaridgeTown_HerbShop_Text_WelcomeToHerbShop:
 	.string "Welcome to the HERB SHOP, home of\n"
 	.string "effective and inexpensive medicine!$"
+
+LavaridgeTown_HerbShop_Text_WaitingForStock:
+	.string "MT. CHIMNEY goes through its own seasons\n"
+	.string "where ash falls to fertilize the ground.\p"
+	.string "This means that we must be patient\n"
+	.string "for the next herb harvest.$"
+
+LavaridgeTown_HerbShop_Text_NewHerbsInStock:
+	.string "Come celebrate the harvest with us!\p"
+	.string "We grew many unique herbs that would\n"
+	.string "interest a trainer like you.$"
+
 
 LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine:
 	.string "You've come to look at herbal medicine\n"
