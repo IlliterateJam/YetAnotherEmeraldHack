@@ -195,7 +195,10 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2::
 	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_VenusaurDoll
 	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_CharizardDoll
 	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_BlastoiseDoll
-	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_RegirockDoll
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_RegiceDoll
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_RegisteelDoll
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -238,6 +241,31 @@ BattleFrontier_ExchangeServiceCorner_EventScript_BlastoiseDoll::
 	setvar VAR_0x8009, DECOR_BLASTOISE_DOLL
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RegirockDoll::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegirockDoll, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2
+	setvar VAR_0x8008, 256
+	setvar VAR_0x8009, DECOR_REGIROCK_DOLL
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RegiceDoll::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegiceDoll, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2
+	setvar VAR_0x8008, 256
+	setvar VAR_0x8009, DECOR_REGICE_DOLL
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RegisteelDoll::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegisteelDoll, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2
+	setvar VAR_0x8008, 256
+	setvar VAR_0x8009, DECOR_REGISTEEL_DOLL
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
 
 BattleFrontier_ExchangeServiceCorner_EventScript_VitaminClerk::
 	lock
@@ -503,6 +531,18 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmCharizardDoll:
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmBlastoiseDoll:
 	.string "You've chosen the BLASTOISE DOLL.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegirockDoll:
+	.string "You've chosen the REGIROCK DOLL.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegiceDoll:
+	.string "You've chosen the REGICE DOLL.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRegisteelDoll:
+	.string "You've chosen the REGISTEEL DOLL.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmProtein:

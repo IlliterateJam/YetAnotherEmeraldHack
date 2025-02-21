@@ -3974,8 +3974,8 @@
     {
       "id": "LAYOUT_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER",
       "name": "BattleFrontier_ExchangeServiceCorner_Layout",
-      "width": 15,
-      "height": 11,
+      "width": 35,
+      "height": 15,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner/border.bin",
