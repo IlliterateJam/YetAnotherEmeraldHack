@@ -2335,7 +2335,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 10;
+        task->tNumItems = 14;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2471,17 +2471,35 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
     {
+        gText_BrightPowder48BP,
         gText_Leftovers48BP,
-        gText_WhiteHerb48BP,
-        gText_QuickClaw48BP,
-        gText_MentalHerb48BP,
-        gText_BrightPowder64BP,
-        gText_ChoiceBand64BP,
-        gText_KingsRock64BP,
-        gText_FocusBand64BP,
-        gText_ScopeLens64BP,
+        gText_FocusBand48BP,
+        gText_LightClayDesc48BP,
+        gText_RockyHelmetDesc48BP,
+        gText_AssaultVestDesc48BP,
+        gText_SafetyGogglesDesc48BP,
+        gText_ClearAmuletDesc56BP,
+        gText_PunchingGloveDesc56BP,
+        gText_CovertCloakDesc56BP,
+        gText_EvioliteDesc64BP,
+        gText_ChoiceBandDesc64BP,
+        gText_ChoiceSpecsDesc64BP,
         gText_Exit
     },
+
+    // [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
+    // {
+    //     gText_Leftovers48BP,
+    //     gText_WhiteHerb48BP,
+    //     gText_QuickClaw48BP,
+    //     gText_MentalHerb48BP,
+    //     gText_BrightPowder64BP,
+    //     gText_ChoiceBand64BP,
+    //     gText_KingsRock64BP,
+    //     gText_FocusBand64BP,
+    //     gText_ScopeLens64BP,
+    //     gText_Exit
+    // },
     [SCROLL_MULTI_BERRY_POWDER_VENDOR] =
     {
         gText_EnergyPowder50,

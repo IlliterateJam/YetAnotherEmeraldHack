@@ -2332,13 +2332,13 @@ static const u8 sMetalCoatDesc[] = _(
 // Choice Items
 static const u8 sChoiceBandDesc[] = _(
     "Raises a move's\n"
-    "power, but permits\n"
+    "Atk, but permits\n"
     "only that move.");
 
 static const u8 sChoiceSpecsDesc[] = _(
-    "Boosts Sp. Atk, but\n"
-    "allows the use of\n"
-    "only one move.");
+    "Raises a move's\n"
+    "Sp. Atk, but permits\n"
+    "only that move.");
 
 static const u8 sChoiceScarfDesc[] = _(
     "Boosts Speed, but\n"

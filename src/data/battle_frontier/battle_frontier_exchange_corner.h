@@ -39,17 +39,37 @@ static const u16 sFrontierExchangeCorner_Vitamins[] =
 
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 {
-    ITEM_LEFTOVERS,
-    ITEM_WHITE_HERB,
-    ITEM_QUICK_CLAW,
-    ITEM_MENTAL_HERB,
     ITEM_BRIGHT_POWDER,
-    ITEM_CHOICE_BAND,
-    ITEM_KINGS_ROCK,
+    ITEM_LEFTOVERS,
     ITEM_FOCUS_BAND,
-    ITEM_SCOPE_LENS,
+    ITEM_LIGHT_CLAY,
+    ITEM_ROCKY_HELMET,
+    ITEM_ASSAULT_VEST,
+    ITEM_SAFETY_GOGGLES,
+    ITEM_CLEAR_AMULET,
+    ITEM_PUNCHING_GLOVE,
+    ITEM_COVERT_CLOAK,
+    ITEM_EVIOLITE,
+    ITEM_CHOICE_BAND,
+    ITEM_CHOICE_SPECS,
     ITEM_LIST_END
 };
+
+
+// static const u16 sFrontierExchangeCorner_HoldItems[] =
+// {
+//     ITEM_LEFTOVERS,
+//     ITEM_WHITE_HERB,
+//     ITEM_QUICK_CLAW,
+//     ITEM_MENTAL_HERB,
+//     ITEM_BRIGHT_POWDER,
+//     ITEM_CHOICE_BAND,
+//     ITEM_KINGS_ROCK,
+//     ITEM_FOCUS_BAND,
+//     ITEM_SCOPE_LENS,
+//     ITEM_LIST_END
+// };
+
 
 static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 {
@@ -92,14 +112,33 @@ static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
 
 static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc,
     BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LightClayDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RockyHelmetDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AssaultVestDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SafetyGogglesDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ClearAmuletDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_PunchingGloveDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CovertCloakDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EvioliteDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc,
     gText_Exit
 };
+
+
+// static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
+// {
+//     BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
+//     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+//     gText_Exit
+// };

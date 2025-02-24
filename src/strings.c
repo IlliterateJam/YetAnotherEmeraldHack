@@ -1203,15 +1203,32 @@ const u8 gText_Iron1BP[] = _("IRON{CLEAR_TO 0x64}1BP");
 const u8 gText_Zinc1BP[] = _("ZINC{CLEAR_TO 0x64}1BP");
 const u8 gText_Carbos1BP[] = _("CARBOS{CLEAR_TO 0x64}1BP");
 const u8 gText_HpUp1BP[] = _("HP UP{CLEAR_TO 0x64}1BP");
+
+const u8 gText_BrightPowder48BP[] = _("BRIGHTPOWDER{CLEAR_TO 0x5E}48BP");
 const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
-const u8 gText_WhiteHerb48BP[] = _("WHITE HERB{CLEAR_TO 0x5E}48BP");
-const u8 gText_QuickClaw48BP[] = _("QUICK CLAW{CLEAR_TO 0x5E}48BP");
-const u8 gText_MentalHerb48BP[] = _("MENTAL HERB{CLEAR_TO 0x5E}48BP");
-const u8 gText_BrightPowder64BP[] = _("BRIGHTPOWDER{CLEAR_TO 0x5E}64BP");
-const u8 gText_ChoiceBand64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
-const u8 gText_KingsRock64BP[] = _("KING'S ROCK{CLEAR_TO 0x5E}64BP");
-const u8 gText_FocusBand64BP[] = _("FOCUS BAND{CLEAR_TO 0x5E}64BP");
-const u8 gText_ScopeLens64BP[] = _("SCOPE LENS{CLEAR_TO 0x5E}64BP");
+const u8 gText_FocusBand48BP[]=_("FOCUS BAND{CLEAR_TO 0x5E}48BP");
+const u8 gText_LightClayDesc48BP[]= _("LIGHT CLAY{CLEAR_TO 0x5E}48BP");
+const u8 gText_RockyHelmetDesc48BP[]= _("ROCKY HELMET{CLEAR_TO 0x5E}48BP");
+const u8 gText_AssaultVestDesc48BP[]= _("ASSAULT VEST{CLEAR_TO 0x5E}48BP");
+const u8 gText_SafetyGogglesDesc48BP[]= _("SAFETYGOGGLES{CLEAR_TO 0x5E}48BP");
+const u8 gText_ClearAmuletDesc56BP[] = _("CLEAR AMULET{CLEAR_TO 0x5E}56BP");
+const u8 gText_PunchingGloveDesc56BP[] = _("PUNCHINGGLOVE{CLEAR_TO 0x5E}56BP");
+const u8 gText_CovertCloakDesc56BP[]= _("COVERT CLOAK{CLEAR_TO 0x5E}56BP");
+const u8 gText_EvioliteDesc64BP[] = _("EVIOLITE{CLEAR_TO 0x5E}64BP");
+const u8 gText_ChoiceBandDesc64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
+const u8 gText_ChoiceSpecsDesc64BP[] = _("CHOICE SPECS{CLEAR_TO 0x5E}64BP");
+
+// const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
+// const u8 gText_WhiteHerb48BP[] = _("WHITE HERB{CLEAR_TO 0x5E}48BP");
+// const u8 gText_QuickClaw48BP[] = _("QUICK CLAW{CLEAR_TO 0x5E}48BP");
+// const u8 gText_MentalHerb48BP[] = _("MENTAL HERB{CLEAR_TO 0x5E}48BP");
+// const u8 gText_BrightPowder64BP[] = _("BRIGHTPOWDER{CLEAR_TO 0x5E}64BP");
+// const u8 gText_ChoiceBand64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
+// const u8 gText_KingsRock64BP[] = _("KING'S ROCK{CLEAR_TO 0x5E}64BP");
+// const u8 gText_FocusBand64BP[] = _("FOCUS BAND{CLEAR_TO 0x5E}64BP");
+// const u8 gText_ScopeLens64BP[] = _("SCOPE LENS{CLEAR_TO 0x5E}64BP");
+
+
 const u8 gText_Softboiled16BP[] = _("SOFTBOILED{CLEAR_TO 0x4E}16BP");
 const u8 gText_SeismicToss24BP[] = _("SEISMIC TOSS{CLEAR_TO 0x4E}24BP");
 const u8 gText_DreamEater24BP[] = _("DREAM EATER{CLEAR_TO 0x4E}24BP");
