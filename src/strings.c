@@ -1218,6 +1218,17 @@ const u8 gText_EvioliteDesc64BP[] = _("EVIOLITE{CLEAR_TO 0x5E}64BP");
 const u8 gText_ChoiceBandDesc64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
 const u8 gText_ChoiceSpecsDesc64BP[] = _("CHOICE SPECS{CLEAR_TO 0x5E}64BP");
 
+
+const u8 gText_EjectButton48BP[]= _("EJECT BUTTON{CLEAR_TO 0x5E}48BP");
+const u8 gText_EjectPack48BP[]= _("EJECT PACK{CLEAR_TO 0x5E}48BP");
+const u8 gText_RedCard48BP[]= _("RED CARD{CLEAR_TO 0x5E}48BP");
+const u8 gText_AirBalloon48BP[]= _("AIR BALLOON{CLEAR_TO 0x5E}48BP");
+const u8 gText_ThroatSpray48BP[]= _("THROAT SPRAY{CLEAR_TO 0x5E}48BP");
+const u8 gText_FocusSash56BP[]= _("FOCUS SASH{CLEAR_TO 0x5E}56BP");
+const u8 gText_WeaknessPolicy56BP[]= _("WEAKNSSPOLICY{CLEAR_TO 0x5E}56BP");
+const u8 gText_BlunderPolicy56BP[]= _("BLUNDRPOLICY{CLEAR_TO 0x5E}56BP");
+
+
 // const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
 // const u8 gText_WhiteHerb48BP[] = _("WHITE HERB{CLEAR_TO 0x5E}48BP");
 // const u8 gText_QuickClaw48BP[] = _("QUICK CLAW{CLEAR_TO 0x5E}48BP");

@@ -55,6 +55,19 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     ITEM_LIST_END
 };
 
+static const u16 sFrontierExchangeCorner_ConsItems[] =
+{
+    ITEM_EJECT_BUTTON,
+    ITEM_EJECT_PACK,
+    ITEM_RED_CARD,
+    ITEM_AIR_BALLOON,
+    ITEM_THROAT_SPRAY,
+    ITEM_FOCUS_SASH,
+    ITEM_WEAKNESS_POLICY,
+    ITEM_BLUNDER_POLICY, 
+    ITEM_LIST_END
+};
+
 
 // static const u16 sFrontierExchangeCorner_HoldItems[] =
 // {
@@ -127,6 +140,21 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc,
     gText_Exit
 };
+
+
+static const u8 *const sFrontierExchangeCorner_ConsItemsDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_EjectButtonDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_EjectPackDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RedCardDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AirBalloonDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ThroatSprayDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicytDesc,
+    gText_Exit
+};
+
 
 
 // static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =

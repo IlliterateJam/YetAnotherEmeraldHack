@@ -19,6 +19,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize::
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_DECOR1_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor1
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_DECOR2_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_CONS_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -57,6 +58,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryGiveItem::
 	playse SE_SHOP
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize, MSGBOX_DEFAULT
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_CONS_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -375,7 +377,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 BattleFrontier_ExchangeServiceCorner_EventScript_Brightpowder::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmBrightpowder, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
-	setvar VAR_0x8008, 64
+	setvar VAR_0x8008, 48
 	setvar VAR_0x8009, ITEM_BRIGHT_POWDER
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
@@ -475,6 +477,234 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs::
 	setvar VAR_0x8009, ITEM_CHOICE_SPECS
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ConsItemClerk::
+	lock
+	faceplayer
+	setvar VAR_TEMP_2, EXCHANGE_CORNER_CONS_ITEM_CLERK
+	call BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	end
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem::
+	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_CONS_ITEM_VENDOR
+	special ShowFrontierExchangeCornerItemIconWindow
+	special ShowScrollableMultichoice
+	waitstate
+	special CloseFrontierExchangeCornerItemIconWindow
+	switch VAR_RESULT
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_EjectButton
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_EjectPack
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_RedCard
+	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_AirBalloon
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_ThroatSpray
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_FocusSash
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_WeaknessPolicy
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_BlunderPolicy
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_EjectButton::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmEjectButton, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_EJECT_BUTTON
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_EjectPack::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmEjectPack, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_EJECT_PACK
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RedCard::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRedCard, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_RED_CARD
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_AirBalloon::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmAirBalloon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_AIR_BALLOON
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ThroatSpray::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmThroatSpray, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_THROAT_SPRAY
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_FocusSash::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmFocusSash, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 56
+	setvar VAR_0x8009, ITEM_FOCUS_SASH
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_WeaknessPolicy::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmWeaknessPolicy, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 56
+	setvar VAR_0x8009, ITEM_WEAKNESS_POLICY
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_BlunderPolicy::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmBlunderPolicy, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	setvar VAR_0x8008, 56
+	setvar VAR_0x8009, ITEM_BLUNDER_POLICY
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 BattleFrontier_ExchangeServiceCorner_EventScript_Man::
@@ -669,6 +899,45 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceSpecs:
 	.string "You've chosen the CHOICE SPECS.\n"
 	.string "Is that correct?$"
 
+
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmEjectButton:
+	.string "You've chosen the EJECT BUTTON.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmEjectPack:
+	.string "You've chosen the EJECT PACK.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRedCard:
+	.string "You've chosen the RED CARD.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmAirBalloon:
+	.string "You've chosen the AIR BALLOON.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmThroatSpray:
+	.string "You've chosen the THROAT SPRAY.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmFocusSash:
+	.string "You've chosen the FOCUS SASH.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmWeaknessPolicy:
+	.string "You've chosen the WEAKNSSPOLICY.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmBlunderPolicy:
+	.string "You've chosen the BLUNDRPOLICY.\n"
+	.string "Is that correct?$"
+
+
+
+
+
+
 BattleFrontier_ExchangeServiceCorner_Text_WellSendItToPC:
 	.string "Thank you!\n"
 	.string "We'll send it to your PC at home.$"
@@ -845,3 +1114,36 @@ BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc::
 BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc::
 	.string "Raises a move's Sp. Atk, but permits\n"
 	.string "only that move.$"
+
+
+BattleFrontier_ExchangeServiceCorner_Text_EjectButtonDesc::
+	.string "Switches out the user if they're hit\n"
+	.string "by the foe.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_EjectPackDesc::
+	.string "Forces the user to switch if its stats\n"
+	.string "are lowered.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RedCardDesc::
+	.string "Switches out the foe if they hit the user.\n"
+	.string "$"
+
+BattleFrontier_ExchangeServiceCorner_Text_AirBalloonDesc::
+	.string "Elevates the holder in the air. If hit,\n"
+	.string "this item will burst.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ThroatSprayDesc::
+	.string "Raises Sp. Atk. if the holder use a\n"
+	.string "sound-based move.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc::
+	.string "If the holder has full HP, it endures KO\n"
+	.string "hits with 1 HP.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc::
+	.string "If hit by a Super Effective move, ups\n"
+	.string "Atk and Sp. Atk.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicytDesc::
+	.string "Raises Speed if the user misses due\n"
+	.string "to Accuracy.$"

@@ -722,6 +722,17 @@ extern const u8 gText_EvioliteDesc64BP[];
 extern const u8 gText_ChoiceBandDesc64BP[];
 extern const u8 gText_ChoiceSpecsDesc64BP[];
 
+
+extern const u8 gText_EjectButton48BP[];
+extern const u8 gText_EjectPack48BP[];
+extern const u8 gText_RedCard48BP[];
+extern const u8 gText_AirBalloon48BP[];
+extern const u8 gText_ThroatSpray48BP[];
+extern const u8 gText_FocusSash56BP[];
+extern const u8 gText_WeaknessPolicy56BP[];
+extern const u8 gText_BlunderPolicy56BP[];
+
+
 // extern const u8 gText_Leftovers48BP[];
 // extern const u8 gText_WhiteHerb48BP[];
 // extern const u8 gText_QuickClaw48BP[];
@@ -881,13 +892,16 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
+
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc[];
+
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_IronDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ZincDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc[];
+
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
@@ -901,6 +915,17 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CovertCloakDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_EvioliteDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_EjectButtonDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_EjectPackDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RedCardDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AirBalloonDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ThroatSprayDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicytDesc[];
+
+
 //extern const u8 BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc[];
 //extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 
