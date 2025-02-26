@@ -2353,26 +2353,26 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 14;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_BF_EXCHANGE_CORNER_BERRY_ITEM_VENDOR:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 14;
-        task->tLeft = 14;
-        task->tTop = 1;
-        task->tWidth = 15;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
+    // case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
+    //     task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+    //     task->tNumItems = 14;
+    //     task->tLeft = 14;
+    //     task->tTop = 1;
+    //     task->tWidth = 15;
+    //     task->tHeight = 12;
+    //     task->tKeepOpenAfterSelect = FALSE;
+    //     task->tTaskId = taskId;
+    //     break;
+    // case SCROLL_MULTI_BF_EXCHANGE_CORNER_BERRY_ITEM_VENDOR:
+    //     task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+    //     task->tNumItems = 14;
+    //     task->tLeft = 14;
+    //     task->tTop = 1;
+    //     task->tWidth = 15;
+    //     task->tHeight = 12;
+    //     task->tKeepOpenAfterSelect = FALSE;
+    //     task->tTaskId = taskId;
+    //     break;
     case SCROLL_MULTI_BERRY_POWDER_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 12;
@@ -3131,6 +3131,7 @@ static void HideFrontierExchangeCornerItemIcon(u16 menu, u16 unused)
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_CONS_ITEM_VENDOR:
             FieldEffectFreeGraphicsResources(&gSprites[sScrollableMultichoice_ItemSpriteId]);
             break;
         }
