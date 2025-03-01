@@ -20,6 +20,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize::
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_DECOR2_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_CONS_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_EVO_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -59,6 +60,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryGiveItem::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize, MSGBOX_DEFAULT
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_CONS_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseConsItem
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_EVO_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -480,6 +482,237 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs::
 	end
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_EvoItemClerk::
+	lock
+	faceplayer
+	setvar VAR_TEMP_2, EXCHANGE_CORNER_EVO_ITEM_CLERK
+	call BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem::
+	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR
+	special ShowFrontierExchangeCornerItemIconWindow
+	special ShowScrollableMultichoice
+	waitstate
+	special CloseFrontierExchangeCornerItemIconWindow
+	switch VAR_RESULT
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_OvalStone
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_DragonScale
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_UpGrade
+	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_Protector
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_Electirizer
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_Magmarizer
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_DubiousDisc
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_ReaperCloth
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_KingsRock
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_QuickClaw
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_RazorClaw
+	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_RazorFang
+	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_DeepSeaScale
+	case 13, BattleFrontier_ExchangeServiceCorner_EventScript_DeepSeaTooth
+	case 14, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	end
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_OvalStone::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmOvalStone, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_OVAL_STONE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_DragonScale::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmDragonScale, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_DRAGON_SCALE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_UpGrade::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmUpGrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_UP_GRADE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Protector::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmProtector, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_PROTECTOR
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Electirizer::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmElectirizer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_ELECTIRIZER
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_Magmarizer::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmMagmarizer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_MAGMARIZER
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_DubiousDisc::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmDubiousDisc, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_DUBIOUS_DISC
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ReaperCloth::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmReaperCloth, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 8
+	setvar VAR_0x8009, ITEM_REAPER_CLOTH
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_KingsRock::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmKingsRock, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, ITEM_KINGS_ROCK
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_QuickClaw::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmQuickClaw, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, ITEM_QUICK_CLAW
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RazorClaw::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorClaw, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, ITEM_RAZOR_CLAW
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RazorFang::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorFang, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 12
+	setvar VAR_0x8009, ITEM_RAZOR_FANG
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_DeepSeaScale::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmDeepSeaScale, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_DEEP_SEA_SCALE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_DeepSeaTooth::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmDeepSeaTooth, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseEvoItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_DEEP_SEA_TOOTH
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 BattleFrontier_ExchangeServiceCorner_EventScript_ConsItemClerk::
 	lock
 	faceplayer
@@ -803,6 +1036,62 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmBlunderPolicy:
 
 
 
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmOvalStone:
+	.string "You've chosen the OVAL STONE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmDragonScale:
+	.string "You've chosen the DRAGON SCALE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmUpGrade:
+	.string "You've chosen the UP GRADE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmProtector:
+	.string "You've chosen the PROTECTOR.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmElectirizer:
+	.string "You've chosen the ELECTIRIZER.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmMagmarizer:
+	.string "You've chosen the MAGMARIZER.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmDubiousDisc:
+	.string "You've chosen the DUBIOUS DISC.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmReaperCloth:
+	.string "You've chosen the REAPER CLOTH.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmKingsRock:
+	.string "You've chosen the KING'S ROCK.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmQuickClaw:
+	.string "You've chosen the QUICK CLAW.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorClaw:
+	.string "You've chosen the RAZOR CLAW.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorFang:
+	.string "You've chosen the RAZOR FANG.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmDeepSeaScale:
+	.string "You've chosen the DEEP SEA SCALE.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmDeepSeaTooth:
+	.string "You've chosen the DEEP SEA TOOTH.\n"
+	.string "Is that correct?$"
+
 
 
 
@@ -984,6 +1273,8 @@ BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc::
 	.string "only that move.$"
 
 
+
+
 BattleFrontier_ExchangeServiceCorner_Text_EjectButtonDesc::
 	.string "Switches out the user if they're hit\n"
 	.string "by the foe.$"
@@ -1015,3 +1306,62 @@ BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc::
 BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicytDesc::
 	.string "Raises Speed if the user misses due\n"
 	.string "to Accuracy.$"
+
+
+
+BattleFrontier_ExchangeServiceCorner_Text_OvalStoneDesc::
+	.string "A peculiar stone that makes\n"
+	.string "certain Pokémon evolve.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_DragonScaleDesc::
+	.string "A strange scale held by a Dragon-\n"
+	.string "type Pokémon.$"
+
+
+BattleFrontier_ExchangeServiceCorner_Text_UpGradeDesc::
+	.string "A device filled with data\n"
+	.string "produced by Silph Co.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ProtectorDesc::
+	.string "A protective item that is\n"
+	.string "loved by a certain Pokémon.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ElectirizerDesc::
+	.string "A box that contains a large\n"
+	.string "amount of electricity.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_MagmarizerDesc::
+	.string "A box that contains\n"
+	.string "intense heat.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_DubiousDiscDesc::
+	.string "A transparent device\n"
+	.string "overflowing with data.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ReaperClothDesc::
+	.string "A cloth imbued with\n"
+	.string "spiritual energy.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc::
+	.string "A lovely rock that makes\n"
+	.string "the holder flinch more often.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc::
+	.string "An item that gives the\n"
+	.string "holder a chance to move first.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RazorClawDesc::
+	.string "An item that raises the\n"
+	.string "holder's critical-hit ratio.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RazorFangDesc::
+	.string "A sharp fang that may cause\n"
+	.string "foes to flinch.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_DeepSeaScaleDesc::
+	.string "A scale that raises\n"
+	.string "Sp. Def of Clamperl.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_DeepSeaToothDesc::
+	.string "A fang that raises\n"
+	.string "Sp. Atk of Clamperl.$"

@@ -1228,6 +1228,22 @@ const u8 gText_FocusSash56BP[]= _("FOCUS SASH{CLEAR_TO 0x5E}56BP");
 const u8 gText_WeaknessPolicy56BP[]= _("WEAKNSSPOLICY{CLEAR_TO 0x5E}56BP");
 const u8 gText_BlunderPolicy56BP[]= _("BLUNDRPOLICY{CLEAR_TO 0x5E}56BP");
 
+const u8 gText_OvalStone8BP[] = _("OVAL STONE{CLEAR_TO 0x5E}8BP");
+const u8 gText_DragonScale8BP[] = _("DRAGON SCALE{CLEAR_TO 0x5E}8BP");
+const u8 gText_UpGrade8BP[] = _("UP GRADE{CLEAR_TO 0x5E}8BP");
+const u8 gText_Protector8BP[] = _("PROTECTOR{CLEAR_TO 0x5E}8BP");
+const u8 gText_Electirizer8BP[] = _("ELECTIRIZER{CLEAR_TO 0x5E}8BP");
+const u8 gText_Magmarizer8BP[] = _("MAGMARIZER{CLEAR_TO 0x5E}8BP");
+const u8 gText_DubiousDisc8BP[] = _("DUBIOUS DISC{CLEAR_TO 0x5E}8BP");
+const u8 gText_ReaperCloth8BP[] = _("REAPER CLOTH{CLEAR_TO 0x5E}8BP");
+const u8 gText_KingsRock12BP[] = _("KING'S ROCK{CLEAR_TO 0x5E}12BP");
+const u8 gText_QuickClaw12BP[] = _("QUICK CLAW{CLEAR_TO 0x5E}12BP");
+const u8 gText_RazorClaw12BP[] = _("RAZOR CLAW{CLEAR_TO 0x5E}12BP");
+const u8 gText_RazorFang12BP[] = _("RAZOR FANG{CLEAR_TO 0x5E}12BP");
+const u8 gText_DeepSeaScale16BP[] = _("DEEP SEA SCALE{CLEAR_TO 0x5E}16BP");
+const u8 gText_DeepSeaTooth16BP[] = _("DEEP SEA TOOTH{CLEAR_TO 0x5E}16BP");
+
+
 
 // const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
 // const u8 gText_WhiteHerb48BP[] = _("WHITE HERB{CLEAR_TO 0x5E}48BP");

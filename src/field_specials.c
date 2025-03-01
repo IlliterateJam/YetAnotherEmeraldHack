@@ -2325,7 +2325,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
+        task->tNumItems = 15;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2353,16 +2353,16 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-    // case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
-    //     task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-    //     task->tNumItems = 14;
-    //     task->tLeft = 14;
-    //     task->tTop = 1;
-    //     task->tWidth = 15;
-    //     task->tHeight = 12;
-    //     task->tKeepOpenAfterSelect = FALSE;
-    //     task->tTaskId = taskId;
-    //     break;
+    case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 15;
+        task->tLeft = 14;
+        task->tTop = 1;
+        task->tWidth = 15;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     // case SCROLL_MULTI_BF_EXCHANGE_CORNER_BERRY_ITEM_VENDOR:
     //     task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
     //     task->tNumItems = 14;
@@ -2529,6 +2529,27 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_BlunderPolicy56BP,
         gText_Exit
     },
+
+
+    [SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR] =
+    {
+        gText_OvalStone8BP,
+        gText_DragonScale8BP,
+        gText_UpGrade8BP,
+        gText_Protector8BP,
+        gText_Electirizer8BP,
+        gText_Magmarizer8BP,
+        gText_DubiousDisc8BP,
+        gText_ReaperCloth8BP,
+        gText_KingsRock12BP,
+        gText_QuickClaw12BP,
+        gText_RazorClaw12BP,
+        gText_RazorFang12BP,
+        gText_DeepSeaScale16BP,
+        gText_DeepSeaTooth16BP,
+        gText_Exit
+    },
+
 
     // [SCROLL_MULTI_BF_EXCHANG!E_CORNER_HOLD_ITEM_VENDOR] =
     // {
@@ -3060,7 +3081,7 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
 {
     #include "data/battle_frontier/battle_frontier_exchange_corner.h"
 
-    if (menu >= SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1 && menu <= SCROLL_MULTI_BF_EXCHANGE_CORNER_CONS_ITEM_VENDOR)
+    if (menu >= SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1 && menu <= SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR)
     {
         FillWindowPixelRect(0, PIXEL_FILL(1), 0, 0, 216, 32);
         switch (menu)
@@ -3103,6 +3124,10 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_ConsItemsDescriptions[selection], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
             ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_ConsItems[selection]);
             break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
+            AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_EvoItemsDescriptions[selection], 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+            ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_EvoItems[selection]);
+            break;
         }
     }
 }
@@ -3132,6 +3157,7 @@ static void HideFrontierExchangeCornerItemIcon(u16 menu, u16 unused)
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_CONS_ITEM_VENDOR:
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_EVO_ITEM_VENDOR:
             FieldEffectFreeGraphicsResources(&gSprites[sScrollableMultichoice_ItemSpriteId]);
             break;
         }

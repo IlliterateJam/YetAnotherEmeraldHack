@@ -733,6 +733,22 @@ extern const u8 gText_WeaknessPolicy56BP[];
 extern const u8 gText_BlunderPolicy56BP[];
 
 
+extern const u8 gText_OvalStone8BP[];
+extern const u8 gText_DragonScale8BP[];
+extern const u8 gText_UpGrade8BP[];
+extern const u8 gText_Protector8BP[];
+extern const u8 gText_Electirizer8BP[];
+extern const u8 gText_Magmarizer8BP[];
+extern const u8 gText_DubiousDisc8BP[];
+extern const u8 gText_ReaperCloth8BP[];
+extern const u8 gText_KingsRock12BP[];
+extern const u8 gText_QuickClaw12BP[];
+extern const u8 gText_RazorClaw12BP[];
+extern const u8 gText_RazorFang12BP[];
+extern const u8 gText_DeepSeaScale16BP[];
+extern const u8 gText_DeepSeaTooth16BP[];
+
+
 // extern const u8 gText_Leftovers48BP[];
 // extern const u8 gText_WhiteHerb48BP[];
 // extern const u8 gText_QuickClaw48BP[];
@@ -925,7 +941,20 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BlunderPolicytDesc[];
 
-
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OvalStoneDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DragonScaleDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_UpGradeDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ProtectorDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ElectirizerDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MagmarizerDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DubiousDiscDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ReaperClothDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RazorClawDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RazorFangDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DeepSeaScaleDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DeepSeaToothDesc[];
 //extern const u8 BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc[];
 //extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 

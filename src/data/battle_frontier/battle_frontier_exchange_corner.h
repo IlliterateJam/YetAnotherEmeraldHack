@@ -69,6 +69,26 @@ static const u16 sFrontierExchangeCorner_ConsItems[] =
 };
 
 
+static const u16 sFrontierExchangeCorner_EvoItems[] =
+{
+    ITEM_OVAL_STONE,
+    ITEM_DRAGON_SCALE,
+    ITEM_UP_GRADE,
+    ITEM_PROTECTOR,
+    ITEM_ELECTIRIZER,
+    ITEM_MAGMARIZER,
+    ITEM_DUBIOUS_DISC,
+    ITEM_REAPER_CLOTH,
+    ITEM_KINGS_ROCK,
+    ITEM_QUICK_CLAW,
+    ITEM_RAZOR_CLAW,
+    ITEM_RAZOR_FANG,
+    ITEM_DEEP_SEA_SCALE, 
+    ITEM_DEEP_SEA_TOOTH, 
+    ITEM_LIST_END
+};
+
+
 // static const u16 sFrontierExchangeCorner_HoldItems[] =
 // {
 //     ITEM_LEFTOVERS,
@@ -156,6 +176,24 @@ static const u8 *const sFrontierExchangeCorner_ConsItemsDescriptions[] =
 };
 
 
+static const u8 *const sFrontierExchangeCorner_EvoItemsDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_OvalStoneDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_DragonScaleDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_UpGradeDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ProtectorDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ElectirizerDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MagmarizerDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_DubiousDiscDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ReaperClothDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RazorClawDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RazorFangDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_DeepSeaScaleDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_DeepSeaToothDesc,
+    gText_Exit
+};
 
 // static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
 // {
