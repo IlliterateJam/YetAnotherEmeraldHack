@@ -1218,7 +1218,6 @@ const u8 gText_EvioliteDesc64BP[] = _("EVIOLITE{CLEAR_TO 0x5E}64BP");
 const u8 gText_ChoiceBandDesc64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
 const u8 gText_ChoiceSpecsDesc64BP[] = _("CHOICE SPECS{CLEAR_TO 0x5E}64BP");
 
-
 const u8 gText_EjectButton48BP[]= _("EJECT BUTTON{CLEAR_TO 0x5E}48BP");
 const u8 gText_EjectPack48BP[]= _("EJECT PACK{CLEAR_TO 0x5E}48BP");
 const u8 gText_RedCard48BP[]= _("RED CARD{CLEAR_TO 0x5E}48BP");
@@ -1242,18 +1241,6 @@ const u8 gText_RazorClaw12BP[] = _("RAZOR CLAW{CLEAR_TO 0x5E}12BP");
 const u8 gText_RazorFang12BP[] = _("RAZOR FANG{CLEAR_TO 0x5E}12BP");
 const u8 gText_DeepSeaScale16BP[] = _("DEEP SEA SCALE{CLEAR_TO 0x5E}16BP");
 const u8 gText_DeepSeaTooth16BP[] = _("DEEP SEA TOOTH{CLEAR_TO 0x5E}16BP");
-
-
-
-// const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
-// const u8 gText_WhiteHerb48BP[] = _("WHITE HERB{CLEAR_TO 0x5E}48BP");
-// const u8 gText_QuickClaw48BP[] = _("QUICK CLAW{CLEAR_TO 0x5E}48BP");
-// const u8 gText_MentalHerb48BP[] = _("MENTAL HERB{CLEAR_TO 0x5E}48BP");
-// const u8 gText_BrightPowder64BP[] = _("BRIGHTPOWDER{CLEAR_TO 0x5E}64BP");
-// const u8 gText_ChoiceBand64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
-// const u8 gText_KingsRock64BP[] = _("KING'S ROCK{CLEAR_TO 0x5E}64BP");
-// const u8 gText_FocusBand64BP[] = _("FOCUS BAND{CLEAR_TO 0x5E}64BP");
-// const u8 gText_ScopeLens64BP[] = _("SCOPE LENS{CLEAR_TO 0x5E}64BP");
 
 
 const u8 gText_Softboiled16BP[] = _("SOFTBOILED{CLEAR_TO 0x4E}16BP");

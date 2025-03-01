@@ -1,6 +1,11 @@
 BattleFrontier_ExchangeServiceCorner_MapScripts::
 	.byte 0
 
+BattleFrontier_ExchangeServiceCorner_EventScript_Board::
+	msgbox BattleFrontier_OutsideWest_Text_Board, MSGBOX_SIGN
+	end
+
+
 BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
 	special ShowBattlePointsWindow
@@ -651,68 +656,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_DeepSeaTooth::
 	end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 BattleFrontier_ExchangeServiceCorner_EventScript_ConsItemClerk::
 	lock
 	faceplayer
@@ -804,7 +747,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_BlunderPolicy::
 	setvar VAR_0x8009, ITEM_BLUNDER_POLICY
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
-
 
 
 
@@ -1118,6 +1060,14 @@ BattleFrontier_ExchangeServiceCorner_Text_ThankYouVisitWithPoints:
 	.string "Thank you very much.\p"
 	.string "Please visit us when you have\n"
 	.string "saved up Battle Points.$"
+
+
+BattleFrontier_OutsideWest_Text_Board:
+	.string "{LEFT_ARROW}{LEFT_ARROW}Secret Base Decorations\p"
+	.string "{LEFT_ARROW}{CLEAR_TO 0x18}Evolution Items\p"
+	.string "{RIGHT_ARROW}{CLEAR_TO 0x18}Vitamins\p"
+	.string "{RIGHT_ARROW}{RIGHT_ARROW}Battle Items$"
+
 
 BattleFrontier_ExchangeServiceCorner_Text_WishIHadAllDolls:
 	.string "Oh, they're so nice!\n"
