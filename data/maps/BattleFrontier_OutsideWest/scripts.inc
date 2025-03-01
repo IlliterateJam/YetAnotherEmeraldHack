@@ -377,8 +377,9 @@ BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
 	.string "here, you know?\p"
 	.string "Only those TRAINERS who've been\n"
 	.string "recognized as tough are brought here.\p"
-	.string "That's why many TRAINERS don't even\n"
-	.string "know about the BATTLE FRONTIER.$"
+	.string "I've heard that there are even tough\n"
+	.string "MOVE TUTORS that have taken to the\p"
+	.string "island not far from here.$" 
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
 	.string "Hey, bro…\p"

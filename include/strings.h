@@ -803,6 +803,21 @@ extern const u8 gText_IcePunch48BP[];
 extern const u8 gText_ThunderPunch48BP[];
 extern const u8 gText_FirePunch48BP[];
 
+
+//For Old Move Tutors
+extern const u8 gText_FuryCutter16BP[];
+extern const u8 gText_SleepTalk24BP[];
+extern const u8 gText_Metronome24BP[];
+extern const u8 gText_DoubleEdge48BP[];
+extern const u8 gText_Explosion48BP[];
+extern const u8 gText_Rollout16BP[];
+extern const u8 gText_Mimic16BP[];
+extern const u8 gText_Swagger24BP[];
+extern const u8 gText_DynamicPunch48BP[];
+extern const u8 gText_Substitute48BP[];
+
+
+
 extern const u8 gText_SlateportCity[];
 extern const u8 gText_BattleFrontier[];
 extern const u8 gText_SouthernIsland[];
@@ -979,6 +994,17 @@ extern const u8 BattleFrontier_Lounge7_Text_PsychUpDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_IcePunchDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_ThunderPunchDesc[];
 extern const u8 BattleFrontier_Lounge7_Text_FirePunchDesc[];
+
+extern const u8 BattleFrontier_Lounge7_Text_FuryCutterDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_SleepTalkDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_MetronomeDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_DoubleEdgeDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_ExplosionDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_RolloutDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_MimicDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_SwaggerDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_DynamicPunchDesc[];
+extern const u8 BattleFrontier_Lounge7_Text_SubstituteDesc[];
 
 extern const u8 gText_YourPartnerHasRetired[];
 

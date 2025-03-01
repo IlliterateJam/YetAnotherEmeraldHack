@@ -1263,6 +1263,18 @@ const u8 gText_PsychUp48BP[] = _("PSYCH UP{CLEAR_TO 0x4E}48BP");
 const u8 gText_IcePunch48BP[] = _("ICE PUNCH{CLEAR_TO 0x4E}48BP");
 const u8 gText_ThunderPunch48BP[] = _("THUNDERPUNCH{CLEAR_TO 0x4E}48BP");
 const u8 gText_FirePunch48BP[] = _("FIRE PUNCH{CLEAR_TO 0x4E}48BP");
+
+const u8 gText_FuryCutter16BP[] = _("FURYCUTTER{CLEAR_TO 0x4E}16BP");
+const u8 gText_SleepTalk24BP[] = _("SLEEPTALK{CLEAR_TO 0x4E}24BP");
+const u8 gText_Metronome24BP[] = _("METRONOME{CLEAR_TO 0x4E}24BP");
+const u8 gText_DoubleEdge48BP[] = _("DOUBLE-EDGE{CLEAR_TO 0x4E}48BP");
+const u8 gText_Explosion48BP[] = _("EXPLOSION{CLEAR_TO 0x4E}48BP");
+const u8 gText_Rollout16BP[] = _("ROLLOUT{CLEAR_TO 0x4E}16BP");
+const u8 gText_Mimic16BP[] = _("MIMIC{CLEAR_TO 0x4E}16BP");
+const u8 gText_Swagger24BP[] = _("SWAGGER{CLEAR_TO 0x4E}24BP");
+const u8 gText_DynamicPunch48BP[] = _("DYNAMIC PUNCH{CLEAR_TO 0x4E}48BP");
+const u8 gText_Substitute48BP[] = _("SUBSTITUTE{CLEAR_TO 0x4E}48BP");
+
 #if OW_POISON_DAMAGE < GEN_4
 const u8 gText_PkmnFainted_FldPsn[] = _("{STR_VAR_1} fainted…\p\n");
 #else
