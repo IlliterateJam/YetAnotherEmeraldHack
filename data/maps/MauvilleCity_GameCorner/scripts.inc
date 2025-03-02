@@ -8,6 +8,9 @@ MauvilleCity_GameCorner_MapScripts::
 	.set TM_THUNDERBOLT_COINS, 4000
 	.set TM_ICE_BEAM_COINS, 4000
 	.set DOLL_COINS, 1000
+	.set SNORUNT_COINS, 3000
+	.set DITTO_COINS, 4500
+	.set PORYGON_COINS, 9000
 
 	.set COINS_PRICE_50,  1000
 	.set COINS_PRICE_500, 10000
@@ -98,6 +101,10 @@ MauvilleCity_GameCorner_EventScript_NoRoomForCoins::
 	hidecoinsbox 0, 5
 	release
 	end
+
+
+
+
 
 MauvilleCity_GameCorner_EventScript_PrizeCornerDolls::
 	lock
@@ -211,6 +218,9 @@ MauvilleCity_GameCorner_EventScript_CancelDollSelect::
 	hidecoinsbox 0, 0
 	release
 	end
+
+
+
 
 MauvilleCity_GameCorner_EventScript_PrizeCornerTMs::
 	lock
@@ -367,6 +377,222 @@ MauvilleCity_GameCorner_EventScript_CancelTMSelect::
 	hidecoinsbox 0, 0
 	release
 	end
+
+
+
+
+MauvilleCity_GameCorner_EventScript_PrizeCornerPokemon::
+	lock
+	faceplayer
+	msgbox MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes, MSGBOX_DEFAULT
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_ChoosePokemonPrizeMessage
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_ChoosePokemonPrizeMessage::
+	message MauvilleCity_GameCorner_Text_WhichPrize
+	waitmessage
+	setvar VAR_TEMP_1, 0
+	showcoinsbox 1, 1
+	goto MauvilleCity_GameCorner_EventScript_ChoosePokemonPrize
+
+MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize::
+	message MauvilleCity_GameCorner_Text_WhichPrize
+	waitmessage
+	goto MauvilleCity_GameCorner_EventScript_ChoosePokemonPrize
+
+MauvilleCity_GameCorner_EventScript_ChoosePokemonPrize::
+	multichoice 12, 0, MULTI_GAME_CORNER_POKEMON, FALSE
+	switch VAR_RESULT
+	case 0, MauvilleCity_GameCorner_EventScript_Snorunt
+	case 1, MauvilleCity_GameCorner_EventScript_Ditto
+	case 2, MauvilleCity_GameCorner_EventScript_Porygon
+	case 3, MauvilleCity_GameCorner_EventScript_CancelTMSelect
+	goto MauvilleCity_GameCorner_EventScript_CancelTMSelect
+	end
+
+MauvilleCity_GameCorner_EventScript_Snorunt::
+	setvar VAR_TEMP_1, 1
+	bufferspeciesname STR_VAR_1, SPECIES_SNORUNT
+	setvar VAR_0x8004, SPECIES_SNORUNT
+	goto MauvilleCity_GameCorner_EventScript_ConfirmPokemonPrize
+
+MauvilleCity_GameCorner_EventScript_Ditto::
+	setvar VAR_TEMP_1, 2
+	bufferspeciesname STR_VAR_1, SPECIES_DITTO
+	setvar VAR_0x8004, SPECIES_DITTO
+	goto MauvilleCity_GameCorner_EventScript_ConfirmPokemonPrize
+
+MauvilleCity_GameCorner_EventScript_Porygon::
+	setvar VAR_TEMP_1, 3
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
+	setvar VAR_0x8004, SPECIES_PORYGON
+	goto MauvilleCity_GameCorner_EventScript_ConfirmPokemonPrize
+
+MauvilleCity_GameCorner_EventScript_ConfirmPokemonPrize::
+	msgbox MauvilleCity_GameCorner_Text_SoYourChoiceIsX, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CancelPokemonSelect
+	switch VAR_TEMP_1
+	case 1, MauvilleCity_GameCorner_EventScript_BuySnorunt
+	case 2, MauvilleCity_GameCorner_EventScript_BuyDitto
+	case 3, MauvilleCity_GameCorner_EventScript_BuyPorygon
+	end
+
+
+
+MauvilleCity_GameCorner_EventScript_BuySnorunt::
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, SNORUNT_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPokemon
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNORUNT
+	givemon SPECIES_SNORUNT, 18,
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MauvilleCity_GameCorner_EventScript_RecieveSnorunttoParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MauvilleCity_GameCorner_EventScript_RecieveSnorunttoPC
+	goto MauvilleCity_GameCorner_EventScript_NoRoomForPokemon
+	end
+
+MauvilleCity_GameCorner_EventScript_RecieveSnorunttoParty::
+	removecoins SNORUNT_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	bufferspeciesname STR_VAR_1, SPECIES_SNORUNT
+	msgbox MauvilleCity_GameCorner_Text_HereYouGo, MSGBOX_DEFAULT
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+MauvilleCity_GameCorner_EventScript_RecieveSnorunttoPC::
+	removecoins SNORUNT_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_SendSnoruntToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MauvilleCity_GameCorner_EventScript_SendSnoruntToPC
+	end
+
+MauvilleCity_GameCorner_EventScript_SendSnoruntToPC::
+	call Common_EventScript_TransferredToPC
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+
+
+
+
+MauvilleCity_GameCorner_EventScript_BuyDitto::
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, DITTO_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPokemon
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DITTO
+	givemon SPECIES_DITTO, 18,
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MauvilleCity_GameCorner_EventScript_RecieveDittotoParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MauvilleCity_GameCorner_EventScript_RecieveDittotoPC
+	goto MauvilleCity_GameCorner_EventScript_NoRoomForPokemon
+	end
+
+MauvilleCity_GameCorner_EventScript_RecieveDittotoParty::
+	removecoins DITTO_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	bufferspeciesname STR_VAR_1, SPECIES_DITTO
+	msgbox MauvilleCity_GameCorner_Text_HereYouGo, MSGBOX_DEFAULT
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+MauvilleCity_GameCorner_EventScript_RecieveDittotoPC::
+	removecoins DITTO_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_SendDittoToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MauvilleCity_GameCorner_EventScript_SendDittoToPC
+	end
+
+MauvilleCity_GameCorner_EventScript_SendDittoToPC::
+	call Common_EventScript_TransferredToPC
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+
+
+
+MauvilleCity_GameCorner_EventScript_BuyPorygon::
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, PORYGON_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPokemon
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PORYGON
+	givemon SPECIES_PORYGON, 18,
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MauvilleCity_GameCorner_EventScript_RecievePorygontoParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MauvilleCity_GameCorner_EventScript_RecievePorygontoPC
+	goto MauvilleCity_GameCorner_EventScript_NoRoomForPokemon
+	end
+
+MauvilleCity_GameCorner_EventScript_RecievePorygontoParty::
+	removecoins PORYGON_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
+	msgbox MauvilleCity_GameCorner_Text_HereYouGo, MSGBOX_DEFAULT
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+MauvilleCity_GameCorner_EventScript_RecievePorygontoPC::
+	removecoins PORYGON_COINS
+	updatecoinsbox 1, 1
+	playse SE_SHOP
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_SendPorygonToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MauvilleCity_GameCorner_EventScript_SendPorygonToPC
+	end
+
+MauvilleCity_GameCorner_EventScript_SendPorygonToPC::
+	call Common_EventScript_TransferredToPC
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+
+
+
+
+
+
+
+
+
+MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPokemon::
+	msgbox MauvilleCity_GameCorner_Text_NotEnoughCoins, MSGBOX_DEFAULT
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+MauvilleCity_GameCorner_EventScript_NoRoomForPokemon::
+	call Common_EventScript_NoMoreRoomForPokemon
+	goto MauvilleCity_GameCorner_EventScript_ReturnToChoosePokemonPrize
+	end
+
+MauvilleCity_GameCorner_EventScript_CancelPokemonSelect::
+	msgbox MauvilleCity_GameCorner_Text_OhIsThatSo, MSGBOX_DEFAULT
+	hidecoinsbox 0, 0
+	release
+	end
+
+
+
+
+
+
+
 
 MauvilleCity_GameCorner_EventScript_Woman2::
 	msgbox MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay, MSGBOX_NPC
@@ -667,6 +893,7 @@ MauvilleCity_GameCorner_Text_WhichPrize:
 MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX:
 	.string "So your choice is\n"
 	.string "the {STR_VAR_1} {STR_VAR_2}?$"
+
 
 MauvilleCity_GameCorner_Text_SendToYourHomePC:
 	.string "Thank you!\n"
