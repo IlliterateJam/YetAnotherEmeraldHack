@@ -127,7 +127,8 @@ Route123_BerryMastersHouse_Text_GoodSayingTakeThis:
 	.string "I want you to have this.$"
 
 Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
-	.string "Our four grandchildren should become\n"
+	.string "Our four grandchildren and their\n"
+	.string "PRETTY PETAL flower shop should become\p" 
 	.string "more accomplished than my husband.\p"
 	.string "Joy never goes out of my life!$"
 
