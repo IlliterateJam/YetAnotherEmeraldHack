@@ -18,6 +18,7 @@
 .set LOCALID_GRUNT_9, 31
 .set LOCALID_GRUNT_11, 33
 .set LOCALID_SCOTT, 35
+.set LOCALID_TM_GUY, 39
 
 @ Note: LOCALID_SLATEPORT_ENERGY_GURU is a local id for this map used elsewhere. It's defined in event_objects.h
 
@@ -31,6 +32,139 @@ SlateportCity_OnTransition:
 	call SlateportCity_EventScript_EnterSlateport
 	call_if_eq VAR_SLATEPORT_CITY_STATE, 1, SlateportCity_EventScript_MovePeopleForSternInterview
 	call_if_eq VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 1, SlateportCity_EventScript_SetReadyForScottScene
+	call_if_set FLAG_HIDE_SLATEPORT_TM_GUY, SlateportCity_EventScript_MoveTMGuy
+	end
+
+
+SlateportCity_EventScript_MoveTMGuy::
+	setobjectxyperm LOCALID_TM_GUY, 31, 17
+	setobjectmovementtype LOCALID_TM_GUY, MOVEMENT_TYPE_FACE_UP
+	end
+
+SlateportCity_EventScript_TMGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_HIDE_SLATEPORT_TM_GUY, SlateportCity_EventScript_TMGuyNowSelling
+	msgbox SlateportCity_Text_TMGuy_IAmACollector, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_TMGuyNowSelling::
+	msgbox SlateportCity_Text_TMGuy_NobodyIsLikeMe, MSGBOX_DEFAULT
+	applymovement LOCALID_TM_GUY, SlateportCity_EventScript_TMGuyNowSelling_Movement_Up
+	waitmovement 0
+	release
+	end
+
+SlateportCity_EventScript_TMGuyNowSelling_Movement_Up:
+	face_up
+	step_end
+
+
+SlateportCity_EventScript_TMShop1::
+	goto_if_unset FLAG_HIDE_SLATEPORT_TM_GUY, SlateportCity_EventScript_ABoxFullofTMs
+	message SlateportCity_Text_TMGuy_WelcomeToTheAllYourNeeds
+	waitmessage
+	pokemart SlateportCity_Pokemart_TMGuy1
+	release
+	end
+
+	.align 2
+
+SlateportCity_Pokemart_TMGuy1:
+	.2byte ITEM_TM_FOCUS_PUNCH
+	.2byte ITEM_TM_DRAGON_CLAW
+	.2byte ITEM_TM_WATER_PULSE
+	.2byte ITEM_TM_CALM_MIND
+	.2byte ITEM_TM_ROAR
+	.2byte ITEM_TM_TOXIC
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_BULK_UP
+	.2byte ITEM_TM_BULLET_SEED
+	.2byte ITEM_TM_HIDDEN_POWER
+	.2byte ITEM_TM_SUNNY_DAY
+	.2byte ITEM_TM_TAUNT
+	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_TM_BLIZZARD
+	.2byte ITEM_TM_HYPER_BEAM
+	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_GIGA_DRAIN
+	.2byte ITEM_TM_SAFEGUARD
+	.2byte ITEM_NONE
+	release
+	end
+
+
+SlateportCity_EventScript_TMShop2::
+	goto_if_unset FLAG_HIDE_SLATEPORT_TM_GUY, SlateportCity_EventScript_ABoxFullofTMs
+	message SlateportCity_Text_TMGuy_WelcomeToTheAllYourNeeds
+	waitmessage
+	pokemart SlateportCity_Pokemart_TMGuy2
+	release
+	end
+
+	.align 2
+
+SlateportCity_Pokemart_TMGuy2:
+	.2byte ITEM_TM_FRUSTRATION
+	.2byte ITEM_TM_SOLAR_BEAM
+	.2byte ITEM_TM_IRON_TAIL
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_THUNDER
+	.2byte ITEM_TM_EARTHQUAKE
+	.2byte ITEM_TM_RETURN
+	.2byte ITEM_TM_DIG
+	.2byte ITEM_TM_PSYCHIC
+	.2byte ITEM_TM_SHADOW_BALL
+	.2byte ITEM_TM_BRICK_BREAK
+	.2byte ITEM_TM_DOUBLE_TEAM
+	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_SHOCK_WAVE
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_SLUDGE_BOMB
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_FIRE_BLAST
+	.2byte ITEM_TM_ROCK_TOMB
+	.2byte ITEM_TM_AERIAL_ACE
+	.2byte ITEM_NONE
+	release
+	end
+
+SlateportCity_EventScript_TMShop3::
+	goto_if_unset FLAG_HIDE_SLATEPORT_TM_GUY, SlateportCity_EventScript_ABoxFullofTMs
+	message SlateportCity_Text_TMGuy_WelcomeToTheAllYourNeeds
+	waitmessage
+	pokemart SlateportCity_Pokemart_TMGuy3
+	release
+	end
+
+	.align 2
+
+SlateportCity_Pokemart_TMGuy3:
+	.2byte ITEM_TM_TORMENT
+	.2byte ITEM_TM_FACADE
+	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_TM_REST
+	.2byte ITEM_TM_ATTRACT
+	.2byte ITEM_TM_THIEF
+	.2byte ITEM_TM_STEEL_WING
+	.2byte ITEM_TM_SKILL_SWAP
+	.2byte ITEM_TM_SNATCH
+	.2byte ITEM_TM_OVERHEAT
+	.2byte ITEM_NONE
+	release
+	end
+
+
+
+SlateportCity_EventScript_ABoxFullofTMs::
+	msgbox SlateportCity_Text_TMGuy_ABoxFullofTMs, MSGBOX_SIGN
+	end
+
+SlateportCity_EventScript_AFamiliarTruck::
+	msgbox SlateportCity_Text_TMGuy_AFamiliarTruck, MSGBOX_SIGN
 	end
 
 SlateportCity_EventScript_EnterSlateport::
@@ -1411,3 +1545,31 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+
+SlateportCity_Text_TMGuy_IAmACollector:
+	.string "Wow! There's nothing like the\n"
+	.string "sea breeze of Hoenn!\p"
+	.string "It makes unloading all of\n"
+	.string "these collector boxes a thrill!$"
+
+SlateportCity_Text_TMGuy_WelcomeToTheAllYourNeeds:
+	.string "Welcome to all of your\n"
+	.string "collecting needs.\p"
+	.string "They call me the TM Wizard!\n"
+	.string "I have copies of every single TM\p"
+	.string "that has been released and I would\n"
+	.string "love to sell some to you!$"
+
+SlateportCity_Text_TMGuy_NobodyIsLikeMe:
+	.string "Even though there are big stores\n"
+	.string "in Hoenn, there is nothing\p"
+	.string "like a grassroots collector!$"
+
+SlateportCity_Text_TMGuy_ABoxFullofTMs:
+	.string "It looks like this box is full\n"
+	.string "of technical machines!$"
+
+SlateportCity_Text_TMGuy_AFamiliarTruck:
+	.string "You remember the time when Mom\n"
+	.string "and Dad made you ride in the back…$"

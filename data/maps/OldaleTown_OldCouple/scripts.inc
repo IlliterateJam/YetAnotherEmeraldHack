@@ -31,7 +31,7 @@ OldaleTown_OldCouple_Text_HaveACookie::
 OldaleTown_OldCouple_Text_TimeFlows::
 	.string "I like spend all my time looking\n"
 	.string "out on the bay.\p"
-	.string "....\l"
+	.string "…\l"
 	.string "It's a peaceful life.$"
 
 OldaleTown_OldCouple_Text_Text_Pikachu::
