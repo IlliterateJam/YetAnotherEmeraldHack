@@ -4,6 +4,7 @@ Route123_BerryMastersHouse_MapScripts::
 
 Route123_BerryMastersHouse_OnTransition:
 	setflag FLAG_LANDMARK_BERRY_MASTERS_HOUSE
+	clearflag FLAG_HIDE_BERRY_SELLER_GIRL
 	end
 
 Route123_BerryMastersHouse_EventScript_BerryMaster::
