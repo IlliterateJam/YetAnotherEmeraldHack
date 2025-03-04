@@ -1219,11 +1219,11 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 #define FLAG_ROUTE_1185_WATER_STONE                                 0x493 // 
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
+#define FLAG_ITEM_SAFARI_ZONe_SOUTH_RAZOR_FANG                      0x494 // Unused Flag
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_RAZOR_CLAW                      0x495 // Unused Flag
+#define FLAG_ITEM_VICTORY_ROAD_B2F_REAPER_CLOTH                     0x496 // Unused Flag
+#define FLAG_ITEM_MAGMA_HIDEOUT_1F_MAGMARIZER                       0x497 // Unused Flag
+#define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_7_DUBIOUS_DISC               0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag

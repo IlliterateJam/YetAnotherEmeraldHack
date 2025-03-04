@@ -414,8 +414,8 @@ NewMauville_Inside_EventScript_ItemFullHeal::
 	finditem ITEM_FULL_HEAL
 	end
 
-NewMauville_Inside_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+NewMauville_Inside_EventScript_ItemUpGrade::
+	finditem ITEM_UP_GRADE
 	end
 
 AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
@@ -474,6 +474,14 @@ SafariZone_North_EventScript_ItemCalcium::
 	finditem ITEM_CALCIUM
 	end
 
+SafariZone_South_EventScript_ItemRazorFang::
+	finditem ITEM_RAZOR_FANG
+	end
+
+SafariZone_North_EventScript_ItemRazorClaw::
+	finditem ITEM_RAZOR_CLAW
+	end
+
 SafariZone_Southwest_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
@@ -526,8 +534,8 @@ AquaHideout_B1F_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
 	end
 
-AquaHideout_B2F_EventScript_ItemNestBall::
-	finditem ITEM_NEST_BALL
+AquaHideout_B2F_EventScript_ItemElectirizer::
+	finditem ITEM_ELECTIRIZER
 	end
 
 AquaHideout_B2F_EventScript_ItemMasterBall::
@@ -564,6 +572,10 @@ ShoalCave_LowTideIceRoom_EventScript_ItemTMHail::
 
 ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce::
 	finditem ITEM_NEVER_MELT_ICE
+	end
+
+SeafloorCavern_Room9_EventScript_ItemDubiousDisc::
+	finditem ITEM_DUBIOUS_DISC
 	end
 
 SeafloorCavern_Room9_EventScript_ItemTMEarthquake::
@@ -622,16 +634,24 @@ VictoryRoad_B1F_EventScript_ItemFullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
 
-VictoryRoad_B2F_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
+VictoryRoad_B2F_EventScript_ItemProtector::
+	finditem ITEM_PROTECTOR
 	end
 
 ArtisanCave_B1F_EventScript_ItemHPUp::
 	finditem ITEM_HP_UP
 	end
 
+VictoryRoad_B2F_EventScript_ItemReaperClotch::
+	finditem ITEM_REAPER_CLOTH
+	end
+
 ArtisanCave_1F_EventScript_ItemCarbos::
 	finditem ITEM_CARBOS
+	end
+
+MagmaHideout_1F_EventScript_Magmarizer::
+	finditem ITEM_MAGMARIZER
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::

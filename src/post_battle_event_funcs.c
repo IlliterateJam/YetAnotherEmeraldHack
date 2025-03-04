@@ -27,7 +27,7 @@ int GameClear(void)
     else
     {
         gHasHallOfFameRecords = FALSE;
-        FlagSet(FLAG_SYS_GAME_CLEAR)
+        FlagSet(FLAG_SYS_GAME_CLEAR);
         FlagSet(FLAG_HIDE_SLATEPORT_TM_GUY);
     }
 
