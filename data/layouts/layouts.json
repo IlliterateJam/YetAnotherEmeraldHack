@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Underwater_Route118/border.bin",
       "blockdata_filepath": "data/layouts/Underwater_Route118/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_CITY_MOVE_TUTOR",
+      "name": "PetalburgCity_MoveTutor_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PetalburgCity_MoveTutor/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgCity_MoveTutor/map.bin"
     }
   ]
 }

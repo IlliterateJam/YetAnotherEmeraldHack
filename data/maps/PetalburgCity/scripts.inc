@@ -825,7 +825,11 @@ PetalburgCity_Text_ThisIsPetalburgGym:
 
 PetalburgCity_Text_ThisIsGymSign:
 	.string "This is the GYM's sign. Look for it\n"
-	.string "whenever you're looking for a GYM.$"
+	.string "whenever you're looking for a GYM.\p"
+	.string "Also you should know that there is\n"
+	.string "MOVE TUTOR in all cities with a GYM\p"
+	.string "PETALBURG's is right next to the\n"
+	.string "great lake in the south.$"
 
 PetalburgCity_Text_WaterReflection:
 	.string "My face is reflected in the water.\p"

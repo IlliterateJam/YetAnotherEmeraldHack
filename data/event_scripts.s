@@ -667,6 +667,10 @@ Common_EventScript_ShowPokemonCenterSign::
 	msgbox gText_PokemonCenterSign, MSGBOX_SIGN
 	end
 
+Common_EventScript_ShowMoveTutorSign::
+	msgbox gText_MoveTutorSign, MSGBOX_SIGN
+	end
+
 Common_ShowEasyChatScreen::
 	fadescreen FADE_TO_BLACK
 	special ShowEasyChatScreen
@@ -846,6 +850,10 @@ gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
 	.string "POKéMON CENTER$"
 
+gText_MoveTutorSign::
+	.string "Home to your local MOVE TUTOR\n"
+	.string "“A service to the community”$"
+	
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
 	.string "… … … … … … … … … … … … … … … …\p"
@@ -1085,3 +1093,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route1185/scripts.inc"
 
 	.include "data/maps/Underwater_Route118/scripts.inc"
+
+	.include "data/maps/PetalburgCity_MoveTutor/scripts.inc"
