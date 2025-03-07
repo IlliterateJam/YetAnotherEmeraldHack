@@ -3,10 +3,8 @@
 @ All of these local IDs are labeled here
 .equ LOCALID_BRINEY_DEWFORD, 2
 .equ LOCALID_BOAT_DEWFORD, 4
-
 .equ LOCALID_BOAT_R109, 1
 .equ LOCALID_BRINEY_R109, 2
-
 .equ LOCALID_BOAT_R104, 7
 .equ LOCALID_BRINEY_R104, 8
 
@@ -821,3 +819,96 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+
+@Move Tutor 
+
+DewfordTown_MoveRelearner_EventScript_MoveRelearner::
+	lockall
+	faceplayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, DewfordTown_MoveRelearner_EventScript_AskTeachMove
+	msgbox DewfordTown_MoveRelearner_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto DewfordTown_MoveRelearner_EventScript_AskTeachMove
+	end
+
+DewfordTown_MoveRelearner_EventScript_AskTeachMove::
+	msgbox DewfordTown_MoveRelearner_Text_WantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, DewfordTown_MoveRelearner_EventScript_ComeBack
+	goto DewfordTown_MoveRelearner_EventScript_ChooseMon
+	end
+
+DewfordTown_MoveRelearner_EventScript_ChooseMon::
+	msgbox DewfordTown_MoveRelearner_Text_TutorWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, DewfordTown_MoveRelearner_EventScript_ComeBack
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_MoveRelearner_EventScript_CantTeachEgg
+	goto_if_eq VAR_0x8005, 0, DewfordTown_MoveRelearner_EventScript_NoMoveToTeachMon
+	goto DewfordTown_MoveRelearner_EventScript_ChooseMove
+	end
+
+DewfordTown_MoveRelearner_EventScript_ChooseMove::
+	msgbox DewfordTown_MoveRelearner_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, 0, DewfordTown_MoveRelearner_EventScript_ChooseMon
+	goto DewfordTown_MoveRelearner_EventScript_ComeBack
+	end
+
+DewfordTown_MoveRelearner_EventScript_NoMoveToTeachMon::
+	msgbox DewfordTown_MoveRelearner_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto DewfordTown_MoveRelearner_EventScript_ChooseMon
+	end
+
+DewfordTown_MoveRelearner_EventScript_CantTeachEgg::
+	msgbox DewfordTown_MoveRelearner_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto DewfordTown_MoveRelearner_EventScript_ChooseMon
+	end
+
+DewfordTown_MoveRelearner_EventScript_ComeBack::
+	lockall
+	msgbox DewfordTown_MoveRelearner_Text_ComeBack, MSGBOX_DEFAULT
+	releaseall
+	end
+
+
+
+
+DewfordTown_MoveRelearner_Text_ImTheMoveTutor:
+	.string "Ahh, nothing like the feeling of soft\n"
+	.string "sand between your toes.\p"
+	.string "My bad, as a MOVE TUTOR I should\n"
+	.string "be inside doing my job ha ha!\p"
+	.string "I know all the moves that POKéMON\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach POKéMON those moves.\p"
+	.string "I can teach a move to a POKéMON\n"
+	.string "of yours out here if you'd like.$"
+
+DewfordTown_MoveRelearner_Text_WantMeToTeachMove:
+	.string "Do your POKéMON want to learn\n"
+	.string "some moves?$"
+
+DewfordTown_MoveRelearner_Text_TutorWhichMon:
+	.string "Which POKéMON needs tutoring?$"
+
+DewfordTown_MoveRelearner_Text_TeachWhichMove:
+	.string "Which move should I teach?$"
+
+DewfordTown_MoveRelearner_Text_DontHaveMoveToTeachPokemon:
+	.string "Ahh…\p"
+	.string "It doesn't appear as if I have any move\n"
+	.string "I can teach that POKéMON.$"
+
+DewfordTown_MoveRelearner_Text_ComeBack:
+	.string "If your POKéMON need to learn a move,\n"
+	.string "you know where to find me!$"
+
+DewfordTown_MoveRelearner_Text_CantTeachEgg:
+	.string "Ahh… There isn't a single move that\n"
+	.string "I can teach an EGG.$"
+
