@@ -136,6 +136,31 @@ RustboroCity_Movement_ScientistLeave:
 	walk_up
 	step_end
 
+RustboroCity_EventScript_Maniac::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RUSTBORO_MANIAC, RustboroCity_EventScript_HereIsASample
+	msgbox RustboroCity_Text_UseItWisely, MSGBOX_DEFAULT
+	release
+	end
+
+RustboroCity_EventScript_HereIsASample::
+	msgbox RustboroCity_Text_WhatDoYouWant, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_PATCH
+	goto_if_eq VAR_RESULT, FALSE, RustboroCity_EventScript_CannotGetSample
+	setflag FLAG_RUSTBORO_MANIAC   
+	msgbox RustboroCity_Text_UseItWisely, MSGBOX_DEFAULT
+	release
+	end
+
+
+RustboroCity_EventScript_CannotGetSample::
+	msgbox RustboroCity_Text_YouAlreadyLoadedMan, MSGBOX_DEFAULT
+	release
+	end
+
+
+
 RustboroCity_EventScript_FatMan::
 	lock
 	faceplayer
@@ -1306,3 +1331,19 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_Text_WhatDoYouWant:
+	.string "Pssst… … … hey kid\n"
+	.string "You know what's up right?\p"
+	.string "I know you want some …\p"
+	.string "… to help your POKéMON of course!\p"
+	.string "Here, take this patch, I don't\n"
+	.string "have much left.$"
+
+RustboroCity_Text_UseItWisely:
+	.string "Use it wisely kid.$"
+
+RustboroCity_Text_YouAlreadyLoadedMan:
+	.string "Woah, you already loaded kid!\n"
+	.string "I can't give this out to you/$"
+

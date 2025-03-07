@@ -1095,3 +1095,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Underwater_Route118/scripts.inc"
 
 	.include "data/maps/PetalburgCity_MoveTutor/scripts.inc"
+
+	.include "data/maps/RustboroCity_MoveTutorFlat/scripts.inc"
+
+	.include "data/maps/RustboroCity_MoveTutorFlat_2F/scripts.inc"
