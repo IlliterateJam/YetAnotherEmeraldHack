@@ -852,6 +852,7 @@ DewfordTown_MoveRelearner_EventScript_ChooseMon::
 	end
 
 DewfordTown_MoveRelearner_EventScript_ChooseMove::
+	lockall
 	msgbox DewfordTown_MoveRelearner_Text_TeachWhichMove, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
 	waitstate
@@ -912,3 +913,12 @@ DewfordTown_MoveRelearner_Text_CantTeachEgg:
 	.string "Ahh… There isn't a single move that\n"
 	.string "I can teach an EGG.$"
 
+DewfordTown_EventScript_LargeTree::
+	message DewfordTown_Text_ThisIsALargeTree
+	waitbuttonpress
+	@delay 40
+	goto EventScript_Headbutt
+	end
+
+DewfordTown_Text_ThisIsALargeTree::
+	.string "A very large tree.$"

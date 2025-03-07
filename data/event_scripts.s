@@ -1099,3 +1099,59 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/RustboroCity_MoveTutorFlat/scripts.inc"
 
 	.include "data/maps/RustboroCity_MoveTutorFlat_2F/scripts.inc"
+
+
+@Credits to Jaizu on the Pokecommunity Forums
+EventScript_Headbutt::
+	lockall
+	checkpartymove MOVE_HEADBUTT
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CantHeadbutt
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick 0, VAR_RESULT
+	buffermovename 1, MOVE_HEADBUTT
+	msgbox Text_WantToHeadbutt, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_CancelHeadbutt
+	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	closemessage
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+	delay 5
+	playse SE_M_HEADBUTT
+	waitse
+	delay 16
+	setvar VAR_0x8004, 0  @ vertical pan
+	setvar VAR_0x8005, 2   @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 1   @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 10
+	special RockSmashWildEncounter
+	compare VAR_RESULT, FALSE
+	goto_if_eq EventScript_Headbutt_NoEncounter
+	waitstate
+	releaseall
+	end
+
+EventScript_CantHeadbutt::
+	msgbox Text_CantHeadbutt, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_CancelHeadbutt::
+	closemessage
+	releaseall
+	end
+
+EventScript_Headbutt_NoEncounter::
+	releaseall
+	end
+
+Text_WantToHeadbutt::
+.string "Do you want to HEADBUTT it?$"
+
+Text_CantHeadbutt:
+.string "Seems suspicous.$"
+
