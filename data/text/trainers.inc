@@ -166,7 +166,9 @@ Route103_Text_AndrewDefeated:
 	.string "I'm even more annoyed now!$"
 
 Route103_Text_AndrewPostBattle:
-	.string "Gah, I'm still boiling mad…\n"
+	.string "Gah, I'm still boiling mad…\p"
+	.string "Makes me want to HEADBUTT a\n"
+	.string "suspicously large object…\l"
 	.string "Grrrrr…$"
 
 Route103_Text_MiguelIntro:

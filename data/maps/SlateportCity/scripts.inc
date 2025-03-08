@@ -179,7 +179,7 @@ SlateportCity_EventScript_MovePeopleForSternInterview::
 
 	setobjectxyperm LOCALID_CAPT_STERN, 32, 13
 	setobjectxyperm LOCALID_OLD_WOMAN, 29, 13
-	setobjectxyperm LOCALID_RICH_BOY, 15
+	setobjectxyperm LOCALID_RICH_BOY, 30, 15
 	setobjectxyperm LOCALID_COOK, 31, 15
 	setobjectxyperm LOCALID_GIRL, 32, 15
 	setobjectxyperm LOCALID_FAT_MAN, 33, 15
