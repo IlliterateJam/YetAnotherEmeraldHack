@@ -1155,3 +1155,5 @@ Text_WantToHeadbutt::
 Text_CantHeadbutt:
 .string "Seems suspicous.$"
 
+
+	.include "data/maps/SlateportCity_House_2/scripts.inc"

@@ -883,7 +883,7 @@ DewfordTown_MoveRelearner_Text_ImTheMoveTutor:
 	.string "Ahh, nothing like the feeling of soft\n"
 	.string "sand between your toes.\p"
 	.string "My bad, as a MOVE TUTOR I should\n"
-	.string "be inside doing my job ha ha!\p"
+	.string "be inside doing my job fufufu!\p"
 	.string "I know all the moves that POKéMON\n"
 	.string "learn--every one of them--and I can\l"
 	.string "teach POKéMON those moves.\p"
