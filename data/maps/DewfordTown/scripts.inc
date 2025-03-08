@@ -916,7 +916,6 @@ DewfordTown_MoveRelearner_Text_CantTeachEgg:
 DewfordTown_EventScript_LargeTree::
 	message DewfordTown_Text_ThisIsALargeTree
 	waitbuttonpress
-	@delay 40
 	goto EventScript_Headbutt
 	end
 

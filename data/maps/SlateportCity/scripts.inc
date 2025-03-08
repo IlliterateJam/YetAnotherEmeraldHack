@@ -174,13 +174,17 @@ SlateportCity_EventScript_EnterSlateport::
 	return
 
 SlateportCity_EventScript_MovePeopleForSternInterview::
-	setobjectxyperm LOCALID_CAPT_STERN, 28, 13
-	setobjectxyperm LOCALID_OLD_WOMAN, 25, 13
-	setobjectxyperm LOCALID_RICH_BOY, 25, 14
-	setobjectxyperm LOCALID_COOK, 27, 16
-	setobjectxyperm LOCALID_GIRL, 28, 16
-	setobjectxyperm LOCALID_FAT_MAN, 29, 16
-	setobjectxyperm LOCALID_MAN_1, 31, 14
+	@setobjectxyperm LOCALID_CAPT_STERN, 28, 13
+
+
+	setobjectxyperm LOCALID_CAPT_STERN, 32, 13
+	setobjectxyperm LOCALID_OLD_WOMAN, 29, 13
+	setobjectxyperm LOCALID_RICH_BOY, 15
+	setobjectxyperm LOCALID_COOK, 31, 15
+	setobjectxyperm LOCALID_GIRL, 32, 15
+	setobjectxyperm LOCALID_FAT_MAN, 33, 15
+	setobjectxyperm LOCALID_MAN_1, 35, 14
+	setobjectxyperm LOCALID_TM_GUY 34, 16
 	setobjectmovementtype LOCALID_CAPT_STERN, MOVEMENT_TYPE_FACE_DOWN
 	setobjectmovementtype LOCALID_OLD_WOMAN, MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT
 	setobjectmovementtype LOCALID_RICH_BOY, MOVEMENT_TYPE_FACE_UP_AND_RIGHT
@@ -188,6 +192,7 @@ SlateportCity_EventScript_MovePeopleForSternInterview::
 	setobjectmovementtype LOCALID_GIRL, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_FAT_MAN, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_MAN_1, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype LOCALID_MAN_1, MOVEMENT_TYPE_FACE_UP
 	return
 
 SlateportCity_EventScript_SetReadyForScottScene::
@@ -760,6 +765,7 @@ SlateportCity_EventScript_CaptStern::
 	applymovement LOCALID_OLD_WOMAN, SlateportCity_Movement_OldWomanConcern
 	applymovement LOCALID_RICH_BOY, Common_Movement_QuestionMark
 	applymovement LOCALID_MAN_1, SlateportCity_Movement_ManConcern
+	applymovement LOCALID_TM_GUY, Common_Movement_QuestionMark
 	waitmovement 0
 	applymovement LOCALID_CAPT_STERN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
