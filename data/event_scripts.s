@@ -1159,3 +1159,7 @@ Text_CantHeadbutt:
 	.include "data/maps/SlateportCity_House_2/scripts.inc"
 
 	.include "data/maps/MauvilleCity_MoveTutor/scripts.inc"
+
+	.include "data/maps/MauvilleCity_Flat_F1/scripts.inc"
+
+	.include "data/maps/MauvilleCity_Flat_F2/scripts.inc"

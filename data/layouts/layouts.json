@@ -4530,6 +4530,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/MauvilleCity_MoveTutor/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_MoveTutor/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_CITY_FLAT_F1",
+      "name": "MauvilleCity_Flat_F1_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MauvilleCity_Flat_F1/border.bin",
+      "blockdata_filepath": "data/layouts/MauvilleCity_Flat_F1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_CITY_FLAT_F2",
+      "name": "MauvilleCity_Flat_F2_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MauvilleCity_Flat_F2/border.bin",
+      "blockdata_filepath": "data/layouts/MauvilleCity_Flat_F2/map.bin"
     }
   ]
 }
