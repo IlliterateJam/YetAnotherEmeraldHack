@@ -4550,6 +4550,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/MauvilleCity_Flat_F2/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_Flat_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_CITY_MENU_MAUVILLE",
+      "name": "MauvilleCity_MenuMauville_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MauvilleCity_MenuMauville/border.bin",
+      "blockdata_filepath": "data/layouts/MauvilleCity_MenuMauville/map.bin"
     }
   ]
 }

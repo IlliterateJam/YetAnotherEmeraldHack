@@ -168,6 +168,7 @@
 #define MAP_MAUVILLE_CITY_MOVE_TUTOR        (8 | (10 << 8))
 #define MAP_MAUVILLE_CITY_FLAT_F1           (9 | (10 << 8))
 #define MAP_MAUVILLE_CITY_FLAT_F2           (10 | (10 << 8))
+#define MAP_MAUVILLE_CITY_MENU_MAUVILLE     (11 | (10 << 8))
 
 // gMapGroup_IndoorRustboro
 #define MAP_RUSTBORO_CITY_DEVON_CORP_1F      (0 | (11 << 8))

@@ -1163,3 +1163,5 @@ Text_CantHeadbutt:
 	.include "data/maps/MauvilleCity_Flat_F1/scripts.inc"
 
 	.include "data/maps/MauvilleCity_Flat_F2/scripts.inc"
+
+	.include "data/maps/MauvilleCity_MenuMauville/scripts.inc"

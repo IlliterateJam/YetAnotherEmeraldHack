@@ -22,6 +22,19 @@ MauvilleCity_EventScript_MoveWattsonBackToGym::
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	return
 
+MauvilleCity_EventScript_Mart_Employee::
+	msgbox MauvilleCity_Text_ImOpeningARestraunt, MSGBOX_NPC
+	end
+
+MauvilleCity_EventScript_Menu_Mauville::
+	goto_if_set FLAG_MENU_MAUVILLE_OPEN MauvilleCity_EventScript_Menu_MauvilleOpen
+	msgbox MauvilleCity_Text_MenuMauvilleComing, MSGBOX_SIGN
+	end
+
+MauvilleCity_EventScript_Menu_MauvilleOpen::
+	msgbox MauvilleCity_Text_MenuMauvilleNowOpen, MSGBOX_SIGN
+	end
+
 MauvilleCity_EventScript_Boy::
 	msgbox MauvilleCity_Text_NurseHurtMonBackToHealth, MSGBOX_NPC
 	end
@@ -668,3 +681,15 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_Text_ImOpeningARestraunt:
+	.string "I am working on opening a new candy shop\n"
+	.string "here in MAUVILLE. It will be for both\l"
+	.string "trainers and POKéMON.$"
+
+MauvilleCity_Text_MenuMauvilleComing:
+	.string "“Coming soon: MENU MAUVILLE!”$"
+
+MauvilleCity_Text_MenuMauvilleNowOpen:
+	.string "MENU MAUVILLE\n"
+	.string "“A treat for everyone!”$"
