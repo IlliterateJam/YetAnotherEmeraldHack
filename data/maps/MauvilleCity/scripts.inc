@@ -22,6 +22,17 @@ MauvilleCity_EventScript_MoveWattsonBackToGym::
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	return
 
+
+MauvilleCity_EventScript_Menu_Trigger::
+	lockall
+	delay 20
+	msgbox MauvilleCity_EventScript_Menu_Trigger_Text, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_MAUVILLE_CITY_STATE, 2
+	release
+	end
+
+
 MauvilleCity_EventScript_Mart_Employee::
 	msgbox MauvilleCity_Text_ImOpeningARestraunt, MSGBOX_NPC
 	end
@@ -684,12 +695,18 @@ MauvilleCity_Text_BeenCheckingOutTV:
 
 MauvilleCity_Text_ImOpeningARestraunt:
 	.string "I am working on opening a new candy shop\n"
-	.string "here in MAUVILLE. It will be for both\l"
-	.string "trainers and POKéMON.$"
+	.string "here in MAUVILLE.\p"
+	.string "My goal is to make treats for all POKéMON.$"
+
 
 MauvilleCity_Text_MenuMauvilleComing:
-	.string "“Coming soon: MENU MAUVILLE!”$"
+	.string "“Coming soon: MENU MAUVILLE”$"
 
 MauvilleCity_Text_MenuMauvilleNowOpen:
 	.string "MENU MAUVILLE\n"
-	.string "“A treat for everyone!”$"
+	.string "“A sweet place for all POKéMON!”$"
+
+MauvilleCity_EventScript_Menu_Trigger_Text:
+	.string "NEARBY BUILDING: Attention everyone!\n"
+	.string "Come into MENU MAUVILLE for the\l"
+	.string "sweetest treats in HOENN!$"

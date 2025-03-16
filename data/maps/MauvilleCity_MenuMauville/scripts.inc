@@ -23,18 +23,18 @@ MauvilleCity_MenuMauville_Mochi:
 	release
 	end
 
-MauvilleCity_MenuMauville_EventScript_MintChef::
+MauvilleCity_MenuMauville_EventScript_MintChef1::
 	lock
 	faceplayer
-	message MauvilleCity_MenuMauville_Text_WelcomeMint
+	message MauvilleCity_MenuMauville_Text_WelcomeMint1
 	waitmessage
-	pokemart MauvilleCity_MenuMauville_Mint
+	pokemart MauvilleCity_MenuMauville_Mint1
 	msgbox MauvilleCity_MenuMauville_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-MauvilleCity_MenuMauville_Mint:
+MauvilleCity_MenuMauville_Mint1:
 	.2byte ITEM_LONELY_MINT
 	.2byte ITEM_ADAMANT_MINT
 	.2byte ITEM_NAUGHTY_MINT
@@ -46,9 +46,38 @@ MauvilleCity_MenuMauville_Mint:
 	.2byte ITEM_MODEST_MINT
 	.2byte ITEM_MILD_MINT
 	.2byte ITEM_RASH_MINT
+	.2byte ITEM_QUIET_MINT
 	.2byte ITEM_NONE
 	release
 	end
+
+
+MauvilleCity_MenuMauville_EventScript_MintChef2::
+	lock
+	faceplayer
+	message MauvilleCity_MenuMauville_Text_WelcomeMint2
+	waitmessage
+	pokemart MauvilleCity_MenuMauville_Mint2
+	msgbox MauvilleCity_MenuMauville_Text_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+MauvilleCity_MenuMauville_Mint2:
+	.2byte ITEM_CALM_MINT
+	.2byte ITEM_GENTLE_MINT
+	.2byte ITEM_CAREFUL_MINT
+	.2byte ITEM_SASSY_MINT
+	.2byte ITEM_TIMID_MINT
+	.2byte ITEM_HASTY_MINT
+	.2byte ITEM_JOLLY_MINT
+	.2byte ITEM_NAIVE_MINT
+	.2byte ITEM_SERIOUS_MINT
+	.2byte ITEM_NONE
+	release
+	end
+
+
 
 
 MauvilleCity_MenuMauville_EventScript_SweetChef::
@@ -127,27 +156,33 @@ MauvilleCity_MenuMauville_EventScript_Man::
 	end
 
 MauvilleCity_MenuMauville_Text_Man:
-	.string "You can take all the vitamins you\n"
-	.string "want, but there is nothing like\l"
-	.string "a fresh MOCHI for the soul.$"
+	.string "You can take all the vitamins you want,\n"
+	.string "but there is nothing like a fresh MOCHI\l"
+	.string "for the soul.$"
 
 MauvilleCity_MenuMauville_Text_WelcomeMochi:
-	.string "Welcome to MENU MAUVILLE,\n"
-	.string "the candy shop for POKéMON!\p"
+	.string "Welcome to MENU MAUVILLE, the candy shop\n"
+	.string "for POKéMON!\p"
 	.string "How about trying some of our\n"
 	.string "mind-blowing MOCHI?$"
 
-MauvilleCity_MenuMauville_Text_WelcomeMint:
-	.string "Welcome to MENU MAUVILLE,\n"
-	.string "the candy shop for POKéMON.\p"
+MauvilleCity_MenuMauville_Text_WelcomeMint1:
+	.string "Welcome to MENU MAUVILLE, the candy shop\n"
+	.string "for POKéMON.\p"
 	.string "Ready to change things up with\n"
 	.string "a miraculous MINT?$"
 
+MauvilleCity_MenuMauville_Text_WelcomeMint2:
+	.string "Welcome to MENU MAUVILLE, the candy shop\n"
+	.string "for POKéMON.\p"
+	.string "We mint all of MINTS right here every\n"
+	.string "morning!$"
+
+
 MauvilleCity_MenuMauville_Text_WelcomeSweet:
-	.string "Welcome to MENU MAUVILLE,\n"
-	.string "the candy shop for POKéMON.\p"
-	.string "I promise our CANDIES are to\n"
-	.string "crave for!$"
+	.string "Welcome to MENU MAUVILLE, the candy shop\n"
+	.string "for POKéMON.\p"
+	.string "I promise our CANDIES are to crave for!$"
 
 MauvilleCity_MenuMauville_Text_PleaseComeAgain:
 	.string "Thank you, and please come again\n"
