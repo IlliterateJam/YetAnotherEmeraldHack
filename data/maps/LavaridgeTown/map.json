@@ -242,8 +242,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 26,
-      "y": 20,
+      "x": 22,
+      "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavaridgeTown_EventScript_HerbShopSign"
@@ -303,6 +303,14 @@
       "elevation": 3,
       "item": "ITEM_ICE_HEAL",
       "flag": "FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowMoveTutorSign"
     }
   ]
 }
