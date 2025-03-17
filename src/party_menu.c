@@ -7770,7 +7770,7 @@ void ItemUseCB_Mints(u8 taskId, TaskFunc task)
 #undef tOldFunc        
 #undef tNewNature      
 
-//Vitamins
+//Mochis
 
 #define tState          data[0]
 #define tSpecies        data[1]
@@ -7779,12 +7779,12 @@ void ItemUseCB_Mints(u8 taskId, TaskFunc task)
 #define tOldFunc        4
 #define tIVTypeChange   data[6]
 
-static const u8 sText_AskVitamin[] = _("Would you like to feed {STR_VAR_1}\nthe {STR_VAR_2}?");
-static const u8 sText_AskVitaminTooMuch[] = _("Are you sure you want to continue\nfeeding {STR_VAR_1} the {STR_VAR_2}?");
-static const u8 sText_VitaminDone[] = _("{STR_VAR_1}'s {STR_VAR_2} increased!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_VitaminDoneMax[] = _("{STR_VAR_1}'s {STR_VAR_2} became maxed!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_VitaminDoneTooMuch[] = _("{STR_VAR_1}'s {STR_VAR_2} became weaker\ninstead...{PAUSE_UNTIL_PRESS}");
-static void Task_Vitamins(u8 taskId)
+static const u8 sText_AskMochi[] = _("Would you like to feed {STR_VAR_1}\nthe {STR_VAR_2}?");
+static const u8 sText_AskMochiTooMuch[] = _("Are you sure you want to continue\nfeeding {STR_VAR_1} the {STR_VAR_2}?");
+static const u8 sText_MochiDone[] = _("{STR_VAR_1}'s {STR_VAR_2} increased!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_MochiDoneMax[] = _("{STR_VAR_1}'s {STR_VAR_2} became maxed!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_MochiDoneTooMuch[] = _("{STR_VAR_1}'s {STR_VAR_2} became weaker\ninstead...{PAUSE_UNTIL_PRESS}");
+static void Task_Mochi(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     u8 maxIV = 31;
@@ -7800,11 +7800,11 @@ static void Task_Vitamins(u8 taskId)
         StringCopy(gStringVar2, ItemId_GetName(gSpecialVar_ItemId)); 
         if (tOldIV == maxIV)
         {
-            StringExpandPlaceholders(gStringVar4, sText_AskVitaminTooMuch);
+            StringExpandPlaceholders(gStringVar4, sText_AskMochiTooMuch);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, sText_AskVitamin);
+            StringExpandPlaceholders(gStringVar4, sText_AskMochi);
         }
 
         PlaySE(SE_SELECT);
@@ -7844,15 +7844,15 @@ static void Task_Vitamins(u8 taskId)
         StringCopy(gStringVar2, gStatNamePointers[tIVTypeChange]); 
         if (tOldIV == maxIV)
         {
-            StringExpandPlaceholders(gStringVar4, sText_VitaminDoneTooMuch);
+            StringExpandPlaceholders(gStringVar4, sText_MochiDoneTooMuch);
         }
         else if(tOldIV == penultimateIV)
         {
-            StringExpandPlaceholders(gStringVar4, sText_VitaminDoneMax);
+            StringExpandPlaceholders(gStringVar4, sText_MochiDoneMax);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, sText_VitaminDone);
+            StringExpandPlaceholders(gStringVar4, sText_MochiDone);
         }
         StringCopy(gStringVar2, gStatNamePointers[tIVTypeChange]);
         DisplayPartyMenuMessage(gStringVar4, TRUE);
@@ -7883,7 +7883,7 @@ static void Task_Vitamins(u8 taskId)
     }
 }
 
-void ItemUseCB_Vitamins(u8 taskId, TaskFunc task)
+void ItemUseCB_Mochi(u8 taskId, TaskFunc task)
 {
     s16 *data = gTasks[taskId].data;
 
@@ -7893,7 +7893,7 @@ void ItemUseCB_Vitamins(u8 taskId, TaskFunc task)
     tSpecies = GetMonData(&gPlayerParty[tMonId], MON_DATA_SPECIES, NULL);
     tOldIV = GetMonData(&gPlayerParty[tMonId], tIVTypeChange, NULL);
     SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
-    gTasks[taskId].func = Task_Vitamins;
+    gTasks[taskId].func = Task_Mochi;
 }
 
 #undef tState         

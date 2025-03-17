@@ -1676,9 +1676,9 @@ void ItemUseOutOfBattle_Mints(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
-void ItemUseOutOfBattle_Vitamins(u8 taskId)
+void ItemUseOutOfBattle_Mochi(u8 taskId)
 {
-    gItemUseCB = ItemUseCB_Vitamins;
+    gItemUseCB = ItemUseCB_Mochi;
     SetUpItemUseCallback(taskId);
 }
 

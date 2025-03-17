@@ -105,7 +105,7 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
-void ItemUseCB_Vitamins(u8 taskId, TaskFunc task);
+void ItemUseCB_Mochi(u8 taskId, TaskFunc task);
 void ItemUseCB_EXPCandy(u8 taskId, TaskFunc task);
 void ItemUseCB_PokeBall(u8 taskId, TaskFunc task);
 

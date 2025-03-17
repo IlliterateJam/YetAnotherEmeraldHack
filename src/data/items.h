@@ -830,10 +830,10 @@ const struct Item gItems[] =
         .description = sHPUpDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_HP_IV,
     },
+
 
     [ITEM_PROTEIN] =
     {
@@ -842,9 +842,8 @@ const struct Item gItems[] =
         .description = sProteinDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_ATK_IV,
     },
 
     [ITEM_IRON] =
@@ -854,9 +853,8 @@ const struct Item gItems[] =
         .description = sIronDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_DEF_IV,
     },
 
     [ITEM_CALCIUM] =
@@ -866,9 +864,8 @@ const struct Item gItems[] =
         .description = sCalciumDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_SPATK_IV,
     },
 
     [ITEM_ZINC] =
@@ -878,9 +875,8 @@ const struct Item gItems[] =
         .description = sZincDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_SPDEF_IV,
     },
 
     [ITEM_CARBOS] =
@@ -890,9 +886,8 @@ const struct Item gItems[] =
         .description = sCarbosDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .flingPower = 30,
-        .secondaryId = MON_DATA_SPEED_IV, 
     },
 
     [ITEM_PP_UP] =
@@ -9851,6 +9846,25 @@ const struct Item gItems[] =
         .secondaryId = TYPE_FIRE,
     },
 
+
+        // [ITEM_PROTEIN] =
+    // {
+    //     .name = _("Protein"),
+    //     .price = 10000,
+    //     .description = sProteinDesc,
+    //     .pocket = POCKET_ITEMS,
+    //     .type = ITEM_USE_PARTY_MENU,
+    //     .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
+    //     .flingPower = 30,
+    //     .secondaryId = MON_DATA_ATK_IV,
+    //.secondaryId = MON_DATA_DEF_IV,
+    //      .secondaryId = MON_DATA_DEF_IV,
+    //        .secondaryId = MON_DATA_SPATK_IV,
+    //        .secondaryId = MON_DATA_SPDEF_IV,
+    //.secondaryId = MON_DATA_SPEED_IV, 
+    // },
+
+
     [ITEM_HEALTH_MOCHI] =
     {
         .name = _("Health Mochi"),
@@ -9858,8 +9872,9 @@ const struct Item gItems[] =
         .description = sHealthMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_HP_IV,
     },
 
     [ITEM_MUSCLE_MOCHI] =
@@ -9869,8 +9884,9 @@ const struct Item gItems[] =
         .description = sMuscleMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_ATK_IV,
     },
 
     [ITEM_RESIST_MOCHI] =
@@ -9880,8 +9896,9 @@ const struct Item gItems[] =
         .description = sResistMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_DEF_IV,
     },
 
     [ITEM_GENIUS_MOCHI] =
@@ -9891,8 +9908,9 @@ const struct Item gItems[] =
         .description = sGeniusMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_SPATK_IV,
     },
 
     [ITEM_CLEVER_MOCHI] =
@@ -9902,8 +9920,9 @@ const struct Item gItems[] =
         .description = sCleverMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_SPDEF_IV,
     },
 
     [ITEM_SWIFT_MOCHI] =
@@ -9913,8 +9932,9 @@ const struct Item gItems[] =
         .description = sSwiftMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_Mochi,
         .flingPower = 30,
+        .secondaryId = MON_DATA_SPEED_IV,
     },
 
     [ITEM_FRESH_START_MOCHI] =
