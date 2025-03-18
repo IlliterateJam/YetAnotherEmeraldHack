@@ -13,6 +13,10 @@ MauvilleCity_MenuMauville_EventScript_Clerk::
 
 	.align 2
 MauvilleCity_MenuMauville_Mochi:
+	.2byte ITEM_PEWTER_CRUNCHIES
+	.2byte ITEM_RAGE_CANDY_BAR
+	.2byte ITEM_OLD_GATEAU
+	.2byte ITEM_CASTELIACONE
 	.2byte ITEM_HEALTH_MOCHI
 	.2byte ITEM_MUSCLE_MOCHI
 	.2byte ITEM_RESIST_MOCHI
@@ -162,9 +166,9 @@ MauvilleCity_MenuMauville_Text_Man:
 
 MauvilleCity_MenuMauville_Text_WelcomeMochi:
 	.string "Welcome to MENU MAUVILLE, the candy shop\n"
-	.string "for POKéMON!\p"
-	.string "How about trying some of our\n"
-	.string "mind-blowing MOCHI?$"
+	.string "for POKéMON.\p"
+	.string "We specialize in sweet treats from all\n"
+	.string "around the world$"
 
 MauvilleCity_MenuMauville_Text_WelcomeMint1:
 	.string "Welcome to MENU MAUVILLE, the candy shop\n"
