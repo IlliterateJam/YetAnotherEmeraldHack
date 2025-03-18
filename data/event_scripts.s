@@ -1165,3 +1165,5 @@ Text_CantHeadbutt:
 	.include "data/maps/MauvilleCity_Flat_F2/scripts.inc"
 
 	.include "data/maps/MauvilleCity_MenuMauville/scripts.inc"
+
+	.include "data/maps/FortreeCity_MoveTutor/scripts.inc"
