@@ -349,31 +349,31 @@ static const u8 sBigMalasadaDesc[] = _(
 
 // Vitamins
 static const u8 sHPUpDesc[] = _(
-    "Raises the base HP\n"
+    "Raises the growth HP\n"
     "of one Pokémon.");
 
 static const u8 sProteinDesc[] = _(
-    "Raises the base\n"
+    "Raises the growth\n"
     "Attack stat of one\n"
     "Pokémon.");
 
 static const u8 sIronDesc[] = _(
-    "Raises the base\n"
+    "Raises the growth\n"
     "Defense stat of\n"
     "one Pokémon.");
 
 static const u8 sCalciumDesc[] = _(
-    "Raises the base\n"
+    "Raises the growth\n"
     "Sp. Atk stat of one\n"
     "Pokémon.");
 
 static const u8 sZincDesc[] = _(
-    "Raises the base\n"
+    "Raises the growth\n"
     "Sp. Def stat of one\n"
     "Pokémon.");
 
 static const u8 sCarbosDesc[] = _(
-    "Raises the base\n"
+    "Raises the growth\n"
     "Speed stat of one\n"
     "Pokémon.");
 
