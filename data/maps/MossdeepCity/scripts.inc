@@ -63,6 +63,10 @@ MossdeepCity_EventScript_WhiteRock::
 	msgbox MossdeepCity_Text_ItsAWhiteRock, MSGBOX_SIGN
 	end
 
+MossdeepCity_EventScript_BlackRock::
+	msgbox MossdeepCity_Text_ItsABlackRock, MSGBOX_SIGN
+	end
+
 MossdeepCity_EventScript_GymSign::
 	msgbox MossdeepCity_Text_GymSign, MSGBOX_SIGN
 	end
@@ -396,6 +400,9 @@ MossdeepCity_Text_SpecialSpaceCenterRock:
 
 MossdeepCity_Text_ItsAWhiteRock:
 	.string "It's a white rock.$"
+
+MossdeepCity_Text_ItsABlackRock:
+	.string "It's a black rock.$"
 
 MossdeepCity_Text_GymSign:
 	.string "MOSSDEEP CITY POKéMON GYM\n"
