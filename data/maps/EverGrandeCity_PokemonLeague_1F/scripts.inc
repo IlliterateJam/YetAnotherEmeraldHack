@@ -1,6 +1,7 @@
 .set LOCALID_NURSE, 1
 .set LOCALID_GUARD_1, 3
 .set LOCALID_GUARD_2, 4
+.set LOCALID_MOVE_RELEARNER, 5
 
 EverGrandeCity_PokemonLeague_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_PokemonLeague_1F_OnTransition
@@ -142,4 +143,102 @@ EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:
 EverGrandeCity_PokemonLeague_1F_Text_GoForth:
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
+
+
+
+EverGrandeCity_MoveRelearners_EventScript_MoveRelearner::
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, EverGrandeCity_MoveRelearners_EventScript_AskTeachMove
+	msgbox EverGrandeCity_MoveRelearners_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto EverGrandeCity_MoveRelearners_EventScript_AskTeachMove
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_AskTeachMove::
+	msgbox EverGrandeCity_MoveRelearners_Text_WantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, EverGrandeCity_MoveRelearners_EventScript_ComeBack
+	goto EverGrandeCity_MoveRelearners_EventScript_ChooseMon
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_ChooseMon::
+	msgbox EverGrandeCity_MoveRelearners_Text_TutorWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, EverGrandeCity_MoveRelearners_EventScript_ComeBack
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, EverGrandeCity_MoveRelearners_EventScript_CantTeachEgg
+	goto_if_eq VAR_0x8005, 0, EverGrandeCity_MoveRelearners_EventScript_NoMoveToTeachMon
+	goto EverGrandeCity_MoveRelearners_EventScript_ChooseMove
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_ChooseMove::
+	msgbox EverGrandeCity_MoveRelearners_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, 0, EverGrandeCity_MoveRelearners_EventScript_ChooseMon
+	goto EverGrandeCity_MoveRelearners_EventScript_ComeBack
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_NoMoveToTeachMon::
+	msgbox EverGrandeCity_MoveRelearners_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto EverGrandeCity_MoveRelearners_EventScript_ChooseMon
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_CantTeachEgg::
+	msgbox EverGrandeCity_MoveRelearners_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto EverGrandeCity_MoveRelearners_EventScript_ChooseMon
+	end
+
+EverGrandeCity_MoveRelearners_EventScript_ComeBack::
+	msgbox EverGrandeCity_MoveRelearners_Text_ComeBack, MSGBOX_DEFAULT
+	releaseall
+	end
+
+
+EverGrandeCity_MoveRelearners_Text_ImTheMoveTutor:
+	.string "Congrats on making it here CHAMPION-\n"
+	.string "bound {PLAYER}!\p"
+	.string "You are simply incredible in how much\n"
+	.string "you have learned in the face of\l"
+	.string "adventure and adversary.\p"
+	.string "You remember that I said that we will\n"
+	.string "win the POKéMON CHAMPIONSHIP together?\p"
+	.string "I wanted to help send you off as prepared\n"
+	.string "as possible…\p"
+	.string "… So I have become a MOVE TUTOR!\p"
+	.string "… Ok, let me see if I rememember\n"
+	.string "everything …\p"
+	.string "Ahem, I know all the moves that POKéMON\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach POKéMON those moves!\p"
+	.string "So umm… … … I can teach a move to a\n"
+	.string "POKéMON of yours if you'd like, yeah!$"
+
+EverGrandeCity_MoveRelearners_Text_WantMeToTeachMove:
+	.string "How about it {PLAYER},\n"
+	.string "would you like to learn a move?$"
+
+EverGrandeCity_MoveRelearners_Text_TutorWhichMon:
+	.string "Which POKéMON needs tutoring?$"
+
+EverGrandeCity_MoveRelearners_Text_TeachWhichMove:
+	.string "Which, uh move should I teach?$"
+
+EverGrandeCity_MoveRelearners_Text_DontHaveMoveToTeachPokemon:
+	.string "Sorry {PLAYER}…\p"
+	.string "It doesn't appear as if I have any move\n"
+	.string "I can teach that POKéMON.$"
+
+
+EverGrandeCity_MoveRelearners_Text_ComeBack:
+	.string "Good luck {PLAYER}!\n"
+	.string "I am always rooting for you!$"
+
+EverGrandeCity_MoveRelearners_Text_CantTeachEgg:
+	.string "Sorry {PLAYER}…\n"
+	.string "There isn't a single move that I\l"
+	.string "can teach an EGG.$"
 
