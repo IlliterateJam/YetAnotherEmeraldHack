@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/PacifidlogTown_ManiacHouse/border.bin",
       "blockdata_filepath": "data/layouts/PacifidlogTown_ManiacHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE134_HERMIT",
+      "name": "Route134_Hermit_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route134_Hermit/border.bin",
+      "blockdata_filepath": "data/layouts/Route134_Hermit/map.bin"
     }
   ]
 }

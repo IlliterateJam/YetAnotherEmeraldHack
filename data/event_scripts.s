@@ -1169,3 +1169,5 @@ Text_CantHeadbutt:
 	.include "data/maps/FortreeCity_MoveTutor/scripts.inc"
 
 	.include "data/maps/PacifidlogTown_ManiacHouse/scripts.inc"
+
+	.include "data/maps/Route134_Hermit/scripts.inc"

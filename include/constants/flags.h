@@ -1225,7 +1225,7 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_1F_MAGMARIZER                       0x497 // Unused Flag
 #define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_7_DUBIOUS_DISC               0x498 // Unused Flag
 #define FLAG_RUSTBORO_MANIAC                                        0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ROUTE_134_HERMIT_CHOICE                                0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

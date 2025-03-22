@@ -31,8 +31,8 @@
       "y": 9,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_DOWN_LEFT",
-      "movement_range_x": 5,
-      "movement_range_y": 6,
+      "movement_range_x": 6,
+      "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route134_EventScript_Jack",
@@ -40,14 +40,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 58,
-      "y": 7,
+      "x": 13,
+      "y": 13,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "Route134_EventScript_Laurel",
       "flag": "0"
     },
@@ -170,7 +170,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 52,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE134_HERMIT",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
