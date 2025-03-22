@@ -1171,3 +1171,5 @@ Text_CantHeadbutt:
 	.include "data/maps/PacifidlogTown_ManiacHouse/scripts.inc"
 
 	.include "data/maps/Route134_Hermit/scripts.inc"
+
+	.include "data/maps/FallarborTown_House3/scripts.inc"
