@@ -1167,3 +1167,5 @@ Text_CantHeadbutt:
 	.include "data/maps/MauvilleCity_MenuMauville/scripts.inc"
 
 	.include "data/maps/FortreeCity_MoveTutor/scripts.inc"
+
+	.include "data/maps/PacifidlogTown_ManiacHouse/scripts.inc"
