@@ -22,6 +22,11 @@ Route113_EventScript_CheckSetAshWeather::
 Route113_EventScript_DontSetAshWeather::
 	return
 
+Route113_EventScript_Locked::
+	msgbox Route113_Text_HouseIsLocked, MSGBOX_SIGN
+	end
+
+
 Route113_EventScript_Gentleman::
 	msgbox Route113_Text_AshCanBeFashionedIntoGlass, MSGBOX_NPC
 	end
@@ -164,3 +169,5 @@ Route113_Text_GlassWorkshopSign:
 	.string "GLASS WORKSHOP\n"
 	.string "“Turning Volcanic Ash into Glass Items”$"
 
+Route113_Text_HouseIsLocked:
+	.string "It's locked.$"
