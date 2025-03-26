@@ -356,10 +356,10 @@ Route103_Text_RouteSign:
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
 Route103_EventScript_LargeRock::
-	message DewfordTown_Text_ThisIsALargeRock
+	message Route103_Text_ThisIsALargeRock
 	waitbuttonpress
 	goto EventScript_Headbutt
 	end
 
-DewfordTown_Text_ThisIsALargeRock::
+Route103_Text_ThisIsALargeRock:
 	.string "A large rock.$"

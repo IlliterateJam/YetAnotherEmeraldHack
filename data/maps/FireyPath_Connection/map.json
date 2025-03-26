@@ -81,6 +81,37 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FireyPath_EventScript_LargeMachine"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FireyPath_EventScript_LargeMachine"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FireyPath_EventScript_LargeMachine"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FireyPath_EventScript_LargeMachine"
+    }
   ]
 }

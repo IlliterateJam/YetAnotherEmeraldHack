@@ -154,3 +154,11 @@ FortreeCity_Text_GymSign:
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
 
+FortreeCity_EventScript_LargeTree::
+	message FortreeCity_Text_ThisIsALargeTree
+	waitbuttonpress
+	goto EventScript_Headbutt
+	end
+
+FortreeCity_Text_ThisIsALargeTree:
+	.string "A very tall tree.$"
