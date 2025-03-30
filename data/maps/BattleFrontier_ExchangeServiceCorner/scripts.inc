@@ -291,13 +291,19 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin::
 	waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
-	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_Protein
-	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_Calcium
-	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_Iron
-	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_Zinc
-	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_Carbos
-	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_HPUp
-	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_MuscleMochi
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_ResistMochi
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_GeniusMochi
+	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_CleverMochi
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_SwiftMochi
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_HealthMochi
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_Protein
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_Calcium
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_Iron
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_Zinc
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_Carbos
+	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_HPUp
+	case 12, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -348,6 +354,75 @@ BattleFrontier_ExchangeServiceCorner_EventScript_HPUp::
 	setvar VAR_0x8009, ITEM_HP_UP
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_MuscleMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmMuscleMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_MUSCLE_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ResistMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmResistMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_RESIST_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_GeniusMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmGeniusMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_GENIUS_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_CleverMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmCleverMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_CLEVER_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_SwiftMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmSwitchMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_SWIFT_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_HealthMochi::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmHealthMochi, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, ITEM_HEALTH_MOCHI
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk::
 	lock
@@ -890,6 +965,33 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmHPUp:
 
 
 
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmMuscleMochi:
+	.string "You've chosen the MUSCLE MOCHI.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmResistMochi:
+	.string "You've chosen the RESIST MOCHI.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmGeniusMochi:
+	.string "You've chosen the GENIUS MOCHI.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmCleverMochi:
+	.string "You've chosen the CLEVER MOCHI.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmSwitchMochi:
+	.string "You've chosen the SWIFT MOCHI.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmHealthMochi:
+	.string "You've chosen the HEALTH MOCHI.\n"
+	.string "Is that correct?$"
+
+
+
+
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmLeftovers:
 	.string "You've chosen the LEFTOVERS.\n"
 	.string "Is that correct?$"
@@ -1167,6 +1269,30 @@ BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc::
 
 BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc::
 	.string "Raises the HP of one POKéMON.$"
+
+
+BattleFrontier_ExchangeServiceCorner_Text_MuscleMochiDesc::
+	.string "Raises the base ATTACK of one\n"
+	.string "POKéMON.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ResistMochiDesc::
+	.string "Raises the base SP. ATK of one\n"
+	.string "POKéMON.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_GeniusMochiDesc::
+	.string "Raises the base DEFENSE of one\n"
+	.string "POKéMON.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_CleverMochiDesc::
+	.string "Raises the base SP. DEF of one\n"
+	.string "POKéMON.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_SwiftMochiDesc::
+	.string "Raises the base SPEED of one\n"
+	.string "POKéMON.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_HealthMochiDesc::
+	.string "Raises base HP of one POKéMON.$"
 
 
 

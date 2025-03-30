@@ -1206,7 +1206,12 @@ const u8 gText_Iron1BP[] = _("IRON{CLEAR_TO 0x64}1BP");
 const u8 gText_Zinc1BP[] = _("ZINC{CLEAR_TO 0x64}1BP");
 const u8 gText_Carbos1BP[] = _("CARBOS{CLEAR_TO 0x64}1BP");
 const u8 gText_HpUp1BP[] = _("HP UP{CLEAR_TO 0x64}1BP");
-
+const u8 gText_MuscleMochi1BP[]= _("MUSCLE MOCHI{CLEAR_TO 0x64}1BP");
+const u8 gText_ResistMochi1BP[]= _("RESIST MOCHI{CLEAR_TO 0x64}1BP");
+const u8 gText_GeniusMochi1BP[]= _("GENIUS MOCHI{CLEAR_TO 0x64}1BP");
+const u8 gText_CleverMochi1BP[]= _("CLEVER MOCHI{CLEAR_TO 0x64}1BP");
+const u8 gText_SwiftMochi1BP[]= _("SWIFT MOCHI{CLEAR_TO 0x64}1BP");
+const u8 gText_HealthMochi1BP[]= _("HEALTH MOCHI{CLEAR_TO 0x64}1BP");
 const u8 gText_BrightPowder48BP[] = _("BRIGHTPOWDER{CLEAR_TO 0x5E}48BP");
 const u8 gText_Leftovers48BP[] = _("LEFTOVERS{CLEAR_TO 0x5E}48BP");
 const u8 gText_FocusBand48BP[]=_("FOCUS BAND{CLEAR_TO 0x5E}48BP");

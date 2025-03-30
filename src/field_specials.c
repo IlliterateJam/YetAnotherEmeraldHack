@@ -2325,7 +2325,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
+        task->tNumItems = 13;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2500,6 +2500,12 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR] =
     {
+        gText_MuscleMochi1BP,
+        gText_ResistMochi1BP,
+        gText_GeniusMochi1BP,
+        gText_CleverMochi1BP,
+        gText_SwiftMochi1BP,
+        gText_HealthMochi1BP,
         gText_Protein1BP,
         gText_Calcium1BP,
         gText_Iron1BP,

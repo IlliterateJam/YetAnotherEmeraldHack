@@ -707,6 +707,12 @@ extern const u8 gText_Iron1BP[];
 extern const u8 gText_Zinc1BP[];
 extern const u8 gText_Carbos1BP[];
 extern const u8 gText_HpUp1BP[];
+extern const u8 gText_MuscleMochi1BP[];
+extern const u8 gText_ResistMochi1BP[];
+extern const u8 gText_GeniusMochi1BP[];
+extern const u8 gText_CleverMochi1BP[];
+extern const u8 gText_SwiftMochi1BP[];
+extern const u8 gText_HealthMochi1BP[];
 
 extern const u8 gText_Leftovers48BP[];
 extern const u8 gText_BrightPowder48BP[];
@@ -932,6 +938,15 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_IronDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ZincDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MuscleMochiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ResistMochiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GeniusMochiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CleverMochiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SwiftMochiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HealthMochiDesc[];
+
+
+
 
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc[];

@@ -199,6 +199,10 @@ Route103_EventScript_Man::
 	msgbox Route103_Text_ShortcutToOldale, MSGBOX_NPC
 	end
 
+Route103_EventScript_Gentleman::
+	msgbox Route103_Text_NeedMoreLand, MSGBOX_NPC
+	end
+
 Route103_EventScript_RouteSign::
 	msgbox Route103_Text_RouteSign, MSGBOX_SIGN
 	end
@@ -363,3 +367,10 @@ Route103_EventScript_LargeRock::
 
 Route103_Text_ThisIsALargeRock:
 	.string "A large rock.$"
+
+Route103_Text_NeedMoreLand:
+	.string "My farming businnes has\n"
+	.string "been very lucrative.\p"
+	.string "The tough part is finding land\n"
+	.string "that is fertile and does not\l"
+	.string "destroy POKéMON habitats.$"

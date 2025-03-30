@@ -28,6 +28,12 @@ static const u16 sFrontierExchangeCorner_Decor2[] =
 
 static const u16 sFrontierExchangeCorner_Vitamins[] =
 {
+    ITEM_MUSCLE_MOCHI,
+	ITEM_RESIST_MOCHI,
+	ITEM_GENIUS_MOCHI,
+	ITEM_CLEVER_MOCHI,
+	ITEM_SWIFT_MOCHI,
+    ITEM_HEALTH_MOCHI,
     ITEM_PROTEIN,
     ITEM_CALCIUM,
     ITEM_IRON,
@@ -134,6 +140,12 @@ static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
 
 static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
 {
+    BattleFrontier_ExchangeServiceCorner_Text_MuscleMochiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ResistMochiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_GeniusMochiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CleverMochiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SwiftMochiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_HealthMochiDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc,
     BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc,
     BattleFrontier_ExchangeServiceCorner_Text_IronDesc,

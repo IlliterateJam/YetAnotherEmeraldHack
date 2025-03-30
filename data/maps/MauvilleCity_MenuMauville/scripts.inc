@@ -6,6 +6,7 @@ MauvilleCity_MenuMauville_EventScript_Clerk::
 	faceplayer
 	message MauvilleCity_MenuMauville_Text_WelcomeMochi
 	waitmessage
+	goto_if_set FLAG_SYS_GAME_CLEAR, MauvilleCity_MenuMauville_EventScript_Clerk_Expanded
 	pokemart MauvilleCity_MenuMauville_Mochi
 	msgbox MauvilleCity_MenuMauville_Text_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -17,15 +18,33 @@ MauvilleCity_MenuMauville_Mochi:
 	.2byte ITEM_RAGE_CANDY_BAR
 	.2byte ITEM_OLD_GATEAU
 	.2byte ITEM_CASTELIACONE
-	.2byte ITEM_HEALTH_MOCHI
+	.2byte ITEM_NONE
+	release
+	end
+
+MauvilleCity_MenuMauville_EventScript_Clerk_Expanded::
+	pokemart MauvilleCity_MenuMauville_Mochi_Expanded
+	msgbox MauvilleCity_MenuMauville_Text_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+MauvilleCity_MenuMauville_Mochi_Expanded:
+	.2byte ITEM_PEWTER_CRUNCHIES
+	.2byte ITEM_RAGE_CANDY_BAR
+	.2byte ITEM_OLD_GATEAU
+	.2byte ITEM_CASTELIACONE
 	.2byte ITEM_MUSCLE_MOCHI
 	.2byte ITEM_RESIST_MOCHI
 	.2byte ITEM_GENIUS_MOCHI
 	.2byte ITEM_CLEVER_MOCHI
 	.2byte ITEM_SWIFT_MOCHI
+	.2byte ITEM_HEALTH_MOCHI
 	.2byte ITEM_NONE
 	release
 	end
+
+
 
 MauvilleCity_MenuMauville_EventScript_MintChef1::
 	lock
@@ -161,7 +180,7 @@ MauvilleCity_MenuMauville_EventScript_Man::
 
 MauvilleCity_MenuMauville_Text_Man:
 	.string "You can take all the vitamins you want,\n"
-	.string "but there is nothing like a fresh MOCHI\l"
+	.string "but there is nothing like a candy\l"
 	.string "for the soul.$"
 
 MauvilleCity_MenuMauville_Text_WelcomeMochi:
