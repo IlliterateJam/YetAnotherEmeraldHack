@@ -984,10 +984,10 @@ static const union AffineAnimCmd *const sAffineAnims_CrossingMonPics[] =
 
 static const struct InGameTrade sIngameTrades[] =
 {
-    [INGAME_TRADE_SEEDOT] =
+    [INGAME_TRADE_ONIX] =
     {
-        .nickname = _("DOTS"),
-        .species = SPECIES_SEEDOT,
+        .nickname = _("ROCKY"),
+        .species = SPECIES_ONIX,
         .ivs = {5, 4, 5, 4, 4, 4},
         .abilityNum = 1,
         .otId = 38726,
@@ -1000,10 +1000,10 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_RALTS
     },
-    [INGAME_TRADE_PLUSLE] =
+    [INGAME_TRADE_SNEASEL] =
     {
-        .nickname = _("PLUSES"),
-        .species = SPECIES_PLUSLE,
+        .nickname = _("SNEEZY"),
+        .species = SPECIES_SNEASEL,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
         .otId = 73996,
@@ -1014,12 +1014,12 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("ROMAN"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_VOLBEAT
+        .requestedSpecies = SPECIES_HOPPIP
     },
-    [INGAME_TRADE_HORSEA] =
+    [INGAME_TRADE_LAPRAS] =
     {
-        .nickname = _("SEASOR"),
-        .species = SPECIES_HORSEA,
+        .nickname = _("RA"),
+        .species = SPECIES_LAPRAS,
         .ivs = {5, 4, 4, 4, 5, 4},
         .abilityNum = 0,
         .otId = 46285,
@@ -1032,14 +1032,14 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_BAGON
     },
-    [INGAME_TRADE_MEOWTH] =
+    [INGAME_TRADE_BIDOOF] =
     {
-        .nickname = _("MEOWOW"),
-        .species = SPECIES_MEOWTH,
-        .ivs = {4, 5, 4, 5, 4, 4},
+        .nickname = _("OOF OOF"),
+        .species = SPECIES_BIDOOF,
+        .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 0,
         .otId = 91481,
-        .conditions = {5, 5, 5, 30, 5},
+        .conditions = {30, 30, 30, 30, 30},
         .personality = 0x8B,
         .heldItem = ITEM_RETRO_MAIL,
         .mailNum = 2,
@@ -1056,9 +1056,9 @@ static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =
         EC_WORD_BE,
         EC_WORD_NICE,
         EC_WORD_TO,
-        EC_POKEMON(PLUSLE),
+        EC_POKEMON(SNEASEL),
         EC_WORD_EXCL,
-        EC_POKEMON(VOLBEAT),
+        EC_POKEMON(HOPPIP),
         EC_WORD_WILL,
         EC_WORD_BE,
         EC_WORD_FANTASTIC
@@ -1070,13 +1070,13 @@ static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =
         EC_WORD_TOUGH,
         EC_WORD_PLEASE,
         EC_WORD_TRAIN,
-        EC_POKEMON(HORSEA),
+        EC_POKEMON(LAPRAS),
         EC_WORD_WELL
     }, {
         EC_WORD_THANK_YOU,
         EC_WORD_FOR,
         EC_POKEMON(SKITTY),
-        EC_POKEMON_NATIONAL(MEOWTH),
+        EC_POKEMON_NATIONAL(BIDOOF),
         EC_WORD_CRIES,
         EC_WORD_IN,
         EC_WORD_A,

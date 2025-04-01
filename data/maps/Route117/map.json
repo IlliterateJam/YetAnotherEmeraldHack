@@ -388,7 +388,7 @@
     {
       "type": "sign",
       "x": 63,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route117_EventScript_RouteSignMauville"

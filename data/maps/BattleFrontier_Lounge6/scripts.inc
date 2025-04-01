@@ -5,7 +5,7 @@ BattleFrontier_Lounge6_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_BATTLE_FRONTIER_TRADE_DONE, BattleFrontier_Lounge6_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_MEOWTH
+	setvar VAR_0x8008, INGAME_TRADE_BIDOOF
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -46,20 +46,20 @@ BattleFrontier_Lounge6_EventScript_TradeCompleted::
 	end
 
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade:
-	.string "My POKéMON is a {STR_VAR_2}.\n"
+	.string "My POKéMON is a Bidoof.\n"
 	.string "Do you know it?\l"
 	.string "It's quite cute and rather nice.\p"
 	.string "This little one, I could trade with\n"
 	.string "pride!\p"
 	.string "Would you like to trade me a {STR_VAR_1}\n"
-	.string "for my {STR_VAR_2}?$"
+	.string "for my BidoofF?$"
 
 BattleFrontier_Lounge6_Text_PromiseIllBeGoodToIt:
 	.string "Oh, it's adorable!\n"
 	.string "Thank you!\l"
 	.string "I promise I'll be good to it!\p"
 	.string "Oh! I hope you'll be good to\n"
-	.string "my {STR_VAR_2}, too!$"
+	.string "my Bidoof, too!$"
 
 BattleFrontier_Lounge6_Text_DontTradeForAnythingButMon:
 	.string "Oh, I'm sorry!\n"
