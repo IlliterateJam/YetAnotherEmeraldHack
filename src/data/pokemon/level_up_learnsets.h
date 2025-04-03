@@ -2851,6 +2851,7 @@ static const struct LevelUpMove sDunsparceLevelUpLearnset[] = {
     LEVEL_UP_MOVE(31, MOVE_SCREECH),
     LEVEL_UP_MOVE(34, MOVE_TAKE_DOWN),
     LEVEL_UP_MOVE(41, MOVE_ENDEAVOR),
+    LEVEL_UP_MOVE(51, MOVE_HYPER_DRILL),
     LEVEL_UP_END
 };
 
@@ -6629,6 +6630,7 @@ static const struct LevelUpMove sObstagoonLevelUpLearnset[] = {
     LEVEL_UP_MOVE(23, MOVE_REST),
     LEVEL_UP_MOVE(28, MOVE_TAKE_DOWN),
     LEVEL_UP_MOVE(35, MOVE_SCARY_FACE),
+    LEVEL_UP_MOVE(42, MOVE_RAGE_FIST),
     LEVEL_UP_MOVE(42, MOVE_COUNTER),
     LEVEL_UP_MOVE(49, MOVE_TAUNT),
     LEVEL_UP_MOVE(56, MOVE_DOUBLE_EDGE),
@@ -6638,6 +6640,7 @@ static const struct LevelUpMove sObstagoonLevelUpLearnset[] = {
 
 #if P_GEN_9_CROSS_EVOS
 static const struct LevelUpMove sAnnihilapeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(0, MOVE_RAGE_FIST),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),
@@ -6647,12 +6650,10 @@ static const struct LevelUpMove sAnnihilapeLevelUpLearnset[] = {
     LEVEL_UP_MOVE(21, MOVE_FURY_SWIPES),
     LEVEL_UP_MOVE(27, MOVE_FOCUS_ENERGY),
     LEVEL_UP_MOVE(28, MOVE_RAGE),
-    LEVEL_UP_MOVE(36, MOVE_RAGE_FIST),
     LEVEL_UP_MOVE(47, MOVE_CROSS_CHOP),
     LEVEL_UP_MOVE(58, MOVE_SCREECH),
     LEVEL_UP_MOVE(64, MOVE_THRASH),
     LEVEL_UP_MOVE(69, MOVE_STOMPING_TANTRUM),
-    LEVEL_UP_MOVE(74, MOVE_OUTRAGE),
     LEVEL_UP_END
 };
 #endif //P_GEN_9_CROSS_EVOS
@@ -7021,6 +7022,7 @@ static const struct LevelUpMove sFarigirafLevelUpLearnset[] = {
 
 #if P_GEN_9_CROSS_EVOS
 static const struct LevelUpMove sDudunsparceLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(0, MOVE_HYPER_DRILL),
     LEVEL_UP_MOVE( 1, MOVE_RAGE),
     LEVEL_UP_MOVE( 4, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE(11, MOVE_YAWN),
@@ -7030,11 +7032,8 @@ static const struct LevelUpMove sDudunsparceLevelUpLearnset[] = {
     LEVEL_UP_MOVE(31, MOVE_SCREECH),
     LEVEL_UP_MOVE(34, MOVE_TAKE_DOWN),
     LEVEL_UP_MOVE(41, MOVE_ENDEAVOR),
-    LEVEL_UP_MOVE(51, MOVE_DRILL_RUN),
-    LEVEL_UP_MOVE(51, MOVE_HYPER_DRILL),
-    LEVEL_UP_MOVE(54, MOVE_DRAGON_RUSH),
+    LEVEL_UP_MOVE(57, MOVE_DRAGON_TAIL),
     LEVEL_UP_MOVE(61, MOVE_HURRICANE),
-    LEVEL_UP_MOVE(64, MOVE_BOOMBURST),
 };
 #endif //P_GEN_9_CROSS_EVOS
 

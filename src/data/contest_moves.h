@@ -5921,7 +5921,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
 
     [MOVE_DIRE_CLAW] = {0}, // TODO
 
-    [MOVE_PSYSHIELD_BASH] = {0}, // TODO
+    [MOVE_PSYSHIELD_BASH] = {
+        .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = 0,
+        .comboMoves = {0}
+    },
 
     [MOVE_POWER_SHIFT] = {0}, // TODO
 
@@ -5943,7 +5948,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
 
     [MOVE_HEADLONG_RUSH] = {0}, // TODO
 
-    [MOVE_BARB_BARRAGE] = {0}, // TODO
+    [MOVE_BARB_BARRAGE] = {        
+        .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .comboStarterId = 0,
+        .comboMoves = {0}},
 
     [MOVE_ESPER_WING] = {0}, // TODO
 
@@ -6035,7 +6044,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
 
     [MOVE_CHILLING_WATER] = {0}, // TODO
 
-    [MOVE_HYPER_DRILL] = {0}, // TODO
+    [MOVE_HYPER_DRILL] = {        
+        .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .comboStarterId = 0,
+        .comboMoves = {0}}, 
+        
 
     [MOVE_TWIN_BEAM] = {0}, // TODO
 

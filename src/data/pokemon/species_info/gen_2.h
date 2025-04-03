@@ -2176,8 +2176,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Wooper usually live in water but come\n"
             "out onto land seeking food occasionally.\n"
-            "On land, they coat their bodies with a\n"
-            "gooey, toxic film."),
+            "On muddy land, they coat their bodies\n"
+            "with a gooey, toxic film."),
         FRONT_PIC(Wooper, 40, 32),
         FRONT_PIC_FEMALE(Wooper, 40, 32),
         .frontPicYOffset = 16,
@@ -2190,7 +2190,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Wooper),
         ICON(Wooper, 0),
         LEARNSETS(Wooper),
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_QUAGSIRE}),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_SURF, SPECIES_QUAGSIRE},
+                                {EVO_MOVE, MOVE_MUDDY_WATER, SPECIES_CLODSIRE}),
     },
 
     [SPECIES_QUAGSIRE] =
@@ -3489,6 +3490,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Qwilfish),
         ICON(Qwilfish, 0),
         LEARNSETS(Qwilfish),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_BARB_BARRAGE, SPECIES_OVERQWIL}),
     },
 
 #if P_HISUIAN_FORMS
@@ -3514,7 +3516,6 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(QwilfishHisuian, 0),
         LEARNSETS(QwilfishHisuian),
         .isHisuianForm = TRUE,
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_BARB_BARRAGE, SPECIES_OVERQWIL}),
     },
 
     [SPECIES_OVERQWIL] =
@@ -3525,7 +3526,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
-        .types = { TYPE_DARK, TYPE_POISON },
+        .types = { TYPE_WATER, TYPE_POISON },
         .catchRate = 45,
         .expYield = 179,
         .evYield_Attack = 2,
@@ -3766,7 +3767,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Sneasel, 0),
         LEARNSETS(Sneasel),
         .evolutions = EVOLUTION({EVO_ITEM_HOLD_NIGHT, ITEM_RAZOR_CLAW, SPECIES_WEAVILE},
-                                {EVO_ITEM_NIGHT, ITEM_RAZOR_CLAW, SPECIES_WEAVILE}),
+                                {EVO_ITEM_NIGHT, ITEM_RAZOR_CLAW, SPECIES_WEAVILE}, 
+                                {EVO_ITEM_HOLD_DAY, ITEM_QUICK_CLAW, SPECIES_SNEASLER},
+                                {EVO_ITEM_DAY, ITEM_QUICK_CLAW, SPECIES_SNEASLER}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -3860,7 +3863,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 120,
         .baseSpAttack  = 40,
         .baseSpDefense = 80,
-        .types = { TYPE_FIGHTING, TYPE_POISON },
+        .types = { TYPE_DARK, TYPE_POISON },
         .catchRate = 20,
         .expYield = 102,
         .evYield_Attack = 2,
@@ -3881,7 +3884,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Because of its wicked poison and daunting\n"
             "physical prowess, no other species could\n"
             "hope to best it on frozen highlands. It\n"
-            "prefers solitude and doesn't form packs."),
+            "left the ice behind for new conquests."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3998,7 +4001,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Ursaring, 2),
         .footprint = gMonFootprint_Ursaring,
         LEARNSETS(Ursaring),
-        .evolutions = EVOLUTION({EVO_ITEM_NIGHT, ITEM_PEAT_BLOCK, SPECIES_URSALUNA},
+        .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 48, SPECIES_URSALUNA},
                                 {EVO_NONE, 0, SPECIES_URSALUNA_BLOODMOON}),
     },
 
@@ -4033,9 +4036,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 24,
         .weight = 2900,
         .description = COMPOUND_STRING(
-            "Swampy terrain gives Ursaluna its burly\n"
-            "physique and newfound capacity to\n"
-            "manipulate peat at will."),
+            "The moon on its head grows bright with\n"
+            "strength, but eventually darkens as\n"
+            "it grows older and slower."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -5066,7 +5069,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Stantler, 2),
         .footprint = gMonFootprint_Stantler,
         LEARNSETS(Stantler),
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_PSYSHIELD_BASH, SPECIES_WYRDEER}),
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_PSYSHIELD_BASH, SPECIES_WYRDEER},
+                                {EVO_ITEM, ITEM_ICE_STONE, SPECIES_WYRDEER}),
+        
+
     },
 
 #if P_GEN_8_CROSS_EVOS
@@ -5099,8 +5105,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "The black orbs shine with an uncanny light\n"
             "when it is erecting invisible barriers.\n"
-            "The fur shed from its beard retains heat\n"
-            "and is useful for winter clothing."),
+            "Not native to warm climates, it needs an\n"
+            "extremely cold power for evolution."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
