@@ -36,6 +36,10 @@ BattleFrontier_ScottsHouse_EventScript_CheckSilverSymbols::
 	msgbox BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols, MSGBOX_DEFAULT
 	giveitem ITEM_LANSAT_BERRY
 	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
+	giveitem ITEM_STARF_BERRY
+	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
+	giveitem ITEM_CUSTAP_BERRY
+	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
 	setflag FLAG_COLLECTED_ALL_SILVER_SYMBOLS
 	setflag FLAG_TEMP_4
 	release
@@ -50,7 +54,7 @@ BattleFrontier_ScottsHouse_EventScript_CheckGoldSymbols::
 	goto_if_unset FLAG_SYS_PIKE_GOLD, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	goto_if_unset FLAG_SYS_PYRAMID_GOLD, BattleFrontier_ScottsHouse_EventScript_CheckGiveShield
 	msgbox BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols, MSGBOX_DEFAULT
-	giveitem ITEM_STARF_BERRY
+	giveitem ITEM_MASTER_BALL
 	goto_if_eq VAR_RESULT, FALSE, BattleFrontier_ScottsHouse_EventScript_BerryPocketFull
 	setflag FLAG_COLLECTED_ALL_GOLD_SYMBOLS
 	setflag FLAG_TEMP_4
@@ -297,8 +301,8 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols:
 	.string "You are tough, just as I suspected!\p"
 	.string "Normally, I wouldn't do something\n"
 	.string "like this, but this is a special time!\p"
-	.string "I want you to have this.\n"
-	.string "I'm sure you can put it to proper use.$"
+	.string "I want you to have these.\n"
+	.string "I'm sure you can put them to proper use.$"
 
 BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols:
 	.string "SCOTT: I hope you're enjoying\n"
