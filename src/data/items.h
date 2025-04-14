@@ -9868,7 +9868,7 @@ const struct Item gItems[] =
     [ITEM_HEALTH_MOCHI] =
     {
         .name = _("Health Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sHealthMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9880,7 +9880,7 @@ const struct Item gItems[] =
     [ITEM_MUSCLE_MOCHI] =
     {
         .name = _("Muscle Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sMuscleMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9892,7 +9892,7 @@ const struct Item gItems[] =
     [ITEM_RESIST_MOCHI] =
     {
         .name = _("Resist Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sResistMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9904,7 +9904,7 @@ const struct Item gItems[] =
     [ITEM_GENIUS_MOCHI] =
     {
         .name = _("Genius Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sGeniusMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9916,7 +9916,7 @@ const struct Item gItems[] =
     [ITEM_CLEVER_MOCHI] =
     {
         .name = _("Clever Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sCleverMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9928,7 +9928,7 @@ const struct Item gItems[] =
     [ITEM_SWIFT_MOCHI] =
     {
         .name = _("Swift Mochi"),
-        .price = 500,
+        .price = 4900,
         .description = sSwiftMochiDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
