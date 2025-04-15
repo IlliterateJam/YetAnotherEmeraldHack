@@ -120,6 +120,7 @@ MauvilleCity_MenuMauville_Sweet:
 	.2byte ITEM_EXP_CANDY_S
 	.2byte ITEM_EXP_CANDY_M
 	.2byte ITEM_EXP_CANDY_L
+	.2byte ITEM_EXP_CANDY_XL
 	.2byte ITEM_NONE
 	release
 	end

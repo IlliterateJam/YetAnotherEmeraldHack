@@ -1281,7 +1281,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 15,
+        .secondaryId = 12,
     },
 
     [ITEM_EXP_CANDY_S] =
@@ -1294,7 +1294,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 20,
+        .secondaryId = 18,
     },
 
     [ITEM_EXP_CANDY_M] =
@@ -1307,7 +1307,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 25,
+        .secondaryId = 22,
     },
 
     [ITEM_EXP_CANDY_L] =
@@ -1320,7 +1320,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 35,
+        .secondaryId = 26,
     },
 
     [ITEM_EXP_CANDY_XL] =
@@ -1333,10 +1333,10 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 40,
+        .secondaryId = 30,
     },
 
-        [ITEM_EXP_SWEET_XS] =
+    [ITEM_EXP_SWEET_XS] =
     {
         .name = _("Exp.Sweet XS"),
         .price = 200,
@@ -1346,7 +1346,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 45,
+        .secondaryId = 34,
     },
 
     [ITEM_EXP_SWEET_S] =
@@ -1359,7 +1359,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 50,
+        .secondaryId = 38,
     },
 
     [ITEM_EXP_SWEET_M] =
@@ -1372,7 +1372,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 60,
+        .secondaryId = 42,
     },
 
     [ITEM_EXP_SWEET_L] =
@@ -1385,7 +1385,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 75,
+        .secondaryId = 50,
     },
 
     [ITEM_EXP_SWEET_XL] =
@@ -1398,7 +1398,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_EXPCandy,
         .flingPower = 30,
-        .secondaryId = 100,
+        .secondaryId = 75,
     },
 
     [ITEM_DYNAMAX_CANDY] =
@@ -9846,23 +9846,6 @@ const struct Item gItems[] =
         .secondaryId = TYPE_FIRE,
     },
 
-
-        // [ITEM_PROTEIN] =
-    // {
-    //     .name = _("Protein"),
-    //     .price = 10000,
-    //     .description = sProteinDesc,
-    //     .pocket = POCKET_ITEMS,
-    //     .type = ITEM_USE_PARTY_MENU,
-    //     .fieldUseFunc = ItemUseOutOfBattle_Vitamins,
-    //     .flingPower = 30,
-    //     .secondaryId = MON_DATA_ATK_IV,
-    //.secondaryId = MON_DATA_DEF_IV,
-    //      .secondaryId = MON_DATA_DEF_IV,
-    //        .secondaryId = MON_DATA_SPATK_IV,
-    //        .secondaryId = MON_DATA_SPDEF_IV,
-    //.secondaryId = MON_DATA_SPEED_IV, 
-    // },
 
 
     [ITEM_HEALTH_MOCHI] =

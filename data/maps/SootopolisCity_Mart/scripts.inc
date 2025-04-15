@@ -19,6 +19,7 @@ SootopolisCity_Mart_Pokemart:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_EXP_SWEET_M
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_SHADOW_MAIL
@@ -74,4 +75,3 @@ SootopolisCity_Mart_Text_FullRestoreItemOfDreams:
 SootopolisCity_Mart_Text_DidSomethingAwaken:
 	.string "This weather…\n"
 	.string "Did something awaken?$"
-
