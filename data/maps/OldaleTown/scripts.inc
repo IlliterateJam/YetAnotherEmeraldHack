@@ -374,8 +374,15 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 	step_end
 
 OldaleTown_Text_SavingMyProgress:
-	.string "I want to take a rest, so I'm saving my\n"
-	.string "progress.$"
+	.string "I like looking at my POKéMON's\n"
+	.string "stats as a summary.\p"
+	.string "Did you know you can press A to\n"
+	.string "switch between the info called the\l"
+	.string "eyevees and the eevees?\p"
+	.string "I like comparing them but its good\n"
+	.string "not to get caught up in the numbers.\p"
+	.string "Because every POKéMON is unique due to\n"
+	.string "the time you get to be together!$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"

@@ -26,6 +26,11 @@ SlateportCity_PokemonCenter_1F_EventScript_Woman::
 	msgbox SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend, MSGBOX_NPC
 	end
 
+SlateportCity_PokemonCenter_1F_EventScript_Gentleman::
+	msgbox SlateportCity_PokemonCenter_1F_Text_TradedMonsDontNeedItems, MSGBOX_NPC
+	end
+
+
 SlateportCity_PokemonCenter_1F_Text_RaiseDifferentTypesOfPokemon:
 	.string "Want a tip for battling?\p"
 	.string "I'd say it's raising different kinds\n"
@@ -40,3 +45,13 @@ SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend:
 	.string "If a traded POKéMON is holding an\n"
 	.string "item, it makes me twice as happy!$"
 
+SlateportCity_PokemonCenter_1F_Text_TradedMonsDontNeedItems:
+	.string "POKéMON don't need to be traded\n"
+	.string "evolve, just given certain items.\p"
+	.string "The POKéDEX should be able to tell\n"
+	.string "you all of the details.\p"
+	.string "However, it is good for a person\n"
+	.string "to still be able to trade or give\l"
+	.string "something that the other may need.\p"
+	.string "You can never know how big of an impact\n"
+	.string "you can make in such a small act.$"
