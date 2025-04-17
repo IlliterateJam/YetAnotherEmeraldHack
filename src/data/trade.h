@@ -988,7 +988,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("ROCKY"),
         .species = SPECIES_ONIX,
-        .ivs = {5, 4, 5, 4, 4, 4},
+        .ivs = {10, 10, 11, 10, 10, 10},
         .abilityNum = 1,
         .otId = 38726,
         .conditions = {30, 5, 5, 5, 5},
@@ -1004,7 +1004,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("SNEEZY"),
         .species = SPECIES_SNEASEL,
-        .ivs = {4, 4, 4, 5, 5, 4},
+        .ivs = {18, 18, 18, 19, 19, 18},
         .abilityNum = 0,
         .otId = 73996,
         .conditions = {5, 5, 30, 5, 5},
@@ -1020,7 +1020,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("RA"),
         .species = SPECIES_LAPRAS,
-        .ivs = {5, 4, 4, 4, 5, 4},
+        .ivs = {24, 24, 24, 24, 31, 24},
         .abilityNum = 0,
         .otId = 46285,
         .conditions = {5, 5, 5, 5, 30},
@@ -1030,7 +1030,7 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("SKYLAR"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_BAGON
+        .requestedSpecies = SPECIES_SKARMORY
     },
     [INGAME_TRADE_BIDOOF] =
     {
