@@ -88,3 +88,13 @@ RustboroCity_Mart_Text_GettingEscapeRopeJustInCase:
 	.string "I just need to use it to get back to\n"
 	.string "the entrance.$"
 
+RustboroCity_Mart_EventScript_Woman::
+    msgbox RustboroCity_Mart_Text_ExpCandy, MSGBOX_NPC
+    end
+
+RustboroCity_Mart_Text_ExpCandy:
+    .string "EXP CANDY is available in POKé MARTS\n"
+    .string "to help strengthen your POKéMON fast.\p"
+    .string "However, it doesn't beat a traditional\n"
+    .string "training regime or diet.$"
+

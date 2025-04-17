@@ -847,6 +847,10 @@ BattleFrontier_ExchangeServiceCorner_EventScript_Girl::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord, MSGBOX_NPC
 	end
 
+BattleFrontier_ExchangeServiceCorner_EventScript_BlackBelt::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_MochisAreABalancedDiet, MSGBOX_NPC
+	end
+
 BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
 	.string "Hello, this is the EXCHANGE SERVICE\n"
 	.string "CORNER.\p"
@@ -1203,6 +1207,14 @@ BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord:
 	.string "If you stretch your record at any of\n"
 	.string "the BATTLE facilities, they start\l"
 	.string "giving you more and more Battle Points.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_MochisAreABalancedDiet:
+	.string "Chew Chew Chew…\p"
+	.string "What? I assure you that these MOCHIS\n"
+	.string "are essential as a trainer!\p"
+	.string "They help improve my POKéMON's unique\n"
+	.string "individual values.\p"
+	.string "… … … Chew Chew Chew…$"
 
 BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc::
 	.string "A large poster with a SMOOCHUM print.$"
