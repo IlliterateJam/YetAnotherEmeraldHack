@@ -551,6 +551,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_DEXNAV_GET
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
@@ -753,8 +754,16 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "PROF. BIRCH: The POKéDEX is a high-tech\n"
 	.string "tool that automatically makes a record\l"
 	.string "of any POKéMON you meet or catch.\p"
+	.string "Once you've caught a POKéMON, it can show\n"
+	.string "MOVES, ABILITIES, STATS, and even the\l"
+	.string "known methods to EVOLVE!\p"
+	.string "Additionally, it has a special function\n"
+	.string "called the DEXNVAV.\p"
+	.string "This helps you find rare POKéMON in the\n"
+	.string "wild. Just make sure to SNEAK around with\l"
+	.string "the A Button so you don't get caught!\p"
 	.string "My kid, {RIVAL}, goes everywhere\n"
-	.string "with it.\p"
+	.string "with the DEXNAV on.\p"
 	.string "Whenever my kid catches a rare POKéMON\n"
 	.string "and records its data in the POKéDEX,\l"
 	.string "why, {RIVAL} looks for me while I'm out\l"
