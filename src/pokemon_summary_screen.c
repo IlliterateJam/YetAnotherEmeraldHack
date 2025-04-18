@@ -3780,7 +3780,7 @@ static void PrintMovePowerAndAccuracy(u16 moveIndex)
     {
         FillWindowPixelRect(PSS_LABEL_WINDOW_MOVES_POWER_ACC, PIXEL_FILL(0), 53, 0, 19, 32);
 
-               if (moveIndex == MOVE_RETURN)
+       if (moveIndex == MOVE_RETURN)
        {
            ConvertIntToDecimalStringN(gStringVar1, (10 * monFriendship / 25), STR_CONV_MODE_RIGHT_ALIGN, 3);
            text = gStringVar1;
