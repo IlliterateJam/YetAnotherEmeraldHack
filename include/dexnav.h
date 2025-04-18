@@ -45,18 +45,18 @@
 #define SEARCHLEVEL100_ONESTAR          8
 //Chance of encountering two star potential
 #define SEARCHLEVEL0_TWOSTAR            0
-#define SEARCHLEVEL5_TWOSTAR            1
-#define SEARCHLEVEL10_TWOSTAR           9
-#define SEARCHLEVEL25_TWOSTAR           16
-#define SEARCHLEVEL50_TWOSTAR           17
-#define SEARCHLEVEL100_TWOSTAR          24
+#define SEARCHLEVEL5_TWOSTAR            2
+#define SEARCHLEVEL10_TWOSTAR           18
+#define SEARCHLEVEL25_TWOSTAR           32
+#define SEARCHLEVEL50_TWOSTAR           24
+#define SEARCHLEVEL100_TWOSTAR          58
 //Chance of encountering three star potential
 #define SEARCHLEVEL0_THREESTAR          0
-#define SEARCHLEVEL5_THREESTAR          0
-#define SEARCHLEVEL10_THREESTAR         1
-#define SEARCHLEVEL25_THREESTAR         7
-#define SEARCHLEVEL50_THREESTAR         6
-#define SEARCHLEVEL100_THREESTAR        12
+#define SEARCHLEVEL5_THREESTAR          1
+#define SEARCHLEVEL10_THREESTAR         2
+#define SEARCHLEVEL25_THREESTAR         14
+#define SEARCHLEVEL50_THREESTAR         18
+#define SEARCHLEVEL100_THREESTAR        24
 
 // GUI Info
 #define ROW_WATER       0

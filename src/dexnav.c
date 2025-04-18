@@ -931,7 +931,7 @@ static void DexNavUpdateDirectionArrow(void)
     const u8 *str;
     u8 windowId = sDexNavSearchDataPtr->windowId;
     
-    FillWindowPixelRect(windowId, PIXEL_FILL(1), SEARCH_ARROW_X, SEARCH_ARROW_Y, 12, 12);
+    FillWindowPixelRect(windowId, PIXEL_FILL(1), SEARCH_ARROW_X-5, SEARCH_ARROW_Y, 12, 12);
     if (deltaX <= 1 && deltaY <= 1)
     {
         str = gText_EmptyString2;
@@ -951,7 +951,7 @@ static void DexNavUpdateDirectionArrow(void)
             str = sText_ArrowDown;  //player above
     }
     
-    AddTextPrinterParameterized3(windowId, 1, SEARCH_ARROW_X, SEARCH_ARROW_Y, sSearchFontColor, TEXT_SKIP_DRAW, str);
+    AddTextPrinterParameterized3(windowId, 1, SEARCH_ARROW_X-5, SEARCH_ARROW_Y, sSearchFontColor, TEXT_SKIP_DRAW, str);
     CopyWindowToVram(windowId, 2);
 }
 
