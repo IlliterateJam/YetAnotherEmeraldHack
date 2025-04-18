@@ -2699,26 +2699,26 @@ bool8 DexNavTryMakeShinyMon(void)
     u8 chain = gSaveBlock1Ptr->dexNavChain;
     
     #ifdef ITEM_SHINY_CHARM
-    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 2 : 0;
+    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 4 : 0;
     #endif
     
-    chainBonus = (chain == 50) ? 5 : (chain == 100) ? 10 : 0;
-    rndBonus = (Random() % 100 < 4 ? 4 : 0);
-    shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
+    chainBonus = (chain == 50) ? 7 : (chain == 100) ? 14 : 0;
+    rndBonus = (Random() % 100 < 4 ? 8 : 0);
+    shinyRolls = 2 + charmBonus + chainBonus + rndBonus;
 
     if (searchLevel > 200)
     {
-        shinyRate += searchLevel - 200;
+        shinyRate += (searchLevel * 10) - 200;
         searchLevel = 200;
     }
     if (searchLevel > 100)
     {
-        shinyRate += (searchLevel * 2) - 200;
+        shinyRate += (searchLevel * 15) - 200;
         searchLevel = 100;
     }
     if (searchLevel > 0)
     {
-        shinyRate += searchLevel * 6;
+        shinyRate += searchLevel * 30;
     }
     
     shinyRate /= 100;
