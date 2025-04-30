@@ -3306,29 +3306,42 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+    static const u8 sTM51Desc[] = _(
+        "The user launches\n"
+        "razor wind. High\n"
+        "critical ratio.");
+    
+    static const u8 sTM52Desc[] = _(
+        "Slams the foe with\n"
+        "a hard seed.");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM54Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM55Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM56Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM57Desc[] = _( // Todo
-    "?????");
-
-static const u8 sTM58Desc[] = _( // Todo
-    "?????");
+    static const u8 sTM53Desc[] = _(
+        "Releases a horrible\n"
+        "aura with dark\n"
+        "thoughts. May flich.");
+    
+    static const u8 sTM54Desc[] = _(
+        "Emits a shockwave\n"
+        "from the users\n"
+        "mouth.");
+    
+    static const u8 sTM55Desc[] = _(
+        "A full-body charge\n"
+        "attack. The user\n"
+        "must rest next turn.");
+    
+    static const u8 sTM56Desc[] = _(
+        "The user makes the\n"
+        "ground erupt.");
+    
+    static const u8 sTM57Desc[] = _(
+        "Slashes the target\n"
+        "with ghostly claws.");
+    
+    static const u8 sTM58Desc[] = _(
+        "Jabs the foe with a\n"
+        "toxic stinger. May\n"
+        "poison the foe.");
 
 static const u8 sTM59Desc[] = _( // Todo
     "?????");

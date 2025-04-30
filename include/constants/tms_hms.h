@@ -51,7 +51,15 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(AIR_CUTTER) \
+    F(SEED_BOMB) \
+    F(DARK_PULSE) \
+    F(DRAGON_PULSE) \
+    F(GIGA_IMPACT) \
+    F(EARTH_POWER) \
+    F(SHADOW_CLAW) \
+    F(POISON_JAB) 
 
 #define FOREACH_HM(F) \
     F(CUT) \
