@@ -226,8 +226,8 @@ Route121_EventScript_ItemZinc::
 	finditem ITEM_ZINC
 	end
 
-Route123_EventScript_ItemCalcium::
-	finditem ITEM_CALCIUM
+Route123_EventScript_ItemCometShard::
+	finditem ITEM_COMET_SHARD
 	end
 
 Route123_EventScript_ItemUltraBall::

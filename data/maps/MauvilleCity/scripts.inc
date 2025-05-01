@@ -71,7 +71,12 @@ MauvilleCity_EventScript_GymSign::
 	end
 
 MauvilleCity_EventScript_BikeShopSign::
+	goto_if_set FLAG_SYS_GAME_CLEAR,  MauvilleCity_EventScript_BikeShopSign_Updated
 	msgbox MauvilleCity_Text_BikeShopSign, MSGBOX_SIGN
+	end
+
+MauvilleCity_EventScript_BikeShopSign_Updated::
+	msgbox MauvilleCity_Text_BikeShopSign_Updated, MSGBOX_SIGN
 	end
 
 MauvilleCity_EventScript_GameCornerSign::
@@ -673,6 +678,13 @@ MauvilleCity_Text_BikeShopSign:
 	.string "“Ride in gravel and shake up your\n"
 	.string "soul!”\l"
 	.string "RYDEL'S CYCLES$"
+
+MauvilleCity_Text_BikeShopSign_Updated:
+	.string "“Ride in gravel and shake up your\n"
+	.string "soul!”\l"
+	.string "RYDEL'S CYCLES\p"
+	.string "There's a picture of you that says\n"
+	.string "“Where true CHAMPIONS shop!”$"
 
 MauvilleCity_Text_GameCornerSign:
 	.string "“The play spot for all!”\n"

@@ -59,6 +59,7 @@ MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes::
 	end
 
 MauvilleCity_BikeShop_EventScript_AskSwitchBikes::
+	goto_if_set FLAG_SYS_GAME_CLEAR, MauvilleCity_BikeShop_EventScript_GiveOtherBike
 	msgbox MauvilleCity_BikeShop_Text_WantToSwitchBikes, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, MauvilleCity_BikeShop_EventScript_SwitchBikes
 	goto_if_eq VAR_RESULT, NO, MauvilleCity_BikeShop_EventScript_KeepBike
@@ -94,6 +95,29 @@ MauvilleCity_BikeShop_EventScript_SwitchMachForAcro::
 	removeitem ITEM_MACH_BIKE
 	giveitem ITEM_ACRO_BIKE
 	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
+	end
+
+MauvilleCity_BikeShop_EventScript_GiveOtherBike::
+	msgbox MauvilleCity_BikeShop_Text_HelloReigningChampion, MSGBOX_DEFAULT
+	checkitem ITEM_ACRO_BIKE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_BikeShop_EventScript_GivePermanentMachBike
+	msgbox MauvilleCity_BikeShop_Text_AcroBikeIsAVictoryPresent, MSGBOX_DEFAULT
+	giveitem ITEM_ACRO_BIKE
+	goto MauvilleCity_Bikeshop_Text_YouAreUpToDate
+	end
+
+MauvilleCity_BikeShop_EventScript_GivePermanentMachBike::
+	checkitem ITEM_MACH_BIKE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Bikeshop_Text_YouAreUpToDate
+	msgbox MauvilleCity_BikeShop_Text_MachBikeIsAVictoryPresent, MSGBOX_DEFAULT
+	giveitem ITEM_MACH_BIKE
+	goto MauvilleCity_Bikeshop_Text_YouAreUpToDate
+	end
+
+MauvilleCity_Bikeshop_Text_YouAreUpToDate::
+	lock
+	msgbox MauvilleCity_BikeShop_Text_MayTheWindBeForeverAtYourBack, MSGBOX_DEFAULT
+	release
 	end
 
 MauvilleCity_BikeShop_EventScript_Assistant::
@@ -245,6 +269,28 @@ MauvilleCity_BikeShop_Text_ExchangedAcroForMach:
 MauvilleCity_BikeShop_Text_HappyYouLikeIt:
 	.string "RYDEL: Good, good!\n"
 	.string "I'm happy that you like it!$"
+
+MauvilleCity_BikeShop_Text_HelloReigningChampion:
+	.string "RYDEL: Hello reigning CHAMPION!\p"
+	.string "I saw that you are now the greatest\n"
+	.string "in HOENN in the news the other day.\p"
+	.string "I am very proud to be the supplier of\n"
+	.string "the CHAMPION's BIKE. You couldn't ask\l"
+	.string "for better advertising!$"
+	.string "Out of my gratitude, here is a new BIKE\n"
+	.string "of the other style!$"
+
+MauvilleCity_BikeShop_Text_AcroBikeIsAVictoryPresent:
+	.string "Here! Take this ACRO BIKE as victory\n"
+	.string "present and royalty payment!$"
+
+MauvilleCity_BikeShop_Text_MachBikeIsAVictoryPresent:
+	.string "Here! Take this MACH BIKE as victory\n"
+	.string "present and royalty payment!$"
+
+MauvilleCity_BikeShop_Text_MayTheWindBeForeverAtYourBack:
+	.string "May the wind always be at your back\n"
+	.string "on your continuing adventure!$"
 
 MauvilleCity_BikeShop_Text_OhYourBikeIsInPC:
 	.string "Oh? What happened to that BIKE\n"
