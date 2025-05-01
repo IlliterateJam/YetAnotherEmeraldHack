@@ -190,6 +190,10 @@ Route119_EventScript_ItemElixir2::
 	finditem ITEM_ELIXIR
 	end
 
+Route119_EventScript_ItemTM_SeedBomb::
+	finditem ITEM_TM_SEED_BOMB
+	end
+
 Route120_EventScript_ItemNugget::
 	finditem ITEM_NUGGET
 	end
@@ -350,6 +354,10 @@ RusturfTunnel_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER
 	end
 
+Rusturf_Connection_EventScript_ItemTMEarthPower::
+	finditem ITEM_TM_EARTH_POWER
+	end
+
 GraniteCave_1F_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
@@ -368,6 +376,10 @@ GraniteCave_B2F_EventScript_ItemRareCandy::
 
 JaggedPass_EventScript_ItemBurnHeal::
 	finditem ITEM_BURN_HEAL
+	end
+
+JaggedPass_EventScript_ItemTMPoisonJab::
+	finditem ITEM_TM_POISON_JAB
 	end
 
 FieryPath_EventScript_ItemFireStone::
@@ -520,6 +532,10 @@ MtPyre_Exterior_EventScript_ItemMaxPotion::
 
 MtPyre_Exterior_EventScript_ItemTMSkillSwap::
 	finditem ITEM_TM_SKILL_SWAP
+	end
+
+MtPyre_Exterior_EventScript_ItemTMShadowClaw::
+	finditem ITEM_TM_SHADOW_CLAW
 	end
 
 AquaHideout_B1F_EventScript_ItemMasterBall::
@@ -680,4 +696,8 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+	end
+
+SkyPillarr_4F_EventScript_ItemTMDragonPulse::
+	finditem ITEM_TM_DRAGON_PULSE
 	end

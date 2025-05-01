@@ -153,6 +153,14 @@ SlateportCity_Pokemart_TMGuy3:
 	.2byte ITEM_TM_SKILL_SWAP
 	.2byte ITEM_TM_SNATCH
 	.2byte ITEM_TM_OVERHEAT
+	.2byte ITEM_TM_AIR_CUTTER
+    .2byte ITEM_TM_SEED_BOMB
+    .2byte ITEM_TM_DARK_PULSE
+    .2byte ITEM_TM_DRAGON_PULSE
+    .2byte ITEM_TM_GIGA_IMPACT
+    .2byte ITEM_TM_EARTH_POWER
+    .2byte ITEM_TM_SHADOW_CLAW
+    .2byte ITEM_TM_POISON_JAB
 	.2byte ITEM_NONE
 	release
 	end

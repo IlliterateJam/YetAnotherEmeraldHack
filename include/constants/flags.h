@@ -1226,11 +1226,11 @@
 #define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_7_DUBIOUS_DISC               0x498 // Unused Flag
 #define FLAG_RUSTBORO_MANIAC                                        0x499 // Unused Flag
 #define FLAG_ROUTE_134_HERMIT_CHOICE                                0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
+#define FLAG_RUSTURF_CONNECTION_TM_EARTH_POWER                      0x49B // Unused Flag
+#define FLAG_SKYPILLAR_4F_TM_DRAGON_PULSE                           0x49C // Unused Flag
+#define FLAG_ITEM_ROUTE_119_TM_SEED_BOMB                            0x49D // Unused Flag
+#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SHADOW_CLAW                   0x49E // Unused Flag
+#define FLAG_ITEM_JAGGED_PASS_TM_POISON_JAB                         0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag

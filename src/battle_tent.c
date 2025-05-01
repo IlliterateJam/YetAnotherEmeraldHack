@@ -99,7 +99,7 @@ void static (*const sSlateportTentFuncs[])(void) =
     [SLATEPORT_TENT_FUNC_GENERATE_RENTAL_MONS]   = GenerateInitialRentalMons
 };
 
-static const u16 sSlateportTentRewards[] = {ITEM_FULL_HEAL};
+static const u16 sSlateportTentRewards[] = {ITEM_TM_POISON_JAB};
 
 // code
 void CallVerdanturfTentFunction(void)
