@@ -311,7 +311,7 @@ static const struct LevelUpMove sEkansLevelUpLearnset[] = {
     LEVEL_UP_MOVE(37, MOVE_STOCKPILE),
     LEVEL_UP_MOVE(37, MOVE_SWALLOW),
     LEVEL_UP_MOVE(37, MOVE_SPIT_UP),
-    LEVEL_UP_MOVE(44, MOVE_POISON_FANG),
+    LEVEL_UP_MOVE(44, MOVE_PSYCHIC_FANGS),
     LEVEL_UP_END
 };
 
@@ -328,7 +328,7 @@ static const struct LevelUpMove sArbokLevelUpLearnset[] = {
     LEVEL_UP_MOVE(46, MOVE_STOCKPILE),
     LEVEL_UP_MOVE(46, MOVE_SWALLOW),
     LEVEL_UP_MOVE(46, MOVE_SPIT_UP),
-    LEVEL_UP_MOVE(56, MOVE_POISON_FANG),
+    LEVEL_UP_MOVE(56, MOVE_PSYCHIC_FANGS),
     LEVEL_UP_END
 };
 
@@ -7043,7 +7043,7 @@ static const struct LevelUpMove sDudunsparceLevelUpLearnset[] = {
     LEVEL_UP_MOVE(34, MOVE_TAKE_DOWN),
     LEVEL_UP_MOVE(41, MOVE_ENDEAVOR),
     LEVEL_UP_MOVE(57, MOVE_DRAGON_TAIL),
-    LEVEL_UP_MOVE(61, MOVE_HURRICANE),
+    LEVEL_UP_MOVE(61, MOVE_WHIRLWIND),
 };
 #endif //P_GEN_9_CROSS_EVOS
 

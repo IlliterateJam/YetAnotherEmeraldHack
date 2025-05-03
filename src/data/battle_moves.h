@@ -14111,7 +14111,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_HYPER_DRILL] =
     {
         .effect = EFFECT_HIT,
-        .power = 100,
+        .power = 75,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 5,
