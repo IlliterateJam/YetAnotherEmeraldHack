@@ -9015,6 +9015,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (moveType == TYPE_WATER)
            modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
         break;
+    case ABILITY_MAGMA_ARMOR:
+        if (moveType == TYPE_FIRE)
+           modifier = uq4_12_multiply(modifier, UQ_4_12(2.0));
+        break;
     case ABILITY_STEELWORKER:
         if (moveType == TYPE_STEEL)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
@@ -9160,6 +9164,14 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
             if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
             && ((IS_MOVE_PHYSICAL(move) && defHighestStat == STAT_DEF) || (IS_MOVE_SPECIAL(move) && defHighestStat == STAT_SPDEF)))
                 modifier = uq4_12_multiply(modifier, UQ_4_12(0.7));
+        }
+        break;
+    case ABILITY_MAGMA_ARMOR:
+        if (moveType == TYPE_ICE)
+        {
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, defAbility);
         }
         break;
     }
