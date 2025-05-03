@@ -9121,7 +9121,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         {
         case ABILITY_BATTERY:
             if (IS_MOVE_SPECIAL(move))
-                modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+                modifier = uq4_12_multiply(modifier, UQ_4_12(1.67));
             break;
         case ABILITY_POWER_SPOT:
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
