@@ -9133,6 +9133,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
     switch (defAbility)
     {
     case ABILITY_HEATPROOF:
+    case ABILITY_WATER_VEIL:
     case ABILITY_WATER_BUBBLE:
         if (moveType == TYPE_FIRE)
         {
