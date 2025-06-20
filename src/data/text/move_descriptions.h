@@ -2561,7 +2561,7 @@ static const u8 sInstructDescription[] = _(
     "its last move again.");
 
 static const u8 sBeakBlastDescription[] = _(
-    "Heats up beak to attack.\n"
+    "Heats up mane to attack.\n"
     "Burns foe on contact.");
 
 static const u8 sClangingScalesDescription[] = _(
@@ -3114,8 +3114,8 @@ static const u8 sPopulationBombDescription[] = _(
     "to ten times in a row.");
 
 static const u8 sIceSpinnerDescription[] = _(
-    "Ice-covered feet hit a foe\n"
-    "and destroy the terrain.");
+    "Ice-covered spin hits a foe\n"
+    "and destroys hazards.");
 
 static const u8 sGlaiveRushDescription[] = _(
     "Foe attacks next turn can't\n"

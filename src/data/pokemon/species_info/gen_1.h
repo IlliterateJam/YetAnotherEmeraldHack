@@ -7916,7 +7916,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_MAROWAK] =
     {
         MAROWAK_MISC_INFO,
-        .types = { TYPE_GROUND, TYPE_DARK },
+        .types = { TYPE_GROUND, TYPE_GROUND },
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD, ABILITY_BATTLE_ARMOR },
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 450,
@@ -9120,7 +9120,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 68,
         .baseSpAttack  = 65,
         .baseSpDefense = 80,
-        .types = { TYPE_WATER, TYPE_WATER },
+        .types = { TYPE_WATER, TYPE_FIRE },
         .catchRate = 60,
         .expYield = 158,
         .evYield_Attack = 2,

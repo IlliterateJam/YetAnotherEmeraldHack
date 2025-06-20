@@ -12164,7 +12164,7 @@ Move_BEAK_BLAST::
 	delay 0x2
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0x1
 	delay 0x2
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET 0x4 0x8
+	loopsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET 0x4 0x8
 	createvisualtask AnimTask_DrillPeckHitSplats, 0x5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
 	waitforvisualfinish
