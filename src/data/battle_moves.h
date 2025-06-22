@@ -5900,7 +5900,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
             .power = 95,
         #endif
         .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .type = TYPE_WATER,
+        .type = TYPE_GROUND,
         .accuracy = 85,
         .pp = 10,
         .secondaryEffectChance = 30,
