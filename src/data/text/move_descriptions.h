@@ -1421,8 +1421,8 @@ static const u8 sCalmMindDescription[] = _(
     "by focusing the mind.");
 
 static const u8 sLeafBladeDescription[] = _(
-    "Slashes with a sharp leaf.\n"
-    "High critical-hit ratio.");
+    "A sharp leaf that does more\n"
+    "damage to slower foes.");
 
 static const u8 sDragonDanceDescription[] = _(
     "A mystical dance that ups\n"

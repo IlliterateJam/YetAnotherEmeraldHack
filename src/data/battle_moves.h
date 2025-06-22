@@ -6225,11 +6225,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_LEAF_BLADE] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .power = 90,
+            .power = 60,
         #else
             .power = 70,
         #endif
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_ELECTRO_BALL,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
@@ -6239,7 +6239,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
-        .highCritRatio = TRUE,
+        //.highCritRatio = TRUE,
         .slicingMove = TRUE,
     },
 
