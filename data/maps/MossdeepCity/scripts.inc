@@ -84,6 +84,26 @@ MossdeepCity_EventScript_VisitedMossdeep::
 	setvar VAR_TEMP_1, 1
 	end
 
+MossdeepCity_EventScript_Rocket::
+	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_EventScript_RocketOpen
+	msgbox MossdeepCity_Text_ShouldntBeSoClose, MSGBOX_SIGN
+	end
+
+MossdeepCity_EventScript_RocketOpen::
+	msgbox MossdeepCity_Text_AnOpenDoor, MSGBOX_SIGN
+	warp MAP_MOSSDEEP_CITY_ROCKET, 8, 2
+	waitstate
+	releaseall
+	end
+
+MossdeepCity_Text_ShouldntBeSoClose:
+	.string "Its a rocket!\n"
+	.string "Maybe you shouldn't be so close.$"
+
+MossdeepCity_Text_AnOpenDoor:
+	.string "Its a rocket!\n"
+	.string "And look, an open door!$"
+
 MossdeepCity_EventScript_TeamMagmaEnterSpaceCenter::
 	lockall
 	applymovement LOCALID_MAXIE, MossdeepCity_Movement_MaxieGestureToSpaceCenter

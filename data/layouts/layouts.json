@@ -4600,6 +4600,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/FallarborTown_House3/border.bin",
       "blockdata_filepath": "data/layouts/FallarborTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOSSDEEP_CITY_ROCKET",
+      "name": "MossdeepCity_Rocket_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MossdeepCity_Rocket/border.bin",
+      "blockdata_filepath": "data/layouts/MossdeepCity_Rocket/map.bin"
     }
   ]
 }

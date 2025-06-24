@@ -348,6 +348,13 @@
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_GAME_CORNER_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 64,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [
@@ -522,6 +529,22 @@
       "elevation": 7,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_BlackRock"
+    },
+    {
+      "type": "sign",
+      "x": 63,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MossdeepCity_EventScript_Rocket"
+    },
+    {
+      "type": "sign",
+      "x": 64,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MossdeepCity_EventScript_Rocket"
     }
   ]
 }
