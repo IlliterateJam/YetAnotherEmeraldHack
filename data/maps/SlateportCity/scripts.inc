@@ -18,6 +18,7 @@
 .set LOCALID_GRUNT_9, 31
 .set LOCALID_GRUNT_11, 33
 .set LOCALID_SCOTT, 35
+.set LOCALID_TRUCK, 38
 .set LOCALID_TM_GUY, 39
 
 @ Note: LOCALID_SLATEPORT_ENERGY_GURU is a local id for this map used elsewhere. It's defined in event_objects.h
@@ -172,8 +173,15 @@ SlateportCity_EventScript_ABoxFullofTMs::
 	end
 
 SlateportCity_EventScript_AFamiliarTruck::
+	goto_if_set FLAG_SYS_GAME_CLEAR, SlateportCity_EventScript_CheckFlagStatus
 	msgbox SlateportCity_Text_TMGuy_AFamiliarTruck, MSGBOX_SIGN
 	end
+
+SlateportCity_EventScript_CheckFlagStatus::
+	goto_if_unset FLAG_RECEIVED_OLD_SEA_MAP, SlateportCity_EventScript_StrengthTruck
+	msgbox SlateportCity_Text_TMGuy_AFamiliarTruck, MSGBOX_SIGN
+	end
+
 
 SlateportCity_EventScript_EnterSlateport::
 	setflag FLAG_VISITED_SLATEPORT_CITY
@@ -1587,3 +1595,97 @@ SlateportCity_Text_TMGuy_ABoxFullofTMs:
 SlateportCity_Text_TMGuy_AFamiliarTruck:
 	.string "You remember the time when Mom\n"
 	.string "and Dad made you ride in the back…$"
+
+
+SlateportCity_EventScript_StrengthTruck::
+	lockall
+	goto_if_set FLAG_SYS_USE_STRENGTH, SlateportCity_EventScript_CheckActivatedTruck
+@ Start qol_field_moves
+    checkitem ITEM_STRENGTH_TOOL,1
+    goto_if_eq VAR_RESULT, TRUE, EventScript_UseStrengthTool
+    checkpartylearnknowsfieldmove MOVE_STRENGTH
+@ End qol_field_moves
+	goto_if_eq VAR_RESULT, PARTY_SIZE, SlateportCity_EventScript_CantStrength
+	setfieldeffectargument 0, VAR_RESULT
+	msgbox SlateportCity_Text_WantToStrength, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SlateportCity_EventScript_CancelStrength
+	closemessage
+	dofieldeffect FLDEFF_USE_STRENGTH
+	waitstate
+	goto SlateportCity_EventScript_ActivateStrength
+	end
+
+
+SlateportCity_EventScript_ActivateStrength::
+	setflag FLAG_SYS_USE_STRENGTH
+	msgbox SlateportCity_Text_MonUsedStrength, MSGBOX_DEFAULT
+	delay 10
+	playse SE_M_SKY_UPPERCUT
+	waitse
+	applymovement LOCALID_TRUCK, SlateportCity_Movement_TruckLift
+	waitmovement 0
+	setvar VAR_0x8004, 0  @ vertical pan
+	setvar VAR_0x8005, 2   @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 1   @ shake delay
+	special ShakeCamera
+	waitstate
+	playse SE_M_STRENGTH
+	waitse
+	delay 10
+	checkitemspace ITEM_OLD_SEA_MAP
+	goto_if_eq VAR_RESULT, FALSE, Slateport_OldSeaMap_NoBagSpace
+	finditem ITEM_OLD_SEA_MAP
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+	releaseall
+	end
+
+SlateportCity_EventScript_CantStrength::
+	msgbox SlateportCity_Text_CantStrength, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SlateportCity_EventScript_CheckActivatedTruck::
+	buffermovename STR_VAR_2, MOVE_STRENGTH @ qol_field_moves
+	msgbox SlateportCity_Text_StrengthActivated, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SlateportCity_EventScript_CancelStrength::
+	closemessage
+	releaseall
+	end
+
+Slateport_OldSeaMap_NoBagSpace::
+	msgbox SlateportCity_Text_NoBagRoom, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SlateportCity_Movement_TruckLift:
+	walk_up
+	walk_down
+	step_end
+
+
+SlateportCity_Text_WantToStrength:
+	.string "It's a big Truck, but a POKéMON\n"
+	.string "may be able to lift it up.\p"
+	.string "Would you like to use STRENGTH?$"
+
+SlateportCity_Text_MonUsedStrength:
+	.string "{STR_VAR_1} used STRENGTH!\p"
+	.string "{STR_VAR_1}'s STRENGTH made it\n"
+	.string "possible to lift Tucks around!$"
+
+SlateportCity_Text_CantStrength:
+	.string "It's a big Truck, but a POKéMON\n"
+	.string "may be able to lift it up.$"
+
+SlateportCity_Text_StrengthActivated:
+	.string "{STR_VAR_2} made it possible to lift\n" @ qol_field_moves
+	.string "Trucks around.$"
+
+SlateportCity_Text_NoBagRoom:
+	.string "It looks like there is something\n"
+	.string "underneath, but your BAG is full.$"
