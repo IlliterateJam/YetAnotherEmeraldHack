@@ -28,7 +28,7 @@ Route104_MrBrineysHouse_EventScript_Briney::
 	call_if_unset FLAG_MR_BRINEY_SAILING_INTRO, Route104_MrBrineysHouse_EventScript_SailingIntro
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_MrBrineysHouse_EventScript_SailBothDeliveries
 	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route104_MrBrineysHouse_EventScript_SailDeliverPackage
-	goto_if_set FLAG_SYS_GAME_CLEAR, Route104_MrBrineysHouse_EventScript_GiveOldSeaMap
+	goto_if_set FLAG_SYS_GAME_CLEAR, Route104_MrBrineysHouse_EventScript_GiveMysticTicket
 	goto Route104_MrBrineysHouse_EventScript_WhereAreWeBound
 	end
 
@@ -98,14 +98,14 @@ Route104_MrBrineysHouse_EventScript_Peeko::
 	release
 	end
 
-Route104_MrBrineysHouse_EventScript_GiveOldSeaMap::
-	goto_if_set FLAG_RECEIVED_OLD_SEA_MAP, Route104_MrBrineysHouse_EventScript_WhereAreWeBound
-	checkitemspace ITEM_OLD_SEA_MAP
-	goto_if_eq VAR_RESULT, FALSE, Route104_MrBrineysHouse_EventScript_OldSeaMap_NoBagSpace
+Route104_MrBrineysHouse_EventScript_GiveMysticTicket::
+	goto_if_set FLAG_RECEIVED_MYSTIC_TICKET, Route104_MrBrineysHouse_EventScript_WhereAreWeBound
+	checkitemspace ITEM_MYSTIC_TICKET
+	goto_if_eq VAR_RESULT, FALSE, Route104_MrBrineysHouse_EventScript_MysticTicket_NoBagSpace
 	msgbox Route104_MrBrineysHouse_Text_AhoyChampion, MSGBOX_DEFAULT
-	giveitem ITEM_OLD_SEA_MAP
-	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
-	setflag FLAG_RECEIVED_OLD_SEA_MAP
+	giveitem ITEM_MYSTIC_TICKET
+	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+	setflag FLAG_RECEIVED_MYSTIC_TICKET
 	msgbox Route104_MrBrineysHouse_Text_IDontKnow, MSGBOX_DEFAULT
 	release
 	end
@@ -116,38 +116,38 @@ Route104_MrBrineysHouse_Text_AhoyChampion:
 	.string "Welcome CHAMPION of HOENN!\p"
 	.string "PEEKO and I heard the news of your\n"
 	.string "adventure {PLAYER}{KUN}!\p"
-	.string "Is there anything that an Old Man can do\n"
-	.string "for such a talented young person\l"
-	.string "even now?\p"
+	.string "Is there anything that an old deckhand can\n"
+	.string "give to such a talented young person\l"
+	.string "for a congratulatory present?\p"
 	.string "… … … I know!\p"
-	.string "Please take this map I've kept ever\n"
-	.string "since I was a lowly deckhand.$"
+	.string "Please take this souvenir I found\n"
+	.string "on the beach one day.$"
 
 
 Route104_MrBrineysHouse_Text_IDontKnow:
-	.string "I don't know where it leads, but I do\n"
-	.string "know it be quite an adventure…\p"
+	.string "I don't know where it goes, but I bet\n"
+	.string "it will be quite an adventure…\p"
 	.string "PEEKO and I wish you well on all\n"
 	.string "your voyages!$"
 
-Route104_MrBrineysHouse_EventScript_OldSeaMap_NoBagSpace:
-	message Route104_MrBrineysHouse_Text_OldSeaMapBagFull
+Route104_MrBrineysHouse_EventScript_MysticTicket_NoBagSpace:
+	message Route104_MrBrineysHouse_Text_MysticTicketBagFull
 	waitmessage
 	waitbuttonpress
 	release
 	end
 
-Route104_MrBrineysHouse_Text_OldSeaMapBagFull:
+Route104_MrBrineysHouse_Text_MysticTicketBagFull:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "Welcome CHAMPION of HOENN!\p"
 	.string "PEEKO and I heard the news of your\n"
 	.string "adventure {PLAYER}{KUN}!\p"
-	.string "Is there anything that an Old Man\n"
-	.string "can do for such a talented young person \l"
-	.string "even now?\p"
+	.string "Is there anything that an old deckhand can\n"
+	.string "give to such a talented young person\l"
+	.string "for a congratulatory present?\p"
 	.string "… … … I know!\p"
 	.string "But I need you to empty your bag\n"
-	.string "space for it, okay?$"
+	.string "space for it fufufu. $"
 
 
 Route104_MrBrineysHouse_Text_WaitUpPeeko:
