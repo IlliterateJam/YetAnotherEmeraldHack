@@ -1621,7 +1621,6 @@ SlateportCity_EventScript_ActivateStrength::
 	msgbox SlateportCity_Text_MonUsedStrength, MSGBOX_DEFAULT
 	delay 10
 	playse SE_M_SKY_UPPERCUT
-	waitse
 	applymovement LOCALID_TRUCK, SlateportCity_Movement_TruckLift
 	waitmovement 0
 	setvar VAR_0x8004, 0  @ vertical pan
@@ -1630,8 +1629,8 @@ SlateportCity_EventScript_ActivateStrength::
 	setvar VAR_0x8007, 1   @ shake delay
 	special ShakeCamera
 	waitstate
-	playse SE_M_STRENGTH
 	waitse
+	@playse SE_M_STRENGTH
 	delay 10
 	checkitemspace ITEM_OLD_SEA_MAP
 	goto_if_eq VAR_RESULT, FALSE, Slateport_OldSeaMap_NoBagSpace

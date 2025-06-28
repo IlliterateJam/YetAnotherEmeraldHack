@@ -419,7 +419,6 @@ OldaleTown_EventScript_Snorlax::
 	lock
 	faceplayer
 	playse SE_M_SNORE
-	waitse
 	checkitem ITEM_BLUE_FLUTE
 	goto_if_eq VAR_RESULT, TRUE, OldaleTown_EventScript_AskUseBlueFlute
 	msgbox OldaleTown_Text_SomethingSleeping, MSGBOX_DEFAULT
@@ -473,9 +472,6 @@ OldaleTown_Text_SomethingSleeping:
 
 OldaleTown_Text_UsedBlueFlutePokemonAttacked:
 	.string "The large POKéMON woke up and attacked!$"
-
-OldaleTown_SnorlaxRanAway:
-	.string "The SNORLAX ran away!$"
 
 OldaleTown_Text_TryingToFindBigFootprints:
 	.string "I've heard rumors of a large bearlike\n"
