@@ -1,9 +1,11 @@
 .set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3
 .set LOCALID_RIVAL, 4
+.set LOCALID_SNORLAX, 7
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, OldaleTown_OnResume
 	.byte 0
 
 OldaleTown_OnTransition:
@@ -12,6 +14,7 @@ OldaleTown_OnTransition:
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
+	call_if_set FLAG_BADGE08_GET, OldaleTown_EventScript_SetSnorlaxState
 	end
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
@@ -28,6 +31,12 @@ OldaleTown_EventScript_MoveMartEmployee::
 	setobjectxyperm LOCALID_MART_EMPLOYEE, 13, 18
 	setobjectmovementtype LOCALID_MART_EMPLOYEE, MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT
 	return
+
+OldaleTown_EventScript_SetSnorlaxState::
+	call OldaleTown_EventScript_BlockWestEntrance
+	call_if_set FLAG_CAUGHT_SNORLAX, OldaleTown_EventScript_HideSnorlax
+	call_if_unset FLAG_CAUGHT_SNORLAX, OldaleTown_EventScript_TryShowSnorlax
+	end
 
 OldaleTown_EventScript_TownSign::
 	msgbox OldaleTown_Text_TownSign, MSGBOX_SIGN
@@ -224,6 +233,7 @@ OldaleTown_Movement_Unknown2:
 OldaleTown_EventScript_FootprintsMan::
 	lock
 	faceplayer
+	goto_if_set FLAG_BADGE08_GET, OldaleTown_EventScript_BlockingPathAgain
 	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_NotBlockingPath
 	msgbox OldaleTown_Text_DiscoveredFootprints, MSGBOX_DEFAULT
 	closemessage
@@ -246,6 +256,14 @@ OldaleTown_EventScript_BlockedPath::
 
 OldaleTown_EventScript_NotBlockingPath::
 	msgbox OldaleTown_Text_FinishedSketchingFootprints, MSGBOX_DEFAULT
+	release
+	end
+
+OldaleTown_EventScript_BlockingPathAgain::
+	msgbox OldaleTown_Text_TryingToFindBigFootprints, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_FOOTPRINTS_MAN, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -372,6 +390,98 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 	walk_down
 	walk_left
 	step_end
+
+
+
+OldaleTown_EventScript_HideSnorlax::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_SNORLAX
+	return
+
+OldaleTown_EventScript_TryShowSnorlax::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_SNORLAX, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_SNORLAX
+	return
+
+OldaleTown_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, OldaleTown_EventScript_TryRemoveSnorlax
+	end
+
+OldaleTown_EventScript_TryRemoveSnorlax::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SNORLAX
+	return
+
+OldaleTown_EventScript_Snorlax::
+	lock
+	faceplayer
+	playse SE_M_SNORE
+	waitse
+	checkitem ITEM_BLUE_FLUTE
+	goto_if_eq VAR_RESULT, TRUE, OldaleTown_EventScript_AskUseBlueFlute
+	msgbox OldaleTown_Text_SomethingSleeping, MSGBOX_DEFAULT
+	release
+	end
+
+OldaleTown_EventScript_AskUseBlueFlute::
+	msgbox OldaleTown_Text_WantToUseBlueFlute, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, OldaleTown_EventScript_UseBlueFlute
+	release
+	end
+
+OldaleTown_EventScript_UseBlueFlute::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_SNORLAX, 40
+	msgbox OldaleTown_Text_UsedBlueFlutePokemonAttacked, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, OldaleTown_EventScript_DefeatedSnorlax
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, OldaleTown_EventScript_RanFromSnorlax
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, OldaleTown_EventScript_RanFromSnorlax
+	setflag FLAG_DEFEATED_SNORLAX
+	releaseall
+	end
+
+OldaleTown_EventScript_DefeatedSnorlax::
+	setflag FLAG_DEFEATED_SNORLAX
+	setvar VAR_0x8004, SPECIES_SNORLAX
+	goto Common_EventScript_LegendaryRanAway
+	end
+
+OldaleTown_EventScript_RanFromSnorlax::
+	setvar VAR_0x8004, SPECIES_SNORLAX
+	goto Common_EventScript_LegendaryRanAway
+	end
+
+OldaleTown_Text_WantToUseBlueFlute:
+	.string "A large POKéMON is asleep here.\p"
+	.string "Do you want to use the BLUE FLUTE?$"
+
+OldaleTown_Text_SomethingSleeping:
+	.string "A large POKéMON is asleep here.$"
+
+OldaleTown_Text_UsedBlueFlutePokemonAttacked:
+	.string "The large POKéMON woke up and attacked!$"
+
+OldaleTown_SnorlaxRanAway:
+	.string "The SNORLAX ran away!$"
+
+OldaleTown_Text_TryingToFindBigFootprints:
+	.string "I've heard rumors of a large bearlike\n"
+	.string "POKéMON pillaging the town.\p"
+	.string "I bet that finding its footprints would\n"
+	.string "be a genious way of tracking it down!$"
 
 OldaleTown_Text_SavingMyProgress:
 	.string "I am looking at my POKéMON's stats\n"

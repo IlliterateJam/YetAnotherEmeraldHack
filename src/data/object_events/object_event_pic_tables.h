@@ -1786,6 +1786,19 @@ static const struct SpriteFrameImage sPicTable_Skitty[] = {
     overworld_frame(gObjectEventPic_Skitty, 2, 2, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_Snorlax[] = {
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+    obj_frame_tiles(gObjectEventPic_Snorlax),
+};
+
+
 static const struct SpriteFrameImage sPicTable_Kecleon[] = {
     overworld_frame(gObjectEventPic_Kecleon, 2, 2, 0),
     overworld_frame(gObjectEventPic_Kecleon, 2, 2, 1),

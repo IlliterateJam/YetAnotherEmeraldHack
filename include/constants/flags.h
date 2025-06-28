@@ -1231,9 +1231,9 @@
 #define FLAG_ITEM_ROUTE_119_TM_SEED_BOMB                            0x49D // Unused Flag
 #define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SHADOW_CLAW                   0x49E // Unused Flag
 #define FLAG_ITEM_JAGGED_PASS_TM_POISON_JAB                         0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
+#define FLAG_HIDE_SNORLAX                                           0x4A0 // Unused Flag
+#define FLAG_CAUGHT_SNORLAX                                         0x4A1 // Unused Flag
+#define FLAG_DEFEATED_SNORLAX                                        0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
