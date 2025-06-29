@@ -4,9 +4,78 @@
 .set LOCALID_GRUNT_1, 4
 .set LOCALID_GRUNT_2, 5
 .set LOCALID_KYOGRE_SLEEPING, 7
+.set LOCALID_ARTICUNO, 8
 
 SeafloorCavern_Room9_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SeafloorCavern_Room9_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, SeafloorCavern_Room9_OnResume @DONT FORGET!
 	.byte 0
+
+SeafloorCavern_Room9_OnTransition:
+	call_if_set FLAG_BADGE08_GET, SeafloorCavern_Room9_EventScript_SetArticunoState
+	end
+
+SeafloorCavern_Room9_EventScript_SetArticunoState::
+	call_if_set FLAG_CAUGHT_ARTICUNO, SeafloorCavern_Room9_EventScript_HideArticuno
+	call_if_unset FLAG_CAUGHT_ARTICUNO, SeafloorCavern_Room9_EventScript_TryShowArticuno
+	end
+
+SeafloorCavern_Room9_EventScript_HideArticuno::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_ARTICUNO
+	return
+
+SeafloorCavern_Room9_EventScript_TryShowArticuno::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_ARTICUNO, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_ARTICUNO
+	return
+
+SeafloorCavern_Room9_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SeafloorCavern_Room9_EventScript_TryRemoveArticuno
+	end
+
+SeafloorCavern_Room9_EventScript_TryRemoveArticuno::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_ARTICUNO
+	return
+
+SeafloorCavern_Room9_EventScript_Articuno::
+	lock
+	faceplayer
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+	msgbox SeafloorCavern_Room9_Text_ArticunoCry, MSGBOX_DEFAULT
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ARTICUNO, 50
+	closemessage
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafloorCavern_Room9_EventScript_DefeatedArticuno
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafloorCavern_Room9_EventScript_RanFromArticuno
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafloorCavern_Room9_EventScript_RanFromArticuno
+	setflag FLAG_DEFEATED_ARTICUNO
+	releaseall
+	end
+
+SeafloorCavern_Room9_EventScript_DefeatedArticuno::
+	setflag FLAG_DEFEATED_ARTICUNO
+	setvar VAR_0x8004, SPECIES_ARTICUNO
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SeafloorCavern_Room9_EventScript_RanFromArticuno::
+	setvar VAR_0x8004, SPECIES_ARTICUNO
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SeafloorCavern_Room9_Text_ArticunoCry:
+	.string "Gyaoo!$"
 
 SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	lockall

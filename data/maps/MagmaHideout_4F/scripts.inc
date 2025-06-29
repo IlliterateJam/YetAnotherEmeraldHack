@@ -5,9 +5,79 @@
 .set LOCALID_TABITHA, 5
 .set LOCALID_MAXIE, 6
 .set LOCALID_GROUDON_SLEEPING, 7
+.set LOCALID_MOLTRES, 9
 
 MagmaHideout_4F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MagmaHideout_4F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MagmaHideout_4F_OnResume @DONT FORGET!
 	.byte 0
+
+MagmaHideout_4F_OnTransition:
+	call_if_set FLAG_BADGE08_GET, MagmaHideout_4F_EventScript_SetMoltresState
+	end
+
+MagmaHideout_4F_EventScript_SetMoltresState::
+	call_if_set FLAG_CAUGHT_MOLTRES, MagmaHideout_4F_EventScript_HideMoltres
+	call_if_unset FLAG_CAUGHT_MOLTRES, MagmaHideout_4F_EventScript_TryShowMoltres
+	end
+
+MagmaHideout_4F_EventScript_HideMoltres::
+	setvar VAR_TEMP_1, 1
+	setflag FLAG_HIDE_MOLTRES
+	return
+
+MagmaHideout_4F_EventScript_TryShowMoltres::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_MOLTRES, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_MOLTRES
+	return
+
+MagmaHideout_4F_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MagmaHideout_4F_EventScript_TryRemoveMoltres
+	end
+
+MagmaHideout_4F_EventScript_TryRemoveMoltres::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_MOLTRES
+	return
+
+MagmaHideout_4F_EventScript_Moltres::
+	lock
+	faceplayer
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	msgbox MagmaHideout_4F_Text_MoltresCry, MSGBOX_DEFAULT
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_MOLTRES, 50
+	closemessage
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MagmaHideout_4F_EventScript_DefeatedMoltres
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MagmaHideout_4F_EventScript_RanFromMoltres
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MagmaHideout_4F_EventScript_RanFromMoltres
+	setflag FLAG_DEFEATED_MOLTRES
+	releaseall
+	end
+
+MagmaHideout_4F_EventScript_DefeatedMoltres::
+	setflag FLAG_DEFEATED_MOLTRES
+	setvar VAR_0x8004, SPECIES_MOLTRES
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+MagmaHideout_4F_EventScript_RanFromMoltres::
+	setvar VAR_0x8004, SPECIES_MOLTRES
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+MagmaHideout_4F_Text_MoltresCry:
+	.string "Gyaoo!$"
+
 
 MagmaHideout_4F_EventScript_Maxie::
 	lockall
