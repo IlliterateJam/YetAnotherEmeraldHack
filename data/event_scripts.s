@@ -1187,3 +1187,7 @@ Text_CantHeadbutt:
 	.include "data/maps/FallarborTown_House3/scripts.inc"
 
 	.include "data/maps/MossdeepCity_Rocket/scripts.inc"
+
+	.include "data/maps/TracklessForest_Entrance/scripts.inc"
+
+	.include "data/maps/TracklessForest_Woods_1/scripts.inc"

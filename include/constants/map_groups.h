@@ -419,6 +419,8 @@
 #define MAP_FIREY_PATH_CONNECTION                    (108 | (24 << 8))
 #define MAP_RUSTURF_CONNECTION1                      (109 | (24 << 8))
 #define MAP_RUSTURF_CONNNECTION2                     (110 | (24 << 8))
+#define MAP_TRACKLESS_FOREST_ENTRANCE                (111 | (24 << 8))
+#define MAP_TRACKLESS_FOREST_WOODS_1                 (112 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

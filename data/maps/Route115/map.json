@@ -361,17 +361,24 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 42,
+      "x": 39,
       "y": 67,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE115",
+      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
       "dest_warp_id": "0"
     },
     {
-      "x": 42,
+      "x": 39,
       "y": 68,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE115",
+      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 69,
+      "elevation": 0,
+      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
       "dest_warp_id": "0"
     }
   ],

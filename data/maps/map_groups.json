@@ -448,7 +448,9 @@
     "MeteorFalls_StevensCave",
     "FireyPath_Connection",
     "Rusturf_Connection1",
-    "Rusturf_Connnection2"
+    "Rusturf_Connnection2",
+    "TracklessForest_Entrance",
+    "TracklessForest_Woods_1"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
