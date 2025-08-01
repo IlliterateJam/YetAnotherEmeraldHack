@@ -451,7 +451,9 @@
     "Rusturf_Connnection2",
     "TracklessForest_Entrance",
     "TracklessForest_Woods_1",
-    "TracklessForest_Woods_2"
+    "TracklessForest_Woods_2",
+    "TracklessForest_Woods_3",
+    "TracklessForest_Raikou"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

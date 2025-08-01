@@ -4640,6 +4640,26 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/TracklessForest_Woods_2/border.bin",
       "blockdata_filepath": "data/layouts/TracklessForest_Woods_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRACKLESS_FOREST_WOODS_3",
+      "name": "TracklessForest_Woods_3_Layout",
+      "width": 44,
+      "height": 66,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/TracklessForest_Woods_3/border.bin",
+      "blockdata_filepath": "data/layouts/TracklessForest_Woods_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRACKLESS_FOREST_RAIKOU",
+      "name": "TracklessForest_Raikou_Layout",
+      "width": 22,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/TracklessForest_Raikou/border.bin",
+      "blockdata_filepath": "data/layouts/TracklessForest_Raikou/map.bin"
     }
   ]
 }
