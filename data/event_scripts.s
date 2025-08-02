@@ -1197,3 +1197,5 @@ Text_CantHeadbutt:
 	.include "data/maps/TracklessForest_Woods_3/scripts.inc"
 
 	.include "data/maps/TracklessForest_Raikou/scripts.inc"
+
+	.include "data/maps/TracklessForest_Suicune/scripts.inc"

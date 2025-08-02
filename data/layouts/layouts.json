@@ -4660,6 +4660,16 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/TracklessForest_Raikou/border.bin",
       "blockdata_filepath": "data/layouts/TracklessForest_Raikou/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRACKLESS_FOREST_SUICUNE",
+      "name": "TracklessForest_Suicune_Layout",
+      "width": 22,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/TracklessForest_Suicune/border.bin",
+      "blockdata_filepath": "data/layouts/TracklessForest_Suicune/map.bin"
     }
   ]
 }
