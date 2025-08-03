@@ -147,14 +147,14 @@
       "x": 38,
       "y": 54,
       "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
+      "dest_map": "MAP_TRACKLESS_FOREST_SUICUNE",
       "dest_warp_id": "1"
     },
     {
       "x": 38,
       "y": 55,
       "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
+      "dest_map": "MAP_TRACKLESS_FOREST_SUICUNE",
       "dest_warp_id": "0"
     },
     {

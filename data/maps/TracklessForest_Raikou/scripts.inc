@@ -42,7 +42,6 @@ TracklessForest_RaikouEventScript_TryRemoveRaikou::
 
 TracklessForest_RaikouEventScript_Raikou::
 	lock
-	faceplayer
 	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
 	msgbox TracklessFroest_RaikouText_RaikouCry, MSGBOX_DEFAULT
 	delay 40
