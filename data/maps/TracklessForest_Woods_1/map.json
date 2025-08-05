@@ -92,14 +92,14 @@
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "21"
+      "dest_warp_id": "19"
     },
     {
       "x": 11,
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "20"
+      "dest_warp_id": "18"
     },
     {
       "x": 27,
@@ -134,28 +134,14 @@
       "y": 60,
       "elevation": 0,
       "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "18"
+      "dest_warp_id": "46"
     },
     {
       "x": 11,
       "y": 60,
       "elevation": 0,
       "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "19"
-    },
-    {
-      "x": 32,
-      "y": 49,
-      "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 33,
-      "y": 49,
-      "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_ENTRANCE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "47"
     },
     {
       "x": 33,
@@ -301,15 +287,15 @@
       "x": 32,
       "y": 60,
       "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_TRACKLESS_FOREST_ENTEI",
+      "dest_warp_id": "0"
     },
     {
       "x": 33,
       "y": 60,
       "elevation": 0,
-      "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_TRACKLESS_FOREST_ENTEI",
+      "dest_warp_id": "1"
     },
     {
       "x": 32,
@@ -348,6 +334,20 @@
     },
     {
       "x": 11,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 32,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 33,
       "y": 49,
       "elevation": 0,
       "dest_map": "MAP_TRACKLESS_FOREST_WOODS_1",

@@ -425,6 +425,7 @@
 #define MAP_TRACKLESS_FOREST_WOODS_3                 (114 | (24 << 8))
 #define MAP_TRACKLESS_FOREST_RAIKOU                  (115 | (24 << 8))
 #define MAP_TRACKLESS_FOREST_SUICUNE                 (116 | (24 << 8))
+#define MAP_TRACKLESS_FOREST_ENTEI                   (117 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
