@@ -2616,7 +2616,7 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_CATERPIE"
+                "species": "SPECIES_SKITTY"
               },
               {
                 "min_level": 8,
@@ -2624,8 +2624,8 @@
                 "species": "SPECIES_CATERPIE"
               },
               {
-                "min_level": 7,
-                "max_level": 7,
+                "min_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_WEEDLE"
               },
               {
@@ -2636,12 +2636,12 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_SKITTY"
+                "species": "SPECIES_SPOINK"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_SKITTY"
+                "species": "SPECIES_SPOINK"
               }
             ]
           }
@@ -2685,7 +2685,7 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_WEEDLE"
+                "species": "SPECIES_SKITTY"
               },
               {
                 "min_level": 8,
@@ -2693,8 +2693,8 @@
                 "species": "SPECIES_WEEDLE"
               },
               {
-                "min_level": 7,
-                "max_level": 7,
+                "min_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_CATERPIE"
               },
               {
@@ -2705,12 +2705,12 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_SKITTY"
+                "species": "SPECIES_SPOINK"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_SKITTY"
+                "species": "SPECIES_SPOINK"
               }
             ]
           }
@@ -14402,6 +14402,144 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_CYNDAQUIL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_TRACKLESS_FOREST_ENTRANCE",
+          "base_label": "gTracklessForest_Entrance",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 18,
+                "max_level": 19,
+                "species": "SPECIES_CATERPIE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_METAPOD"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_SLAKOTH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_VIGOROTH"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_WEEDLE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_KAKUNA"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ARIADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_TRACKLESS_FOREST_ENTRANCE",
+          "base_label": "gTracklessForest_Entrance_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 18,
+                "max_level": 19,
+                "species": "SPECIES_WEEDLE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_KAKUNA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_SLAKOTH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_VIGOROTH"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_CATERPIE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_METAPOD"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_BUTTERFREE"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ARIADOS"
               }
             ]
           }
