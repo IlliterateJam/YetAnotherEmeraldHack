@@ -2734,9 +2734,9 @@ const struct Item gItems[] =
         .name = _("Sweet Apple"),
         .price = 2200,
         .description = sSweetAppleDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
     },
 

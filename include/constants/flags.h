@@ -288,7 +288,7 @@
 #define FLAG_ENTERED_ELITE_FOUR              0x107
 #define FLAG_RECEIVED_TM_HIDDEN_POWER        0x108
 #define FLAG_RECEIVED_TM_TORMENT             0x109
-#define FLAG_RECEIVED_LAVARIDGE_EGG          0x10A
+#define FLAG_RECEIVED_LAVARIDGE_EGG_HERA          0x10A
 #define FLAG_RECEIVED_REVIVED_FOSSIL_MON     0x10B
 #define FLAG_SECRET_BASE_REGISTRY_ENABLED    0x10C
 #define FLAG_RECEIVED_TM_THIEF               0x10D
@@ -1184,14 +1184,14 @@
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
 #define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_ITEM_HIDDEN_ROUTE_101_REPEL                            0x472 
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_UNUSED_0x479                                           0x479 // Unused Flag
+#define FLAG_ITEM_TRACKLESS_FOREST_PROTEIN                          0x479 
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C
@@ -1218,43 +1218,43 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_ROUTE_1185_WATER_STONE                                 0x493 // 
-#define FLAG_ITEM_SAFARI_ZONe_SOUTH_RAZOR_FANG                      0x494 // Unused Flag
-#define FLAG_ITEM_SAFARI_ZONE_NORTH_RAZOR_CLAW                      0x495 // Unused Flag
-#define FLAG_ITEM_VICTORY_ROAD_B2F_REAPER_CLOTH                     0x496 // Unused Flag
-#define FLAG_ITEM_MAGMA_HIDEOUT_1F_MAGMARIZER                       0x497 // Unused Flag
-#define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_7_DUBIOUS_DISC               0x498 // Unused Flag
-#define FLAG_RUSTBORO_MANIAC                                        0x499 // Unused Flag
-#define FLAG_ROUTE_134_HERMIT_CHOICE                                0x49A // Unused Flag
-#define FLAG_RUSTURF_CONNECTION_TM_EARTH_POWER                      0x49B // Unused Flag
-#define FLAG_SKYPILLAR_4F_TM_DRAGON_PULSE                           0x49C // Unused Flag
-#define FLAG_ITEM_ROUTE_119_TM_SEED_BOMB                            0x49D // Unused Flag
-#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SHADOW_CLAW                   0x49E // Unused Flag
-#define FLAG_ITEM_JAGGED_PASS_TM_POISON_JAB                         0x49F // Unused Flag
-#define FLAG_HIDE_SNORLAX                                           0x4A0 // Unused Flag
-#define FLAG_CAUGHT_SNORLAX                                         0x4A1 // Unused Flag
-#define FLAG_DEFEATED_SNORLAX                                       0x4A2 // Unused Flag
-#define FLAG_HIDE_ARTICUNO                                          0x4A3 // Unused Flag
-#define FLAG_CAUGHT_ARTICUNO                                        0x4A4 // Unused Flag
-#define FLAG_DEFEATED_ARTICUNO                                      0x4A5 // Unused Flag
-#define FLAG_HIDE_ZAPDOS                                            0x4A6 // Unused Flag
-#define FLAG_CAUGHT_ZAPDOS                                          0x4A7 // Unused Flag
-#define FLAG_DEFEATED_ZAPDOS                                        0x4A8 // Unused Flag
-#define FLAG_HIDE_MOLTRES                                           0x4A9 // Unused Flag
-#define FLAG_CAUGHT_MOLTRES                                         0x4AA // Unused Flag
-#define FLAG_DEFEATED_MOLTRES                                       0x4AB // Unused Flag
-#define FLAG_HIDE_RAIKOU                                            0x4AC // Unused Flag
-#define FLAG_CAUGHT_RAIKOU                                          0x4AD // Unused Flag
-#define FLAG_DEFEATED_RAIKOU                                        0x4AE // Unused Flag
-#define FLAG_HIDE_ENTEI                                             0x4AF // Unused Flag
-#define FLAG_DEFEATED_ENTEI                                         0x4B0 // Unused Flag
-#define FLAG_CAUGHT_ENTEI                                           0x4B1 // Unused Flag
-#define FLAG_HIDE_SUICUNE                                           0x4B2 // Unused Flag
-#define FLAG_CAUGHT_SUICUNE                                          0x4B3 // Unused Flag
-#define FLAG_DEFEATED_SUICUNE                                       0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
+#define FLAG_ROUTE_1185_WATER_STONE                                 0x493  
+#define FLAG_ITEM_SAFARI_ZONe_SOUTH_RAZOR_FANG                      0x494 
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_RAZOR_CLAW                      0x495 
+#define FLAG_ITEM_VICTORY_ROAD_B2F_REAPER_CLOTH                     0x496 
+#define FLAG_ITEM_MAGMA_HIDEOUT_1F_MAGMARIZER                       0x497 
+#define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_7_DUBIOUS_DISC               0x498 
+#define FLAG_RUSTBORO_MANIAC                                        0x499 
+#define FLAG_ROUTE_134_HERMIT_CHOICE                                0x49A 
+#define FLAG_RUSTURF_CONNECTION_TM_EARTH_POWER                      0x49B 
+#define FLAG_SKYPILLAR_4F_TM_DRAGON_PULSE                           0x49C 
+#define FLAG_ITEM_ROUTE_119_TM_SEED_BOMB                            0x49D 
+#define FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SHADOW_CLAW                   0x49E 
+#define FLAG_ITEM_JAGGED_PASS_TM_POISON_JAB                         0x49F 
+#define FLAG_HIDE_SNORLAX                                           0x4A0 
+#define FLAG_CAUGHT_SNORLAX                                         0x4A1 
+#define FLAG_DEFEATED_SNORLAX                                       0x4A2 
+#define FLAG_HIDE_ARTICUNO                                          0x4A3 
+#define FLAG_CAUGHT_ARTICUNO                                        0x4A4 
+#define FLAG_DEFEATED_ARTICUNO                                      0x4A5 
+#define FLAG_HIDE_ZAPDOS                                            0x4A6 
+#define FLAG_CAUGHT_ZAPDOS                                          0x4A7 
+#define FLAG_DEFEATED_ZAPDOS                                        0x4A8 
+#define FLAG_HIDE_MOLTRES                                           0x4A9 
+#define FLAG_CAUGHT_MOLTRES                                         0x4AA 
+#define FLAG_DEFEATED_MOLTRES                                       0x4AB 
+#define FLAG_HIDE_RAIKOU                                            0x4AC 
+#define FLAG_CAUGHT_RAIKOU                                          0x4AD 
+#define FLAG_DEFEATED_RAIKOU                                        0x4AE 
+#define FLAG_HIDE_ENTEI                                             0x4AF 
+#define FLAG_DEFEATED_ENTEI                                         0x4B0 
+#define FLAG_CAUGHT_ENTEI                                           0x4B1 
+#define FLAG_HIDE_SUICUNE                                           0x4B2 
+#define FLAG_CAUGHT_SUICUNE                                         0x4B3 
+#define FLAG_DEFEATED_SUICUNE                                       0x4B4 
+#define FLAG_GIVEN_APPLE                                            0x4B5 
+#define FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA                          0x4B6 // Unused Flag
+#define FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE                       0x4B7 // Unused Flag
 #define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag

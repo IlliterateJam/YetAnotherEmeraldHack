@@ -1202,9 +1202,9 @@ static const u8 sDawnStoneDesc[] = _(
     "evolve.");
 
 static const u8 sSweetAppleDesc[] = _(
-    "A very sweet apple\n"
-    "that makes certain\n"
-    "Pokémon evolve.");
+    "An apple so sweet\n"
+    "that it can cause a\n"
+    "fight.");
 
 static const u8 sTartAppleDesc[] = _(
     "A very tart apple\n"

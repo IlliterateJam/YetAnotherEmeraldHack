@@ -213,7 +213,24 @@ LavaridgeTown_EventScript_EnteredHotSprings::
 	end
 
 LavaridgeTown_EventScript_ExpertM::
-	msgbox LavaridgeTown_Text_HotSpringsNeverRunDry, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_GIVEN_APPLE, LavaridgeTown_EventScript_ExpertM_PreventedAWar
+	checkitem ITEM_SWEET_APPLE
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_ExpertM_ChooseAFairestOnce
+	msgbox LavaridgeTown_Text_IHaveAnAppleToGive, MSGBOX_DEFAULT
+	giveitem ITEM_SWEET_APPLE
+	message LavaridgeTown_Text_PickforMeHeh
+	waitbuttonpress
+	release
+	end
+
+LavaridgeTown_EventScript_ExpertM_PreventedAWar::
+	msgbox LavaridgeTown_Text_WhatTheyDidntCare, MSGBOX_NPC
+	end
+
+LavaridgeTown_EventScript_ExpertM_ChooseAFairestOnce::
+	msgbox LavaridgeTown_Text_PickforMeHeh, MSGBOX_NPC
 	end
 
 LavaridgeTown_EventScript_OldMan::
@@ -224,9 +241,143 @@ LavaridgeTown_EventScript_Twin::
 	msgbox LavaridgeTown_Text_BatheInHotSpringsEveryDay, MSGBOX_NPC
 	end
 
-LavaridgeTown_EventScript_HotSpringsOldWoman1::
+LavaridgeTown_EventScript_HotSpringsHera::
+	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG_HERA, LavaridgeTown_EventScript_WhoWasThatGuy
+	checkitem ITEM_SWEET_APPLE
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_HeraChoose
 	msgbox LavaridgeTown_Text_IfPokemonInHotSprings, MSGBOX_NPC
 	end
+
+LavaridgeTown_EventScript_HeraChoose::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_HeraChooseMeforEgg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
+	setvar VAR_0x8004, ITEM_SWEET_APPLE
+	call Common_EventScript_PlayerHandedOverTheItem
+	msgbox LavaridgeTown_Text_HeraChooseCorrectMortal, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_LAVARIDGE_EGG_HERA
+	setflag FLAG_GIVEN_APPLE
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_MUNCHLAX
+	release
+	end
+
+
+LavaridgeTown_EventScript_HotSpringsAthena::
+	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA, LavaridgeTown_EventScript_WhoWasThatGuy
+	checkitem ITEM_SWEET_APPLE
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_AthenaChoose
+	msgbox LavaridgeTown_Text_HotSpringsNeverRunDry, MSGBOX_NPC
+	end
+
+LavaridgeTown_EventScript_AthenaChoose::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_AthenaChooseMeforEgg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
+	setvar VAR_0x8004, ITEM_SWEET_APPLE
+	call Common_EventScript_PlayerHandedOverTheItem
+	msgbox LavaridgeTown_Text_AthenaChooseCorrectWise, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA
+	setflag FLAG_GIVEN_APPLE
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_WYNAUT
+	release
+	end
+
+LavaridgeTown_EventScript_HotSpringsAphrodite::
+	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE, LavaridgeTown_EventScript_WhoWasThatGuy
+	checkitem ITEM_SWEET_APPLE
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_AphroditeChoose
+	msgbox LavaridgeTown_Text_HotSpringsClaims, MSGBOX_NPC
+	end
+
+LavaridgeTown_EventScript_AphroditeChoose::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_AphroditeChooseMeforEgg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
+	setvar VAR_0x8004, ITEM_SWEET_APPLE
+	call Common_EventScript_PlayerHandedOverTheItem
+	msgbox LavaridgeTown_Text_AphroditeChooseCorrectHeart, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE
+	setflag FLAG_GIVEN_APPLE
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_TOGEPI
+	release
+
+LavaridgeTown_EventScript_WhoWasThatGuy::
+	msgbox LavaridgeTown_Text_ThatGuyisLazy, MSGBOX_NPC
+	end
+
+LavaridgeTown_Text_IHaveAnAppleToGive:
+	.string "Oh là là!\p"
+	.string "Three experts in the hot springs!\p"
+	.string "I want to grab the attention of them,\n"
+	.string "but they seem to be the jealous type\l"
+	.string "and I only have this one apple…\p"
+	.string "I know! You can give it to one of them\n"
+	.string "so that blame does not come back to me.$"
+
+LavaridgeTown_Text_PickforMeHeh:
+	.string "Pick the fairest one for me heh heh!$"
+
+LavaridgeTown_Text_WhatTheyDidntCare:
+	.string "I can't believe that she still blamed\n"
+	.string "me for your choice and others forgave.\p"
+	.string "If it were me, I would have gone to war.$"
+
+LavaridgeTown_Text_ThatGuyisLazy:
+	.string "That man didn't even bother to give the\n"
+	.string "SWEET APPLE himself. How Lazy.$"
+
+LavaridgeTown_Text_HeraChooseMeforEgg:
+	.string "Oh! Give me the SWEET APPLE!\p"
+	.string "As reward, you will have the most majestic\n"
+	.string "EGG you have ever seen. Trainers will be\l"
+	.string "in awe of your power and might.\p"
+	.string "Don't listen to those other experts.\n"
+	.string "How about handing it over?$"
+
+LavaridgeTown_Text_HeraChooseCorrectMortal:
+	.string "Oh! You have made the right choice\n"
+	.string "mortal--I mean child.$"
+
+LavaridgeTown_Text_AthenaChooseMeforEgg:
+	.string "Oh! Give me the SWEET APPLE!\p"
+	.string "As reward, you will have the smartest\n"
+	.string "EGG you have ever seen. Trainers will be\l"
+	.string "in awe of your skill and abilities.\p"
+	.string "Don't listen to those other experts.\n"
+	.string "How about handing it over?$"
+
+LavaridgeTown_Text_AthenaChooseCorrectWise:
+	.string "Oh! You have made the wisest choice$"
+
+LavaridgeTown_Text_AphroditeChooseMeforEgg:
+	.string "Oh! Give me the SWEET APPLE!\p"
+	.string "As reward, you will have the cutest\n"
+	.string "EGG you have ever seen. Trainers will be\l"
+	.string "in awe of your overwhelming adorableness.\p"
+	.string "Don't listen to those other experts.\n"
+	.string "How about handing it over?$"
+
+LavaridgeTown_Text_AphroditeChooseCorrectHeart:
+	.string "Oh! You have chosen with your heart.$"
+
 
 LavaridgeTown_EventScript_HotSpringsOldWoman2::
 	msgbox LavaridgeTown_Text_HotSpringsClaims, MSGBOX_NPC
@@ -234,23 +385,6 @@ LavaridgeTown_EventScript_HotSpringsOldWoman2::
 
 LavaridgeTown_EventScript_ExpertF::
 	msgbox LavaridgeTown_Text_OhYouLikeHotSprings, MSGBOX_NPC
-	end
-
-LavaridgeTown_EventScript_EggWoman::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG, LavaridgeTown_EventScript_ReceivedEgg
-	msgbox LavaridgeTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
-	getpartysize
-	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
-	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_LAVARIDGE_EGG
-	playfanfare MUS_OBTAIN_ITEM
-	message LavaridgeTown_Text_ReceivedTheEgg
-	waitfanfare
-	giveegg SPECIES_WYNAUT
-	release
 	end
 
 LavaridgeTown_EventScript_ReceivedEgg::
@@ -350,8 +484,7 @@ LavaridgeTown_Text_NoRoomForThisEgg:
 
 LavaridgeTown_Text_AsYouWishThen:
 	.string "As you wish, then…\p"
-	.string "If you have a change of heart about\n"
-	.string "hatching this EGG, I will be here.$"
+	.string "Don't make a decision you might regret!$"
 
 LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare:
 	.string "Every so often, an EGG will be found at\n"
@@ -411,3 +544,19 @@ LavaridgeTown_Text_HerbShopSign:
 	.string "POKéMON HERB SHOP\n"
 	.string "“Bitter taste--better cure!”$"
 
+LavaridgeTown_EventScript_EggWoman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG_HERA, LavaridgeTown_EventScript_ReceivedEgg
+	msgbox LavaridgeTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
+	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_LAVARIDGE_EGG_HERA
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_WYNAUT
+	release
+	end

@@ -21,19 +21,6 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 20,
-      "y": 11,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LavaridgeTown_EventScript_ExpertF",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 17,
       "y": 5,
@@ -74,28 +61,28 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
-      "x": 16,
-      "y": 8,
+      "x": 15,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",
+      "script": "LavaridgeTown_EventScript_HotSpringsHera",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
       "x": 17,
-      "y": 8,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LavaridgeTown_EventScript_HotSpringsOldWoman2",
+      "script": "LavaridgeTown_EventScript_HotSpringsAphrodite",
       "flag": "0"
     },
     {
@@ -134,7 +121,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LavaridgeTown_EventScript_EggWoman",
+      "script": "LavaridgeTown_EventScript_ExpertF",
       "flag": "0"
     },
     {
@@ -166,14 +153,14 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
       "x": 16,
-      "y": 8,
+      "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LavaridgeTown_EventScript_HotSpringsOldWoman1",
+      "script": "LavaridgeTown_EventScript_HotSpringsAthena",
       "flag": "0"
     }
   ],

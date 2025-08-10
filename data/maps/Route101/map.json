@@ -269,8 +269,8 @@
       "x": 9,
       "y": 14,
       "elevation": 0,
-      "item": "ITEM_NONE",
-      "flag": "FLAG_TEMP_1"
+      "item": "ITEM_REPEL",
+      "flag": "FLAG_ITEM_HIDDEN_ROUTE_101_REPEL"
     }
   ]
 }
