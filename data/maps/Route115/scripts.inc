@@ -31,6 +31,10 @@ Route115_EventScript_MeteorFallsSign::
 	msgbox Route115_Text_MeteorFallsSign, MSGBOX_SIGN
 	end
 
+Route115_EventScript_TracklessForestSign::
+	msgbox Route115_Text_RouteSignTracklessForest, MSGBOX_SIGN
+	end
+
 Route115_EventScript_Timothy::
 	trainerbattle_single TRAINER_TIMOTHY_1, Route115_Text_TimothyIntro, Route115_Text_TimothyDefeat, Route115_EventScript_RegisterTimothy
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -143,3 +147,6 @@ Route115_Text_MeteorFallsSign:
 	.string "METEOR FALLS\n"
 	.string "FALLARBOR TOWN THROUGH HERE$"
 
+Route115_Text_RouteSignTracklessForest
+	.string "TRACKLESS FOREST\n"
+	.string "Be wary of getting lost$"
