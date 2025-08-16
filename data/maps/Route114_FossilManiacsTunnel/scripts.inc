@@ -41,6 +41,12 @@ Route114_FossilManiacsTunnel_EventScript_FossilManiac::
 	goto_if_eq VAR_RESULT, TRUE, Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil
 	checkitem ITEM_CLAW_FOSSIL
 	goto_if_eq VAR_RESULT, TRUE, Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil
+	checkitem ITEM_HELIX_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil
+	checkitem ITEM_DOME_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil
+	checkitem ITEM_OLD_AMBER
+	goto_if_eq VAR_RESULT, TRUE, Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil
 	msgbox Route114_FossilManiacsTunnel_Text_LookInDesertForFossils, MSGBOX_DEFAULT
 	release
 	end
@@ -62,8 +68,8 @@ Route114_FossilManiacsTunnel_Text_LookInDesertForFossils:
 	.string "But the FOSSILS around these parts all\n"
 	.string "belong to me… None for you…\p"
 	.string "If you can't bear to go without\n"
-	.string "a FOSSIL, look in a desert where there\l"
-	.string "are boulders and sand that may hide\l"
+	.string "a FOSSIL, look in the desert sand or\l"
+	.string "the deep ocean boulders that may hide\l"
 	.string "FOSSILS…$"
 
 Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils:

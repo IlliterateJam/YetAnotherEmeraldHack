@@ -147,6 +147,6 @@ Route115_Text_MeteorFallsSign:
 	.string "METEOR FALLS\n"
 	.string "FALLARBOR TOWN THROUGH HERE$"
 
-Route115_Text_RouteSignTracklessForest
+Route115_Text_RouteSignTracklessForest:
 	.string "TRACKLESS FOREST\n"
 	.string "Be wary of getting lost$"

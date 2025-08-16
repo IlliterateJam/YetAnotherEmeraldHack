@@ -78,11 +78,19 @@
     },
     {
       "type": "hidden_item",
-      "x": 72,
-      "y": 20,
+      "x": 28,
+      "y": 31,
       "elevation": 3,
       "item": "ITEM_RED_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD"
+    },
+    {
+      "type": "hidden_item",
+      "x": 72,
+      "y": 20,
+      "elevation": 3,
+      "item": "ITEM_OLD_AMBER",
+      "flag": "FLAG_HIDDEN_ITEM_METEOR_FALLS_AMBER"
     }
   ]
 }

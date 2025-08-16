@@ -619,6 +619,9 @@ static const struct MenuAction MultichoiceList_Fossil[] =
 {
     {gText_ClawFossil},
     {gText_RootFossil},
+    {gText_HelixFossil},
+    {gText_DomeFossil},
+    {gText_AmberFossil},
     {gText_Exit},
 };
 
