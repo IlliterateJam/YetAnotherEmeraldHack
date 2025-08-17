@@ -1,4 +1,5 @@
 .set LOCALID_FOSSIL_SCIENTIST, 5
+.set LOCALID_CLONING_SCIENTIST, 7
 
 RustboroCity_DevonCorp_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_DevonCorp_2F_OnTransition
@@ -679,3 +680,134 @@ RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext:
 RustboroCity_DevonCorp_2F_Text_YouDontHaveThatFossil:
 	.string "Hmmm… seems like you do not own an\n"
 	.string "authentic {STR_VAR_1}.$"
+
+
+
+@Forgive Me
+RustboroCity_DevonCorp_2F_EventScript_CloningScientist::
+	lock
+	faceplayer
+	call_if_eq VAR_FOSSIL_RESURRECTION_STATE, 1, RustboroCity_DevonCorp_2F_EventScript_SetFossilReady
+	goto_if_set FLAG_RECEIVED_MEWTWO, RustboroCity_DevonCorp_2F_EventScript_HasMewtwo
+	msgbox RustboroCity_DevonCorp_2F_Text_NeedMonForaCloningMachine, MSGBOX_DEFAULT
+	checkpartymove MOVE_HEART_SWAP
+	goto_if_ne VAR_RESULT, PARTY_SIZE, RustboroCity_DevonCorp_2F_EventScript_NoticeMew
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_HasMewtwo:
+	msgbox RustboroCity_DevonCorp_2F_Text_ThatWasReallyEasy, MSGBOX_NPC
+	release
+	end
+	
+RustboroCity_DevonCorp_2F_Text_ThatWasReallyEasy:
+	.string "See how easy and simple that was?\p"
+	.string "As a purely altruistic person myself,\n"
+	.string "I can only see this technology be used\l"
+	.string "for good.$"
+
+RustboroCity_DevonCorp_2F_Text_NeedMonForaCloningMachine:
+	.string "I'm developing a machine to clone\n"
+	.string "and make new POKéMON…\p"
+	.string "But first I need a POKéMON with unique\n"
+	.string "DNA that allows it to learn the move\l"
+	.string "HEART SWAP.$"
+
+
+RustboroCity_DevonCorp_2F_EventScript_NoticeMew::
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_CLONING_SCIENTIST, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_CLONING_SCIENTIST, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_WantToUseMewtoTryTheMachine, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwo
+	msgbox RustboroCity_DevonCorp_2F_Text_WhyYouCanTrustMe, MSGBOX_NPC
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwo::
+	message RustboroCity_DevonCorp_2F_Text_OkHereWeGo
+	waitbuttonpress
+	closemessage
+	playse SE_M_STAT_INCREASE
+	waitse
+	waitbuttonpress
+	msgbox RustboroCity_DevonCorp_2F_Text_OkWereDone, MSGBOX_NPC
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEWTWO
+	givemon SPECIES_MEWTWO, 20
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwoParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwoPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwoParty::
+	setflag FLAG_RECEIVED_MEWTWO
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedMewtwoFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_FinishReceivingMewtwo
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto RustboroCity_DevonCorp_2F_EventScript_FinishReceivingMewtwo
+	end
+
+
+RustboroCity_DevonCorp_2F_EventScript_ReceiveMewtwoPC::
+	setflag FLAG_RECEIVED_MEWTWO
+	call RustboroCity_DevonCorp_2F_EventScript_ReceivedMewtwoFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, RustboroCity_DevonCorp_2F_EventScript_TransferMewtwoToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto RustboroCity_DevonCorp_2F_EventScript_TransferMewtwoToPC
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_TransferMewtwoToPC::
+	call Common_EventScript_TransferredToPC
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_ReceivedMewtwoFanfare::
+	bufferspeciesname STR_VAR_2, SPECIES_MEWTWO
+	playfanfare MUS_OBTAIN_ITEM
+	message RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MEWTWO
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_FinishReceivingMewtwo::
+	setflag FLAG_RECEIVED_MEWTWO
+	release
+	end
+
+RustboroCity_DevonCorp_2F_Text_WantToUseMewtoTryTheMachine:
+	.string "Oh, what is that?\n"
+	.string "Is that the mythical POKéMON MEW?\p"
+	.string "Rumor has it that its DNA is so robust\n"
+	.string "that it can grow on its own accord.\l"
+	.string "This means that it can perform the\l"
+	.string "special function of HEART SWAPPING.\p"
+	.string "How about you let me use MEW's DNA and\n"
+	.string "see if we can create a new POKéMON?$"
+
+RustboroCity_DevonCorp_2F_Text_OkHereWeGo:
+	.string "Okay! Here we go. This should only take\n"
+	.string "a couple of seconds.$"
+
+RustboroCity_DevonCorp_2F_Text_OkWereDone:
+	.string "… … …\n"
+	.string "… … …\p"
+	.string "… And just like that we are done!\p"
+	.string "I took some liberties with the creation\n"
+	.string "process, giving the clones of MEW some\l"
+	.string "improved features and strengths.\p"
+	.string "For your help, I will even give you one of\n"
+	.string "the clones for your own training!$"
+
+
+RustboroCity_DevonCorp_2F_Text_WhyYouCanTrustMe:
+	.string "No? Why not? You can defintely\n"
+	.string "trust me with this technology!$"
+
+
