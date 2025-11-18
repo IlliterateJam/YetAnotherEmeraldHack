@@ -60,7 +60,7 @@ MagmaHideout_4F_EventScript_Moltres::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MagmaHideout_4F_EventScript_DefeatedMoltres
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MagmaHideout_4F_EventScript_RanFromMoltres
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MagmaHideout_4F_EventScript_RanFromMoltres
-	setflag FLAG_DEFEATED_MOLTRES
+	setflag FLAG_CAUGHT_MOLTRES
 	releaseall
 	end
 

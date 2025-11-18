@@ -47,6 +47,7 @@ VictoryRoad_1F_EventScript_WallyEntranceBattle::
 	copyobjectxytoperm LOCALID_WALLY_ENTRANCE
 	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
 	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
+	setvar VAR_PETALBURG_WOODS_STATE, 2
 	releaseall
 	end
 

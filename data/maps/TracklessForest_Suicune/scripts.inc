@@ -55,7 +55,7 @@ TracklessForest_SuicuneEventScript_Suicune::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TracklessForest_SuicuneEventScript_DefeatedSuicune
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TracklessForest_SuicuneEventScript_RanFromSuicune
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TracklessForest_SuicuneEventScript_RanFromSuicune
-	setflag FLAG_DEFEATED_SUICUNE
+	setflag FLAG_CAUGHT_SUICUNE
 	releaseall
 	end
 

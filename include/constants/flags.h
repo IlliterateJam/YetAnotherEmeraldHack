@@ -1253,9 +1253,9 @@
 #define FLAG_CAUGHT_SUICUNE                                         0x4B3 
 #define FLAG_DEFEATED_SUICUNE                                       0x4B4 
 #define FLAG_GIVEN_APPLE                                            0x4B5 
-#define FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA                          0x4B6 // Unused Flag
-#define FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE                       0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
+#define FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA                          0x4B6 
+#define FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE                       0x4B7 
+#define FLAG_CAUGHT_CELEBI                                          0x4B8 
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag

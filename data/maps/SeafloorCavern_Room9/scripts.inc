@@ -59,7 +59,7 @@ SeafloorCavern_Room9_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafloorCavern_Room9_EventScript_DefeatedArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafloorCavern_Room9_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafloorCavern_Room9_EventScript_RanFromArticuno
-	setflag FLAG_DEFEATED_ARTICUNO
+	setflag FLAG_CAUGHT_ARTICUNO
 	releaseall
 	end
 

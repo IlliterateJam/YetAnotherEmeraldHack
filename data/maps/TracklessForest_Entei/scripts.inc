@@ -55,7 +55,7 @@ TracklessForest_EnteiEventScript_Entei::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TracklessForest_EnteiEventScript_DefeatedEntei
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TracklessForest_EnteiEventScript_RanFromEntei
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TracklessForest_EnteiEventScript_RanFromEntei
-	setflag FLAG_DEFEATED_ENTEI
+	setflag FLAG_CAUGHT_ENTEI
 	releaseall
 	end
 

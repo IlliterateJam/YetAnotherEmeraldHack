@@ -56,7 +56,7 @@ TracklessForest_RaikouEventScript_Raikou::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TracklessForest_RaikouEventScript_DefeatedRaikou
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TracklessForest_RaikouEventScript_RanFromRaikou
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TracklessForest_RaikouEventScript_RanFromRaikou
-	setflag FLAG_DEFEATED_RAIKOU
+	setflag FLAG_CAUGHT_RAIKOU
 	releaseall
 	end
 

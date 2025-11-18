@@ -56,7 +56,7 @@ AquaHideout_B2FEventScript_Zapdos::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AquaHideout_B2FEventScript_DefeatedZapdos
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AquaHideout_B2FEventScript_RanFromZapdos
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AquaHideout_B2FEventScript_RanFromZapdos
-	setflag FLAG_DEFEATED_ZAPDOS
+	setflag FLAG_CAUGHT_ZAPDOS
 	releaseall
 	end
 

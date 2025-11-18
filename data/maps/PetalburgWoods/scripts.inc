@@ -1,5 +1,6 @@
 .set LOCALID_GRUNT, 3
 .set LOCALID_DEVON_EMPLOYEE, 4
+.set LOCALID_WALLY, 17
 
 PetalburgWoods_MapScripts::
 	.byte 0
@@ -474,3 +475,66 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
 
+PetalburgWoods_EventScript_Shrine::
+	goto_if_set FLAG_SYS_GAME_CLEAR, PetalburgWoods_EventScript_CheckforCelebi
+	msgbox PetalburgWoods_Text_Shrine, MSGBOX_SIGN
+	end
+
+ PetalburgWoods_EventScript_CheckforCelebi:
+	goto_if_unset FLAG_CAUGHT_CELEBI,  PetalburgWoods_CelebiEventScript_Celebi
+	msgbox PetalburgWoods_Text_Shrine, MSGBOX_SIGN
+	end
+
+PetalburgWoods_Text_Shrine:
+	.string "You offer to the shrine,\n"
+	.string "but gain nothing.$"
+
+
+PetalburgWoods_Text_ShrineSucess:
+	.string "You offer to the shrine,\n"
+	.string "but gain nothing.\p"
+	.string "…\p"
+	.string "A wild POKéMON suddenly appeared!$"
+
+PetalburgWoods_CelebiText_CelebiCry:
+	.string "Beeeeee!$"
+
+PetalburgWoods_CelebiEventScript_Celebi::
+	lock
+	msgbox PetalburgWoods_Text_ShrineSucess, MSGBOX_DEFAULT
+	waitmessage
+	delay 40
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+	msgbox PetalburgWoods_CelebiText_CelebiCry, MSGBOX_DEFAULT
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_CELEBI, 50
+	closemessage
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PetalburgWoods_CelebiEventScript_DefeatedCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PetalburgWoods_CelebiEventScript_RanFromCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PetalburgWoods_CelebiEventScript_RanFromCelebi
+	setflag FLAG_CAUGHT_CELEBI
+	releaseall
+	end
+
+
+PetalburgWoods_CelebiEventScript_DefeatedCelebi::
+	lock
+	msgbox PetalburgWoods_Text_CelebiStillWantsToPlay, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_CelebiEventScript_RanFromCelebi::
+	lock
+	msgbox PetalburgWoods_Text_CelebiStillWantsToPlay, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Text_CelebiStillWantsToPlay:
+	.string "The CELEBI still looks like it wants\n"
+	.string "to play with you…$"
