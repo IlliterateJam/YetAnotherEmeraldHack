@@ -433,10 +433,16 @@ MtChimney_EventScript_BusyMagmaGrunt6::
 	end
 
 MtChimney_EventScript_MagmaPoochyena::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
 	msgbox MtChimney_Text_Bufoh, MSGBOX_SIGN
 	end
 
 MtChimney_EventScript_AquaPoochyena::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
 	msgbox MtChimney_Text_Bushaa, MSGBOX_SIGN
 	end
 
@@ -649,8 +655,10 @@ MtChimney_Text_AquasNameSimilar:
 	.string "use a name like ours!$"
 
 MtChimney_Text_DouseThemInFire:
-	.string "Yeah!\n"
-	.string "Douse them in fire!$"
+	.string "I don't know if I can fight against\n"
+	.string "a girl this pretty.\p"
+	.string "Even for TEAM MAGMA'S sake!$"
+
 
 MtChimney_Text_KeepMakingMoreLand:
 	.string "We're going to keep making more land!$"
@@ -689,7 +697,9 @@ MtChimney_Text_ArchieThankYou:
 
 MtChimney_Text_MagmaOutnumbersUs:
 	.string "Darn… TEAM MAGMA outnumbers us!\n"
-	.string "We can't keep up with them!$"
+	.string "…But they can't be that bad, can they?\p"
+	.string "You know the guy in front of me is kinda\n"
+	.string "cute now that I think about it.$"
 
 MtChimney_Text_LessHabitatForWaterPokemon:
 	.string "If they expand the land, there'll be\n"

@@ -27,3 +27,24 @@ LilycoveCity_MoveDeletersHouse_EventScript_AquaF_Text:
 
 LilycoveCity_MoveDeletersHouse_EventScript_MagmaM_Text:
 	.string "… I love you too.$"
+
+
+LilycoveCity_EventScript_MagmaPoochyena::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	delay 40
+	waitmoncry
+	msgbox LilycoveCity_Text_Bufoh, MSGBOX_SIGN
+	end
+
+LilycoveCity_EventScript_AquaPoochyena::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	delay 40
+	waitmoncry
+	msgbox LilycoveCity_Text_Bushaa, MSGBOX_SIGN
+	end
+
+LilycoveCity_Text_Bufoh:
+	.string "Bufoh…$"
+
+LilycoveCity_Text_Bushaa:
+	.string "Bushaa…$"

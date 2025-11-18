@@ -170,4 +170,6 @@ Route113_Text_GlassWorkshopSign:
 	.string "“Turning Volcanic Ash into Glass Items”$"
 
 Route113_Text_HouseIsLocked:
-	.string "It's locked.$"
+	.string "It's locked.\p"
+	.string "Don't you dare think about breaking in\n"
+	.string "and entering!$"

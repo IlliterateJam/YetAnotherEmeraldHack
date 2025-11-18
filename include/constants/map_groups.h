@@ -606,6 +606,7 @@
 
 // gMapGroup_IndoorRoute113
 #define MAP_ROUTE113_GLASS_WORKSHOP (0 | (30 << 8))
+#define MAP_ROUTE113_JIRACHI_HOUSE  (1 | (30 << 8))
 
 // gMapGroup_IndoorRoute123
 #define MAP_ROUTE123_BERRY_MASTERS_HOUSE (0 | (31 << 8))

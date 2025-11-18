@@ -4680,6 +4680,16 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/TracklessForest_Entei/border.bin",
       "blockdata_filepath": "data/layouts/TracklessForest_Entei/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE113_JIRACHI_HOUSE",
+      "name": "Route113_JirachiHouse_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route113_JirachiHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route113_JirachiHouse/map.bin"
     }
   ]
 }

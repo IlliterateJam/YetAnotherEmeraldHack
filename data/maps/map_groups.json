@@ -635,7 +635,8 @@
     "Route110_SeasideCyclingRoadSouthEntrance"
   ],
   "gMapGroup_IndoorRoute113": [
-    "Route113_GlassWorkshop"
+    "Route113_GlassWorkshop",
+    "Route113_JirachiHouse"
   ],
   "gMapGroup_IndoorRoute123": [
     "Route123_BerryMastersHouse"

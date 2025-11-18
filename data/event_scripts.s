@@ -1201,3 +1201,5 @@ Text_CantHeadbutt:
 	.include "data/maps/TracklessForest_Suicune/scripts.inc"
 
 	.include "data/maps/TracklessForest_Entei/scripts.inc"
+
+	.include "data/maps/Route113_JirachiHouse/scripts.inc"
