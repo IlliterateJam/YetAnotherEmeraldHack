@@ -1812,11 +1812,12 @@ bool32 IsPersonalityFemale(u16 species, u32 personality)
 
 u32 GetUnownSpeciesId(u32 personality)
 {
-    u16 unownLetter = GetUnownLetterByPersonality(personality);
+    // u16 unownLetter = GetUnownLetterByPersonality(personality);
 
-    if (unownLetter == 0)
-        return SPECIES_UNOWN;
-    return unownLetter + SPECIES_UNOWN_B - 1;
+    // if (unownLetter == 0)
+    //     return SPECIES_UNOWN;
+    // return unownLetter + SPECIES_UNOWN_B - 1;
+    return SPECIES_UNOWN;
 }
 
 void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)

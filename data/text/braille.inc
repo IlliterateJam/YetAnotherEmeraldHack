@@ -115,3 +115,11 @@ AncientTomb_Braille_ShineInTheMiddle:
 	.braille "INHERIT OUR\n"
 	.braille "WILL, SHINE\n"
 	.braille "IN THE MIDDLE.$"
+
+
+Route118_Braille_Message:
+	brailleformat 3, 0, 25, 19, 6, 3
+	.braille "YOU CAN\n"
+	.braille "ALTER THE\n"
+	.braille "FUTURE\n"
+	.braille "WITH WORDS.$"
