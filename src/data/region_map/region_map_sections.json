@@ -707,24 +707,24 @@
     {
       "map_section": "MAPSEC_TRACKLESS_FOREST",
       "name": "TRACKLESS FOREST",
-      "x": 0,
-      "y": 4,
+      "x": 13,
+      "y": 2,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_VIRIDIAN_CITY",
-      "name": "VIRIDIAN CITY",
+      "map_section": "MAPSEC_HOLLOW_CRATER",
+      "name": "HOLLOW CRATER",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_PEWTER_CITY",
-      "name": "PEWTER CITY",
-      "x": 0,
-      "y": 0,
+      "map_section": "MAPSEC_HIDDEN_CONDUIT",
+      "name": "HIDDEN CONDUIT",
+      "x": 13,
+      "y": 2,
       "width": 1,
       "height": 1
     },

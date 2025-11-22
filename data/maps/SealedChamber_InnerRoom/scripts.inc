@@ -1,4 +1,6 @@
 SealedChamber_InnerRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, SealedChamber_InnerRoom_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, SealedChamber_InnerRoom_OnTransition
 	.byte 0
 
 SealedChamber_InnerRoom_EventScript_BrailleBackWall::
@@ -71,3 +73,57 @@ SealedChamber_InnerRoom_EventScript_BrailleStoryPart6::
 	releaseall
 	end
 
+
+
+
+SealedChamber_InnerRoom_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SealedChamber_InnerRoom_EventScript_TryRemoveRegigigas
+	end
+
+SealedChamber_InnerRoom_EventScript_TryRemoveRegigigas::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject VAR_LAST_TALKED
+	return
+
+SealedChamber_InnerRoom_OnTransition:
+	@setflag FLAG_LANDMARK_ANCIENT_TOMB @REMEMBER THIS!!!!!!!!
+	clearflag FLAG_HIDE_REGIGIGAS
+	call_if_set FLAG_CAUGHT_REGIGIGAS, SealedChamber_InnerRoom_EventScript_HideRegigigas
+	call_if_set FLAG_DEFEATED_REGIGIGAS, SealedChamber_InnerRoom_EventScript_HideRegigigas
+	end
+
+SealedChamber_InnerRoom_EventScript_HideRegigigas::
+	setflag FLAG_HIDE_REGIGIGAS
+	return
+
+SealedChamber_InnerRoom_EventScript_Regigigas::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_REGIGIGAS, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_REGIGIGAS, 70
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special StartRegiBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SealedChamber_InnerRoom_EventScript_DefeatedRegigigas
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SealedChamber_InnerRoom_EventScript_RanFromRegigigas
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SealedChamber_InnerRoom_EventScript_RanFromRegigigas
+	setflag FLAG_CAUGHT_REGIGIGAS
+	release
+	end
+
+SealedChamber_InnerRoom_EventScript_DefeatedRegigigas::
+	setflag FLAG_DEFEATED_REGIGIGAS
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+SealedChamber_InnerRoom_EventScript_RanFromRegigigas::
+	setvar VAR_0x8004, SPECIES_REGIGIGAS
+	setflag FLAG_DEFEATED_REGIGIGAS
+	goto Common_EventScript_LegendaryFlewAway
+	end

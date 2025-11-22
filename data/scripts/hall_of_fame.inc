@@ -37,6 +37,12 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_RAIKOU
 	clearflag FLAG_DEFEATED_ENTEI
 	clearflag FLAG_DEFEATED_SUICUNE
+	clearflag FLAG_DEFEATED_REGIROCK
+	clearflag FLAG_DEFEATED_REGICE
+	clearflag FLAG_DEFEATED_REGISTEEL
+	clearflag FLAG_DEFEATED_REGIELEKI
+	clearflag FLAG_DEFEATED_REGIDRAGO
+	clearflag FLAG_DEFEATED_REGIGIGAS
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::

@@ -216,6 +216,10 @@ static void DoBrailleRegirockEffect(void)
     UnlockPlayerFieldControls();
 }
 
+
+
+
+
 bool8 ShouldDoBrailleRegisteelEffect(void)
 {
     if (!FlagGet(FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED) && (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ANCIENT_TOMB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ANCIENT_TOMB)))
@@ -277,6 +281,10 @@ bool8 FldEff_UsePuzzleEffect(void)
     }
     return FALSE;
 }
+
+
+
+
 
 // The puzzle to unlock Regice's cave requires the player to interact with the braille message on the back wall,
 // step on every space on the perimeter of the cave (and only those spaces) then return to the back wall.

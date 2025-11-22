@@ -1203,3 +1203,7 @@ Text_CantHeadbutt:
 	.include "data/maps/TracklessForest_Entei/scripts.inc"
 
 	.include "data/maps/Route113_JirachiHouse/scripts.inc"
+
+	.include "data/maps/HollowCrater/scripts.inc"
+
+	.include "data/maps/HiddenCondui/scripts.inc"

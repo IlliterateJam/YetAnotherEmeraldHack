@@ -1256,18 +1256,18 @@
 #define FLAG_RECEIVED_LAVARIDGE_EGG_ATHENA                          0x4B6 
 #define FLAG_RECEIVED_LAVARIDGE_EGG_APHRODITE                       0x4B7 
 #define FLAG_CAUGHT_CELEBI                                          0x4B8 
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
+#define FLAG_CAUGHT_REGIROCK                                        0x4B9 // Unused Flag
+#define FLAG_CAUGHT_REGICE                                          0x4BA // Unused Flag
+#define FLAG_CAUGHT_REGISTEEL                                       0x4BB // Unused Flag
+#define FLAG_HIDE_REGIELEKI                                          0x4BC // Unused Flag
+#define FLAG_CAUGHT_REGIELEKI                                           0x4BD // Unused Flag
+#define FLAG_DEFEATED_REGIELEKI                                          0x4BE // Unused Flag
+#define FLAG_HIDE_REGIDRAGO                                           0x4BF // Unused Flag
+#define FLAG_CAUGHT_REGIDRAGO                                           0x4C0 // Unused Flag
+#define FLAG_DEFEATED_REGIDRAGO                                           0x4C1 // Unused Flag
+#define FLAG_HIDE_REGIGIGAS                                          0x4C2 // Unused Flag
+#define FLAG_CAUGHT_REGIGIGAS                                       0x4C3 // Unused Flag
+#define FLAG_DEFEATED_REGIGIGAS                                         0x4C4 // Unused Flag
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
 #define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag

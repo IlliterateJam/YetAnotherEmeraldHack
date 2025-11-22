@@ -335,7 +335,7 @@
       "id": "LAYOUT_ROUTE118",
       "name": "Route118_Layout",
       "width": 80,
-      "height": 32,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route118/border.bin",
@@ -4690,6 +4690,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route113_JirachiHouse/border.bin",
       "blockdata_filepath": "data/layouts/Route113_JirachiHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOLLOW_CRATER",
+      "name": "HollowCrater_Layout",
+      "width": 17,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/HollowCrater/border.bin",
+      "blockdata_filepath": "data/layouts/HollowCrater/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_CONDUI",
+      "name": "HiddenCondui_Layout",
+      "width": 17,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/HiddenCondui/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenCondui/map.bin"
     }
   ]
 }

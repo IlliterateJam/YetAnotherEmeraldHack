@@ -251,6 +251,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Moltres;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Raikou;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Entei;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Suicune;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regieleki;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regidrago;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regigigas;
+
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -499,6 +503,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_RAIKOU] =                   &gObjectEventGraphicsInfo_Raikou, 
     [OBJ_EVENT_GFX_ENTEI] =                    &gObjectEventGraphicsInfo_Entei, 
     [OBJ_EVENT_GFX_SUICUNE] =                  &gObjectEventGraphicsInfo_Suicune, 
+    [OBJ_EVENT_GFX_REGIELEKI] =                &gObjectEventGraphicsInfo_Regieleki,
+    [OBJ_EVENT_GFX_REGIDRAGO] =                &gObjectEventGraphicsInfo_Regidrago,
+    [OBJ_EVENT_GFX_REGIGIGAS] =                &gObjectEventGraphicsInfo_Regigigas,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

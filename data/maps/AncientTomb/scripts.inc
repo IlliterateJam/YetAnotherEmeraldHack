@@ -16,11 +16,13 @@ AncientTomb_EventScript_TryRemoveRegisteel::
 
 AncientTomb_OnTransition:
 	setflag FLAG_LANDMARK_ANCIENT_TOMB
-	call_if_unset FLAG_DEFEATED_REGISTEEL, AncientTomb_EventScript_ShowRegisteel
+	clearflag FLAG_HIDE_REGISTEEL
+	call_if_set FLAG_CAUGHT_REGISTEEL, AncientTomb_EventScript_HideRegisteel
+	call_if_set FLAG_DEFEATED_REGISTEEL, AncientTomb_EventScript_HideRegisteel
 	end
 
-AncientTomb_EventScript_ShowRegisteel::
-	clearflag FLAG_HIDE_REGISTEEL
+AncientTomb_EventScript_HideRegisteel::
+	setflag FLAG_HIDE_REGISTEEL
 	return
 
 AncientTomb_OnLoad:
@@ -70,7 +72,7 @@ AncientTomb_EventScript_Registeel::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AncientTomb_EventScript_DefeatedRegisteel
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AncientTomb_EventScript_RanFromRegisteel
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AncientTomb_EventScript_RanFromRegisteel
-	setflag FLAG_DEFEATED_REGISTEEL
+	setflag FLAG_CAUGHT_REGISTEEL
 	release
 	end
 
@@ -81,6 +83,7 @@ AncientTomb_EventScript_DefeatedRegisteel::
 
 AncientTomb_EventScript_RanFromRegisteel::
 	setvar VAR_0x8004, SPECIES_REGISTEEL
+	setflag FLAG_DEFEATED_REGISTEEL
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
