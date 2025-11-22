@@ -258,6 +258,34 @@ MoveTutor_EventScript_ExplosionTaught::
 	release
 	end
 
+
+PetalburgWoods_EventScript_ExtremeSpeedTutor::
+	lock
+	faceplayer
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_EXTREME_SPEED, MoveTutor_EventScript_ExtremeSpeedTaught
+	msgbox MoveTutor_Text_ExtremeSpeedTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_ExtremeSpeedDeclined
+	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_ExtremeSpeedDeclined
+	msgbox MoveTutor_Text_ExtremeSpeedWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_EXTREME_SPEED
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_ExtremeSpeedDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_EXTREME_SPEED
+	goto MoveTutor_EventScript_ExtremeSpeedTaught
+	end
+
+MoveTutor_EventScript_ExtremeSpeedDeclined::
+	msgbox MoveTutor_Text_ExtremeSpeedDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_ExtremeSpeedTaught::
+	msgbox MoveTutor_Text_ExtremeSpeedTaught, MSGBOX_DEFAULT
+	release
+	end
+
+
 MoveTutor_EventScript_OpenPartyMenu::
 	special ChooseMonForMoveTutor
 	waitstate

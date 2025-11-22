@@ -235,3 +235,28 @@ MoveTutor_Text_ExplosionTaught:
 	.string "to ignite my own EXPLOSION…\p"
 	.string "Maybe it's because deep down,\n"
 	.string "I would rather stay here…$"
+
+
+MoveTutor_Text_ExtremeSpeedTeach:
+	.string "Hiyah! Hiyah!\p"
+	.string "Did you see how fast I moved there?\p"
+	.string "See how dumbfounded you are, there\n"
+	.string "is no match for my speed!\p"
+	.string "The only thing that can compare to me\n"
+	.string "is a POKéMON of immense potential…\p"
+	.string "You know, I think I'm up for the\n"
+	.string "challenge of teaching EXTREMESPEED!$"
+
+MoveTutor_Text_ExtremeSpeedDeclined:
+	.string "Fufufufu! It seems like your POKéMON\n"
+	.string "can't handle the challenge.$"
+
+MoveTutor_Text_ExtremeSpeedWhichMon:
+	.string "Hiyah!\n"
+	.string "Which POKéMON has to go fast?$"
+
+MoveTutor_Text_ExtremeSpeedTaught:
+	.string "Hiyah! Your POKéMON almost matches up to\n"
+	.string "to my style, but I'm still the fastest\l"
+	.string "EXTREMESPEED user in HOENN!\p"
+	.string "Fufufufu!$"
