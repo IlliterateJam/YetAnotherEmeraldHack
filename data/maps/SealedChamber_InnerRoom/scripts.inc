@@ -1,6 +1,6 @@
 SealedChamber_InnerRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SealedChamber_InnerRoom_OnResume
-	map_script MAP_SCRIPT_ON_TRANSITION, SealedChamber_InnerRoom_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, SealedChamber_InnerRoom_OnLoad
 	.byte 0
 
 SealedChamber_InnerRoom_EventScript_BrailleBackWall::
@@ -13,6 +13,14 @@ SealedChamber_InnerRoom_EventScript_BrailleBackWall::
 	playse SE_TRUCK_MOVE
 	special DoSealedChamberShakingEffect_Long
 	waitstate
+	delay 40
+	special DoSealedChamberShakingEffect_Short
+	waitstate
+	playse SE_DOOR
+	delay 40
+	special DoSealedChamberShakingEffect_Short
+	waitstate
+	playse SE_DOOR
 	delay 40
 	special DoSealedChamberShakingEffect_Short
 	waitstate
@@ -76,6 +84,8 @@ SealedChamber_InnerRoom_EventScript_BrailleStoryPart6::
 
 
 
+
+
 SealedChamber_InnerRoom_OnResume:
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, SealedChamber_InnerRoom_EventScript_TryRemoveRegigigas
 	end
@@ -86,20 +96,35 @@ SealedChamber_InnerRoom_EventScript_TryRemoveRegigigas::
 	removeobject VAR_LAST_TALKED
 	return
 
-SealedChamber_InnerRoom_OnTransition:
-	@setflag FLAG_LANDMARK_ANCIENT_TOMB @REMEMBER THIS!!!!!!!!
-	clearflag FLAG_HIDE_REGIGIGAS
+
+SealedChamber_InnerRoom_OnLoad:
 	call_if_set FLAG_CAUGHT_REGIGIGAS, SealedChamber_InnerRoom_EventScript_HideRegigigas
-	call_if_set FLAG_DEFEATED_REGIGIGAS, SealedChamber_InnerRoom_EventScript_HideRegigigas
+	call_if_unset FLAG_CAUGHT_REGIGIGAS, SealedChamber_InnerRoom_EventScript_TryShowRegigigas
 	end
 
 SealedChamber_InnerRoom_EventScript_HideRegigigas::
+	setvar VAR_TEMP_1, 1
 	setflag FLAG_HIDE_REGIGIGAS
 	return
 
+SealedChamber_InnerRoom_EventScript_TryShowRegigigas::
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_DEFEATED_REGIGIGAS, Common_EventScript_NopReturn
+	setvar VAR_TEMP_1, 0
+	clearflag FLAG_HIDE_REGIGIGAS
+	return
+
+SealedChamber_InnerRoom_EventScript_Statue::
+	goto_if_eq VAR_REGIS_CAUGHT, 5, SealedChamber_InnerRoom_EventScript_Regigigas
+	msgbox SealedChamber_InnerRoom_Text_Statue, MSGBOX_DEFAULT
+	end
+
+
+
 SealedChamber_InnerRoom_EventScript_Regigigas::
 	lock
-	faceplayer
+	faceplayer 
+	msgbox SealedChamber_InnerRoom_Text_TheStatueIsCrumbling, MSGBOX_DEFAULT
 	waitse
 	playmoncry SPECIES_REGIGIGAS, CRY_MODE_ENCOUNTER
 	delay 40
@@ -127,3 +152,13 @@ SealedChamber_InnerRoom_EventScript_RanFromRegigigas::
 	setflag FLAG_DEFEATED_REGIGIGAS
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+
+SealedChamber_InnerRoom_Text_TheStatueIsCrumbling:
+	.string "The seal of the statue starts to crumble\n"
+	.string "away.\p"
+	.string "There's a giant POKéMON underneath!$"
+
+SealedChamber_InnerRoom_Text_Statue:
+	.string "A statue dedicated to an guardian\n"
+	.string "made by ancient people.$"

@@ -123,3 +123,18 @@ Route118_Braille_Message:
 	.braille "ALTER THE\n"
 	.braille "FUTURE\n"
 	.braille "WITH WORDS.$"
+
+
+HollowCrater_Braille_Message:
+	brailleformat 3, 0, 25, 19, 6, 3
+	.braille "THE\n"
+	.braille "UNOWNN\n"
+	.braille "SPELL OUT\n"
+	.braille "OMEGA.$"
+
+HiddenCondui_Braille_Message:
+	brailleformat 3, 0, 25, 19, 6, 3
+	.braille "THE\n"
+	.braille "UNOWNN\n"
+	.braille "SPELL OUT\n"
+	.braille "ALPHA.$"

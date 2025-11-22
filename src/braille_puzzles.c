@@ -103,6 +103,48 @@ bool8 CheckRelicanthWailord(void)
     return FALSE;
 }
 
+
+bool8 SpellUnownAlpha(void)
+{
+    
+    CalculatePlayerPartyCount();
+    u16 i;
+    for(i = 0; i < 2; i++)
+    {
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN)
+        && (GetMonData(&gPlayerParty[i+1], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_L)
+            && (GetMonData(&gPlayerParty[i+2], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_P)
+                 && (GetMonData(&gPlayerParty[i+3], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_H)
+                        && (GetMonData(&gPlayerParty[i+4], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN))
+            {
+                return TRUE;
+            }
+    }
+    return FALSE;
+}
+
+
+bool8 SpellUnownOmega(void)
+{
+    
+    CalculatePlayerPartyCount();
+    u16 i;
+    for(i = 0; i < 2; i++)
+    {
+        if ((GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_O)
+        && (GetMonData(&gPlayerParty[i+1], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_M)
+            && (GetMonData(&gPlayerParty[i+2], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_E)
+                 && (GetMonData(&gPlayerParty[i+3], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN_G)
+                        && (GetMonData(&gPlayerParty[i+4], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_UNOWN))
+            {
+                return TRUE;
+            }
+    }
+    return FALSE;
+}
+
+
+
 // THEORY: this was caused by block commenting out all of the older R/S braille functions but leaving the call to it itself, which creates the nullsub.
 void ShouldDoBrailleRegirockEffectOld(void)
 {

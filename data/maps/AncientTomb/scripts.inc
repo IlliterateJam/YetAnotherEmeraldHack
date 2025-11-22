@@ -73,6 +73,7 @@ AncientTomb_EventScript_Registeel::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AncientTomb_EventScript_RanFromRegisteel
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AncientTomb_EventScript_RanFromRegisteel
 	setflag FLAG_CAUGHT_REGISTEEL
+	addvar VAR_REGIS_CAUGHT, 1
 	release
 	end
 

@@ -543,3 +543,5 @@ gSpecials::
 	def_special VsSeekerResetObjectMovementAfterChargeComplete
 	def_special VsSeekerFreezeObjectsAfterChargeComplete
 	def_special BufferUnitSystemText
+	def_special SpellUnownAlpha
+	def_special SpellUnownOmega

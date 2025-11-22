@@ -1268,8 +1268,8 @@
 #define FLAG_HIDE_REGIGIGAS                                          0x4C2 // Unused Flag
 #define FLAG_CAUGHT_REGIGIGAS                                       0x4C3 // Unused Flag
 #define FLAG_DEFEATED_REGIGIGAS                                         0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
+#define FLAG_SYS_BRAILLE_REGIELEKI_COMPLETED                                          0x4C5 // Unused Flag
+#define FLAG_SYS_BRAILLE_REGIDRAGO_COMPLETED                                                0x4C6 // Unused Flag
 #define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
 #define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
 #define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
