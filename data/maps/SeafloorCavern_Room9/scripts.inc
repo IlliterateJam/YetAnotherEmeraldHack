@@ -12,7 +12,7 @@ SeafloorCavern_Room9_MapScripts::
 	.byte 0
 
 SeafloorCavern_Room9_OnTransition:
-	call_if_set FLAG_BADGE08_GET, SeafloorCavern_Room9_EventScript_SetArticunoState
+	call_if_set FLAG_SAVED_HOENN, SeafloorCavern_Room9_EventScript_SetArticunoState
 	end
 
 SeafloorCavern_Room9_EventScript_SetArticunoState::

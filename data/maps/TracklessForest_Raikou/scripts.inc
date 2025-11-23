@@ -10,7 +10,7 @@ TracklessFroest_Raikou_MapScripts::
 	.byte 0
 
 TracklessFroest_Raikou_OnTransition:
-	call_if_set FLAG_BADGE08_GET, TracklessForest_RaikouEventScript_SetRaikouState
+	call_if_set FLAG_SAVED_HOENN, TracklessForest_RaikouEventScript_SetRaikouState
 	end
 
 TracklessForest_RaikouEventScript_SetRaikouState::

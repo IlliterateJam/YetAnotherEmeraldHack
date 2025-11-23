@@ -9,7 +9,7 @@ TracklessFroest_Entei_MapScripts::
 	.byte 0
 
 TracklessFroest_Entei_OnTransition:
-	call_if_set FLAG_BADGE08_GET, TracklessForest_EnteiEventScript_SetEnteiState
+	call_if_set FLAG_SAVED_HOENN, TracklessForest_EnteiEventScript_SetEnteiState
 	end
 
 TracklessForest_EnteiEventScript_SetEnteiState::

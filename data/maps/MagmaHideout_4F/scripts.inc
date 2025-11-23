@@ -13,7 +13,7 @@ MagmaHideout_4F_MapScripts::
 	.byte 0
 
 MagmaHideout_4F_OnTransition:
-	call_if_set FLAG_BADGE08_GET, MagmaHideout_4F_EventScript_SetMoltresState
+	call_if_set FLAG_SAVED_HOENN, MagmaHideout_4F_EventScript_SetMoltresState
 	end
 
 MagmaHideout_4F_EventScript_SetMoltresState::

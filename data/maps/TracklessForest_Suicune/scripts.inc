@@ -9,7 +9,7 @@ TracklessFroest_Suicune_MapScripts::
 	.byte 0
 
 TracklessFroest_Suicune_OnTransition:
-	call_if_set FLAG_BADGE08_GET, TracklessForest_SuicuneEventScript_SetSuicuneState
+	call_if_set FLAG_SAVED_HOENN, TracklessForest_SuicuneEventScript_SetSuicuneState
 	end
 
 TracklessForest_SuicuneEventScript_SetSuicuneState::

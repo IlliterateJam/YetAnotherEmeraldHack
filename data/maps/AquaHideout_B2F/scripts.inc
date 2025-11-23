@@ -9,7 +9,7 @@ AquaHideout_B2F_MapScripts::
 
 AquaHideout_B2F_OnTransition:
 	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, AquaHideout_B2F_EventScript_PreventMattNoticing
-	call_if_set FLAG_BADGE08_GET, AquaHideout_B2FEventScript_SetZapdosState
+	call_if_set FLAG_SAVED_HOENN, AquaHideout_B2FEventScript_SetZapdosState
 	end
 
 AquaHideout_B2FEventScript_SetZapdosState::
