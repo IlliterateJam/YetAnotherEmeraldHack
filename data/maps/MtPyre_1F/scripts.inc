@@ -24,6 +24,9 @@ MtPyre_1F_EventScript_PokefanF::
 MtPyre_1F_EventScript_Man::
 	msgbox MtPyre_1F_Text_RestingPlaceOfZigzagoon, MSGBOX_NPC
 	end
+MtPyre_1F_EventScript_LittleGirl::
+	msgbox MtPyre_1F_Text_BeastHint, MSGBOX_NPC
+	end
 
 
 MtPyre_1F_EventScript_IncenseManiac::
@@ -82,3 +85,10 @@ MtPyre_1F_Text_IncenseIntro:
 
 MtPyre_1F_Text_IncenseComeAgain:
 	.string "Please come again… when you are ready.$"
+
+MtPyre_1F_Text_BeastHint::
+	.string "No one believes me, but I saw writing/n"
+	.string "appear on the wall once!\p"
+	.string "It said RIGHT, DOWN, RIGHT, DOWN,\n"
+	.string "LEFT, LEFT.\p"
+	.string "I wonder what it could mean?$"

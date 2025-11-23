@@ -27,6 +27,15 @@ PacifidlogTown_EventScript_TownSign::
 	msgbox PacifidlogTown_Text_TownSign, MSGBOX_SIGN
 	end
 
+PacifidlogTown_EventScript_DivinerSign::
+	msgbox PacifidlogTown_Text_DivinerSign, MSGBOX_SIGN
+	end
+
+PacifidlogTown_EventScript_LittleGirl::
+	msgbox PacifidlogTown_Text_DivinerToldMe, MSGBOX_NPC
+	end
+
+
 PacifidlogTown_Text_FastRunningCurrent:
 	.string "The sea between PACIFIDLOG and\n"
 	.string "SLATEPORT has a fast-running tide.\p"
@@ -52,3 +61,15 @@ PacifidlogTown_Text_TownSign:
 	.string "“Where the morning sun smiles upon\n"
 	.string "the waters.”$"
 
+PacifidlogTown_Text_DivinerSign:
+	.string "School for aspiring Diviners of\n"
+	.string "the sea.$"
+
+PacifidlogTown_Text_DivinerToldMe:
+	.string "One of those weird women told me\n"
+	.string "something. She said that a beast was\l"
+	.string "waiting in the forest.\p"
+	.string "She also said something about DOWN,\n"
+	.string "LEFT, UP, UP, LEFT, RIGHT…\p"
+	.string "It was freaky! I'm never going back\n"
+	.string "there again!$"

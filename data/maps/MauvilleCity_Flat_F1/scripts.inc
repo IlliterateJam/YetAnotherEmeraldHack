@@ -19,4 +19,7 @@ MauvilleCity_Flat_F1_Daughter::
 
 MauvilleCity_Text_Daughter:
 	.string "… … …\p"
-	.string "She does not seem to notice you.$"
+	.string "GIRL: UP, DOWN, UP, LEFT, DOWN, DOWN\p"
+	.string "… … …\p"
+	.string "She does not seem to notice you in\n
+	.string "her muttering. $"
