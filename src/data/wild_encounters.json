@@ -641,12 +641,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TOTODILE"
+                "species": "SPECIES_MUDKIP"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TOTODILE"
+                "species": "SPECIES_MUDKIP"
               }
             ]
           },
@@ -11886,7 +11886,17 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_CYNDAQUIL"
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_TOTODILE"
               },
               {
                 "min_level": 23,
@@ -11896,27 +11906,27 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_CYNDAQUIL"
+                "species": "SPECIES_CHIKORITA"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_TOTODILE"
+                "species": "SPECIES_CHIKORITA"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_TOTODILE"
+                "species": "SPECIES_BAYLEEF"
               },
               {
-                "min_level": 23,
-                "max_level": 25,
-                "species": "SPECIES_TOTODILE"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_CROCONAW"
               },
               {
-                "min_level": 23,
-                "max_level": 25,
-                "species": "SPECIES_TOTODILE"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_CROCONAW"
               },
               {
                 "min_level": 30,
@@ -11926,17 +11936,7 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_QUILAVA"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_CROCONAW"
-              },
-              {
-                "min_level": 30,
-                "max_level": 32,
-                "species": "SPECIES_CROCONAW"
+                "species": "SPECIES_BAYLEEF"
               }
             ]
           },
@@ -11946,7 +11946,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_TOTODILE"
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 25,
@@ -11961,7 +11961,7 @@
               {
                 "min_level": 30,
                 "max_level": 35,
-                "species": "SPECIES_CROCONAW"
+                "species": "SPECIES_WARTORTLE"
               },
               {
                 "min_level": 35,
@@ -11978,94 +11978,64 @@
             "encounter_rate": 25,
             "mons": [
               {
-                "min_level": 33,
-                "max_level": 33,
-                "species": "SPECIES_ZIGZAGOON_GALARIAN"
-              },
-              {
-                "min_level": 34,
-                "max_level": 34,
-                "species": "SPECIES_VOLTORB_HISUIAN"
-              },
-              {
-                "min_level": 35,
-                "max_level": 35,
-                "species": "SPECIES_RATTATA_ALOLAN"
-              },
-              {
-                "min_level": 36,
-                "max_level": 36,
-                "species": "SPECIES_PONYTA_GALARIAN"
-              },
-              {
-                "min_level": 34,
-                "max_level": 34,
-                "species": "SPECIES_SLOWPOKE_GALARIAN"
-              },
-              {
-                "min_level": 33,
-                "max_level": 33,
-                "species": "SPECIES_GRIMER_ALOLAN"
-              },
-              {
-                "min_level": 35,
-                "max_level": 35,
-                "species": "SPECIES_VULPIX_ALOLAN"
-              },
-              {
-                "min_level": 34,
-                "max_level": 34,
-                "species": "SPECIES_MEOWTH_GALARIAN"
-              },
-              {
-                "min_level": 36,
-                "max_level": 36,
-                "species": "SPECIES_GROWLITHE_HISUIAN"
-              },
-              {
-                "min_level": 37,
-                "max_level": 37,
-                "species": "SPECIES_SANDSHREW_ALOLAN"
-              },
-              {
-                "min_level": 39,
-                "max_level": 39,
-                "species": "SPECIES_SNEASEL_HISUIAN"
-              },
-              {
-                "min_level": 40,
-                "max_level": 40,
-                "species": "SPECIES_SNEASEL_HISUIAN"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 25,
-            "mons": [
-              {
-                "min_level": 25,
-                "max_level": 30,
-                "species": "SPECIES_GEODUDE_ALOLAN"
-              },
-              {
-                "min_level": 20,
+                "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_GEODUDE_ALOLAN"
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_BULBASAUR"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_BULBASAUR"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_BULBASAUR"
+              },
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_QUILAVA"
               },
               {
                 "min_level": 30,
-                "max_level": 35,
-                "species": "SPECIES_GEODUDE_ALOLAN"
+                "max_level": 32,
+                "species": "SPECIES_CHARMELEON"
               },
               {
                 "min_level": 30,
-                "max_level": 35,
-                "species": "SPECIES_GEODUDE_ALOLAN"
+                "max_level": 32,
+                "species": "SPECIES_IVYSAUR"
               },
               {
-                "min_level": 35,
-                "max_level": 40,
-                "species": "SPECIES_GEODUDE_ALOLAN"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_QUILAVA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_CHARMELEON"
               }
             ]
           }
@@ -13784,12 +13754,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHIKORITA"
+                "species": "SPECIES_TREECKO"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CHIKORITA"
+                "species": "SPECIES_TREECKO"
               }
             ]
           }
@@ -14189,12 +14159,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CYNDAQUIL"
+                "species": "SPECIES_TORCHIC"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CYNDAQUIL"
+                "species": "SPECIES_TORCHIC"
               }
             ]
           }

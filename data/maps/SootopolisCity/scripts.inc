@@ -188,6 +188,7 @@ SootopolisCity_OnFrame:
 @ If not at PokeCenter, assumed to have arrived via Dive
 SootopolisCity_EventScript_StartLegendariesScene::
 	lockall
+	setflag FLAG_SAVED_HOENN  
 	special StorePlayerCoordsInVars
 	goto_if_ne VAR_0x8004, 43, SootopolisCity_EventScript_LegendariesSceneFromDive
 	goto_if_ne VAR_0x8005, 32, SootopolisCity_EventScript_LegendariesSceneFromDive
