@@ -2587,6 +2587,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
             s16 r5, r10;
             for (i = 0, r5 = 0, r10 = 0; i < temp_dexCount; i++)
             {
+                //temp_dexNum = HoennToNationalOrder(i + 1);
                 temp_dexNum = i + 1;
                 if (GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN))
                     r10 = 1;

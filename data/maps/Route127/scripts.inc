@@ -76,3 +76,13 @@ Route127_EventScript_RematchKoji::
 	msgbox Route127_Text_KojiPostRematch, MSGBOX_AUTOCLOSE
 	end
 
+
+
+Route127_EventScript_LargeTree::
+	message Route127_Text_ThisIsALargeTree
+	waitbuttonpress
+	goto EventScript_Headbutt
+	end
+
+Route127_Text_ThisIsALargeTree::
+	.string "A very large tree.$"
