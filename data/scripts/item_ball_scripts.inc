@@ -701,3 +701,11 @@ MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 SkyPillarr_4F_EventScript_ItemTMDragonPulse::
 	finditem ITEM_TM_DRAGON_PULSE
 	end
+
+Route102_EventScript_ItemProtein::
+	finditem ITEM_PROTEIN
+	end
+
+Lilycove_EventScript_ItemOvalCharm::
+	finditem ITEM_OVAL_CHARM
+	end

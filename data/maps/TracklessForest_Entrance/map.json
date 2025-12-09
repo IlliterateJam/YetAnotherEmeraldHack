@@ -63,7 +63,7 @@
       "x": 16,
       "y": 19,
       "elevation": 0,
-      "item": "ITEM_PROTEIN",
+      "item": "ITEM_LIGHT_BALL",
       "flag": "FLAG_ITEM_TRACKLESS_FOREST_PROTEIN"
     }
   ]

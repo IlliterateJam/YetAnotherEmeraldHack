@@ -46,7 +46,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetReadyForJohtoStarter::
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout::
-	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
+	@setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout::
@@ -86,16 +86,16 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
-	addobject LOCALID_BALL_CYNDAQUIL
-	addobject LOCALID_BALL_TOTODILE
-	addobject LOCALID_BALL_CHIKORITA
-	addobject LOCALID_RIVAL
-	turnobject LOCALID_BALL_CYNDAQUIL, DIR_SOUTH
-	setobjectxy LOCALID_BALL_CYNDAQUIL, 8, 4
-	turnobject LOCALID_BALL_TOTODILE, DIR_SOUTH
-	setobjectxy LOCALID_BALL_TOTODILE, 9, 4
-	turnobject LOCALID_BALL_CHIKORITA, DIR_SOUTH
-	setobjectxy LOCALID_BALL_CHIKORITA, 10, 4
+	@addobject LOCALID_BALL_CYNDAQUIL
+	@addobject LOCALID_BALL_TOTODILE
+	@addobject LOCALID_BALL_CHIKORITA
+	@addobject LOCALID_RIVAL
+	@turnobject LOCALID_BALL_CYNDAQUIL, DIR_SOUTH
+	@setobjectxy LOCALID_BALL_CYNDAQUIL, 8, 4
+	@turnobject LOCALID_BALL_TOTODILE, DIR_SOUTH
+	@setobjectxy LOCALID_BALL_TOTODILE, 9, 4
+	@turnobject LOCALID_BALL_CHIKORITA, DIR_SOUTH
+	@setobjectxy LOCALID_BALL_CHIKORITA, 10, 4
 	turnobject LOCALID_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCH, 6, 4
 	turnobject LOCALID_RIVAL, DIR_EAST
@@ -259,6 +259,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ChooseJohtoStarter::
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ProfessorBirchsLab_Movement_PlayerEnterLabForJohtoStarter
 	waitmovement 0
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CompletedDexChoosePokemon, MSGBOX_DEFAULT
+	giveitem ITEM_SHINY_CHARM
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5
 	releaseall
 	end
@@ -902,10 +903,10 @@ LittlerootTown_ProfessorBirchsLab_Text_CompletedDexChoosePokemon:
 	.string "I have a gift for you.\p"
 	.string "Consider it my show of appreciation\n"
 	.string "for the fantastic work you've done.\p"
-	.string "My gift is a rare POKéMON only found\n"
+	.string "My gift is a rare CHARM only found\n"
 	.string "in another region!\p"
-	.string "You can have any one of these\n"
-	.string "three POKéMON!$"
+	.string "You are quite the shiny star of all\n"
+	.string "things POKéMON!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CanHaveAnyOneOfRarePokemon:
 	.string "PROF. BIRCH: These are rare POKéMON\n"

@@ -1271,8 +1271,8 @@
 #define FLAG_SYS_BRAILLE_REGIELEKI_COMPLETED                                          0x4C5 // Unused Flag
 #define FLAG_SYS_BRAILLE_REGIDRAGO_COMPLETED                                                0x4C6 // Unused Flag
 #define FLAG_SAVED_HOENN                                          0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
+#define FLAG_ROUTE_101_PROTEIN                                          0x4C8 // Unused Flag
+#define FLAG_LILYCOVE_OVAL_CHARM                                         0x4C9 // Unused Flag
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
