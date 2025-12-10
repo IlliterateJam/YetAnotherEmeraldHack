@@ -2606,8 +2606,8 @@ static const u8 sWeatherCycleRoute119[WEATHER_CYCLE_LENGTH] =
 };
 static const u8 sWeatherCycleRoute123[WEATHER_CYCLE_LENGTH] =
 {
-    WEATHER_DROUGHT,
-    WEATHER_DROUGHT,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
     WEATHER_RAIN,
     WEATHER_SUNNY,
 };

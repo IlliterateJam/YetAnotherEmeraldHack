@@ -61,7 +61,7 @@ HollowCrater_EventScript_TryRemoveRegidrago::
 	return
 
 HollowCrater_OnTransition:
-	@setflag FLAG_LANDMARK_ANCIENT_TOMB @REMEMBER THIS!!!!!!!!
+	setflag FLAG_LANDMARK_HOLLOW_CRATER
 	clearflag FLAG_HIDE_REGIDRAGO
 	call_if_set FLAG_CAUGHT_REGIDRAGO, HollowCrater_EventScript_HideRegidrago
 	call_if_set FLAG_DEFEATED_REGIDRAGO, HollowCrater_EventScript_HideRegidrago

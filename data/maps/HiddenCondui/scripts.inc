@@ -59,7 +59,7 @@ HiddenCondui_EventScript_TryRemoveRegieleki::
 	return
 
 HiddenCondui_OnTransition:
-	@setflag FLAG_LANDMARK_ANCIENT_TOMB @REMEMBER THIS!!!!!!!!
+	setflag FLAG_LANDMARK_HIDDEN_CONDUIT
 	clearflag FLAG_HIDE_REGIELEKI
 	call_if_set FLAG_CAUGHT_REGIELEKI, HiddenCondui_EventScript_HideRegieleki
 	call_if_set FLAG_DEFEATED_REGIELEKI, HiddenCondui_EventScript_HideRegieleki
