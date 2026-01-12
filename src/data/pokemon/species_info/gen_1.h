@@ -6655,12 +6655,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_GRIMER
 #define GRIMER_FAMILY_MISC_INFO                                     \
-        .itemRare = ITEM_BLACK_SLUDGE,                              \
         .genderRatio = PERCENT_FEMALE(50),                          \
         .eggCycles = 20,                                            \
         .friendship = STANDARD_FRIENDSHIP,                          \
         .growthRate = GROWTH_MEDIUM_FAST,                           \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS }
+
+//.itemRare = ITEM_BLACK_SLUDGE,  
 
 #define GRIMER_MISC_INFO                                \
         .baseHP        = 80,                            \
