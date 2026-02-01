@@ -85,13 +85,13 @@ static void CopyFrontierBrainText(bool8 playerWonText);
 // const rom data
 static const u8 sFrontierBrainStreakAppearances[NUM_FRONTIER_FACILITIES][4] =
 {
-    [FRONTIER_FACILITY_TOWER]   = {35,  70, 35, 1},
+    [FRONTIER_FACILITY_TOWER]   = {28,  56, 28, 1},
     [FRONTIER_FACILITY_DOME]    = { 4,   9,  5, 0},
-    [FRONTIER_FACILITY_PALACE]  = {21,  42, 21, 1},
-    [FRONTIER_FACILITY_ARENA]   = {28,  56, 28, 1},
+    [FRONTIER_FACILITY_PALACE]  = {14,  28, 28, 1},
+    [FRONTIER_FACILITY_ARENA]   = {14,  28, 28, 1},
     [FRONTIER_FACILITY_FACTORY] = {21,  42, 21, 1},
-    [FRONTIER_FACILITY_PIKE]    = {28, 140, 56, 1},
-    [FRONTIER_FACILITY_PYRAMID] = {21,  70, 35, 0},
+    [FRONTIER_FACILITY_PIKE]    = {28, 77, 42, 1},
+    [FRONTIER_FACILITY_PYRAMID] = {21,  49, 21, 0},
 };
 
 static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZE] =
@@ -500,41 +500,42 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
 static const u8 sBattlePointAwards[NUM_FRONTIER_FACILITIES][FRONTIER_MODE_COUNT][30] =
 {
     /* facility, mode, tier */
-    [FRONTIER_FACILITY_TOWER] = /* Tier: 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 */
+    [FRONTIER_FACILITY_TOWER] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
-        [FRONTIER_MODE_DOUBLES]     = {  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
-        [FRONTIER_MODE_MULTIS]      = {  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
-        [FRONTIER_MODE_LINK_MULTIS] = {  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = {  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
+        [FRONTIER_MODE_DOUBLES]     = {  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
+        [FRONTIER_MODE_MULTIS]      = {  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
+        [FRONTIER_MODE_LINK_MULTIS] = {  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
     },
     [FRONTIER_FACILITY_DOME] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15 },
-        [FRONTIER_MODE_DOUBLES]     = {  1,  1,  2,  2,  3,  3,  4,  4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = {  3,  3,  6,  6,  9,  9, 12, 12, 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45 },
+        [FRONTIER_MODE_DOUBLES]     = {  3,  3,  6,  6,  9,  9, 12, 12, 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45 },
     },
     [FRONTIER_FACILITY_PALACE] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  4,  4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15 },
-        [FRONTIER_MODE_DOUBLES]     = {  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = { 12, 12, 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45, 45, 45, 45, 45, 45, 45 },
+        [FRONTIER_MODE_DOUBLES]     = { 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
     },
     [FRONTIER_FACILITY_ARENA] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  1,  1,  1,  2,  2,  2,  3,  3,  4,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = {  3,  3,  3,  6,  6,  6,  9,  9, 12, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
     },
     [FRONTIER_FACILITY_FACTORY] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  3,  3,  4,  4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 15, 15 },
-        [FRONTIER_MODE_DOUBLES]     = {  4,  4,  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = {  9,  9, 12, 12, 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45, 45, 45, 45, 45 },
+        [FRONTIER_MODE_DOUBLES]     = { 12, 12, 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45, 45, 45, 45, 45, 45, 45 },
     },
     [FRONTIER_FACILITY_PIKE] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  1,  1,  2,  2,  2,  4,  4,  4,  8,  8,  8,  8, 10, 10, 10, 10, 12, 12, 12, 12, 12, 14, 14, 14, 14, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = {  3,  3,  6,  6,  6, 12, 12, 12, 24, 24, 24, 24, 30, 30, 30, 30, 36, 36, 36, 36, 36, 42, 42, 42, 42, 45, 45, 45, 45, 45 },
     },
     [FRONTIER_FACILITY_PYRAMID] =
     {
-        [FRONTIER_MODE_SINGLES]     = {  5,  5,  6,  6,  7,  7,  8,  8,  9,  9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
+        [FRONTIER_MODE_SINGLES]     = { 15, 15, 18, 18, 21, 21, 24, 24, 27, 27, 30, 30, 33, 33, 36, 36, 39, 39, 42, 42, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45 },
     },
 };
+
 
 
 // Flags to change the conversation when the Frontier Brain is encountered for a battle
@@ -1854,7 +1855,7 @@ static void GiveBattlePoints(void)
 
     points = sBattlePointAwards[facility][battleMode][challengeNum];
     if (gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN)
-        points += 10;
+        points += 30;
     gSaveBlock2Ptr->frontier.battlePoints += points;
     ConvertIntToDecimalStringN(gStringVar1, points, STR_CONV_MODE_LEFT_ALIGN, 2);
     if (gSaveBlock2Ptr->frontier.battlePoints > MAX_BATTLE_FRONTIER_POINTS)
@@ -1865,8 +1866,8 @@ static void GiveBattlePoints(void)
     IncrementDailyBattlePoints(sBattlePointAwards[facility][battleMode][challengeNum]);
     if (gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN)
     {
-        points += 10;
-        IncrementDailyBattlePoints(10);
+        points += 30;
+        IncrementDailyBattlePoints(30);
     }
     if (points > 0xFFFF)
         points = 0xFFFF;

@@ -1,9 +1,9 @@
 BattleFrontier_Lounge3_MapScripts::
 	.byte 0
 
-	.set BET_AMOUNT_5,  5
-	.set BET_AMOUNT_10, 10
-	.set BET_AMOUNT_15, 15
+	.set BET_AMOUNT_5,  15
+	.set BET_AMOUNT_10, 30
+	.set BET_AMOUNT_15, 45
 
 BattleFrontier_Lounge3_EventScript_Gambler::
 	lock
