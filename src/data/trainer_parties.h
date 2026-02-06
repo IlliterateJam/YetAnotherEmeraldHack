@@ -3706,7 +3706,7 @@ static const struct TrainerMon sParty_Drake[] = {
     .lvl = 53,
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_SMOKESCREEN, MOVE_DRAGON_DANCE, MOVE_FOCUS_ENERGY, MOVE_BODY_SLAM}
+    .moves = {MOVE_SMOKESCREEN, MOVE_DRAGON_DANCE, MOVE_LASER_FOCUS, MOVE_BODY_SLAM}
     },
     {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
