@@ -622,6 +622,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route123_EventScript_Magama_Grunt_3",
       "flag": "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 139,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ScorchedSlab_EventScript_ItemTMSunnyDay",
+      "flag": "FLAG_ITEM_SCORCHED_SLAB_TM_SUNNY_DAY"
     }
   ],
   "warp_events": [
@@ -853,16 +866,16 @@
     },
     {
       "type": "hidden_item",
-      "x": 91,
-      "y": 19,
+      "x": 79,
+      "y": 21,
       "elevation": 3,
       "item": "ITEM_HYPER_POTION",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_HYPER_POTION"
     },
     {
       "type": "hidden_item",
-      "x": 139,
-      "y": 15,
+      "x": 101,
+      "y": 19,
       "elevation": 3,
       "item": "ITEM_PP_UP",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_PP_UP"

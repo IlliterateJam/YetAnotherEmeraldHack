@@ -8708,7 +8708,7 @@ static const struct TrainerMon sParty_MaxieMagmaHideout[] = {
     .iv = TRAINER_PARTY_IVS(30, 30, 30, 30, 30, 30),
     .lvl = 37,
     .species = SPECIES_QUILAVA,
-    .heldItem = ITEM_EVIOLITE,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_FLAME_WHEEL, MOVE_SMOKESCREEN, MOVE_ROAR, MOVE_SWIFT}
     },
     {

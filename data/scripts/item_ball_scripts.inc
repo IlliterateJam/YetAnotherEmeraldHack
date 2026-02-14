@@ -478,6 +478,10 @@ ScorchedSlab_EventScript_ItemTMSunnyDay::
 	finditem ITEM_TM_SUNNY_DAY
 	end
 
+ScorchedSlab_EventScript_ItemEviolite::
+	finditem ITEM_EVIOLITE
+	end
+
 SafariZone_Northwest_EventScript_ItemTMSolarBeam::
 	finditem ITEM_TM_SOLAR_BEAM
 	end
