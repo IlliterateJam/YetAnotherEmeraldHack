@@ -7861,7 +7861,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_OVERHEAT,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM_AIR_CUTTER] =
     {
         .name = _("TM51"),
         .price = 3000,
@@ -7873,7 +7873,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_AIR_CUTTER,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_SEED_BOMB] =
     {
         .name = _("TM52"),
         .price = 4500,
@@ -7885,7 +7885,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_SEED_BOMB,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_DARK_PULSE] =
     {
         .name = _("TM53"),
         .price = 4500,
@@ -7897,7 +7897,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_DARK_PULSE,
     },
 
-    [ITEM_TM54] =
+    [ITEM_TM_DRAGON_PULSE] =
     {
         .name = _("TM54"),
         .price = 450,
@@ -7909,7 +7909,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_DRAGON_PULSE,
     },
 
-    [ITEM_TM55] =
+    [ITEM_TM_GIGA_IMPACT] =
     {
         .name = _("TM55"),
         .price = 7500,
@@ -7921,7 +7921,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_GIGA_IMPACT,
     },
 
-    [ITEM_TM56] =
+    [ITEM_TM_EARTH_POWER] =
     {
         .name = _("TM56"),
         .price = 5000,
@@ -7933,7 +7933,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_EARTH_POWER,
     },
 
-    [ITEM_TM57] =
+    [ITEM_TM_SHADOW_CLAW] =
     {
         .name = _("TM57"),
         .price = 3000,
@@ -7945,12 +7945,12 @@ const struct Item gItems[] =
         .secondaryId = MOVE_SHADOW_CLAW,
     },
 
-    [ITEM_TM58] =
+    [ITEM_TM_POISON_JAB] =
     {
         .name = _("TM58"),
         .price = 3000,
         .description = sTM58Desc,
-        .importance = I_REUSABLE_TMS,
+        .importance = I_REUSABLE_TMS,                                                                                       
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
