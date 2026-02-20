@@ -8022,6 +8022,7 @@ static const u16 sSylveonTeachableLearnset[] = {
     MOVE_CUT,
     MOVE_DIG,
     MOVE_DOUBLE_TEAM,
+    MOVE_DRAGON_PULSE, 
     MOVE_FACADE,
     MOVE_FLASH,
     MOVE_FRUSTRATION,
