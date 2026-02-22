@@ -1594,7 +1594,7 @@
 #define SPECIES_TATSUGIRI_CURLY                         GEN9_START + 79
 #define SPECIES_TATSUGIRI_DROOPY                        GEN9_START + 80
 #define SPECIES_TATSUGIRI_STRETCHY                      GEN9_START + 81
-#define SPECIES_ANNIHILAPE                              GEN9_START + 82
+#define SPECIES_ANNIHILAPE                              GEN9_START + 82  //1370
 #define SPECIES_CLODSIRE                                GEN9_START + 83
 #define SPECIES_FARIGIRAF                               GEN9_START + 84
 #define SPECIES_DUDUNSPARCE                             SPECIES_DUDUNSPARCE_TWO_SEGMENT
@@ -1609,7 +1609,7 @@
 #define SPECIES_SANDY_SHOCKS                            GEN9_START + 93
 #define SPECIES_IRON_TREADS                             GEN9_START + 94
 #define SPECIES_IRON_BUNDLE                             GEN9_START + 95
-#define SPECIES_IRON_HANDS                              GEN9_START + 96
+#define SPECIES_IRON_HANDS                              GEN9_START + 96zx
 #define SPECIES_IRON_JUGULIS                            GEN9_START + 97
 #define SPECIES_IRON_MOTH                               GEN9_START + 98
 #define SPECIES_IRON_THORNS                             GEN9_START + 99
