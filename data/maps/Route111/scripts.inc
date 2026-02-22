@@ -669,11 +669,14 @@ Route111_Text_OldLadysRestStopSign:
 
 Route111_Text_TrainerTipsSpAtkSpDef:
 	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
-	.string "powerfulness is SP. ATK. It stands for\l"
-	.string "“SPECIAL ATTACK.”\p"
-	.string "Likewise, SP. DEF stands for “SPECIAL\n"
-	.string "DEFENSE.”$"
+	.string "Different moves within the same type\n"
+	.string "use different attributes of a POKéMON.\p"
+	.string "Physical moves use ATTACK against\n"
+	.string "DEFENSE while special moves use SP. ATK\l" 
+	.string "against SP. DEF.\p"
+	.string "Check the move power indicator for\n"
+	.string "physical, special, or status moves.$"
+
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
 	.string "There should be a tower made of sand\n"

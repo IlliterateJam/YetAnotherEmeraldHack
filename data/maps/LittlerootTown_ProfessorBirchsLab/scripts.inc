@@ -778,7 +778,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 
 LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese:
 	.string "MAY: Oh, wow, {PLAYER}{KUN}!\n"
-	.string "You got a POKéDEX, too!\p"
+	.string "A POKéDEX with DEXNAV, too!\p"
 	.string "That's great! Just like me!\n"
 	.string "I've got something for you, too!$"
 
@@ -794,8 +794,10 @@ LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
 	.string "Oh? Your BAG's full.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext:
-	.string "MAY: I wonder where I should go look\n"
-	.string "for POKéMON next?$"
+	.string "MAY: Hold down the A BUTTON when using\n"
+	.string "the DEXNAV to sneak up on POKéMON!\p"
+	.string "They can have all sort of rare moves or\n"
+	.string "abilities!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese:
 	.string "BRENDAN: Huh…\n"
@@ -815,8 +817,10 @@ LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
 	.string "Hey, your BAG's full.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
-	.string "BRENDAN: Where should I look for\n"
-	.string "POKéMON next…$"
+	.string "BRENDAN: Hold down the A BUTTON when using\n"
+	.string "the DEXNAV to sneak up on POKéMON.\p"
+	.string "They can have rare moves or abilities\n"
+	.string "you know.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine:
 	.string "It's a serious-looking machine.\n"

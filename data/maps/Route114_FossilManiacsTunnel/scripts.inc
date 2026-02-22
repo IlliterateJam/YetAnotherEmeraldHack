@@ -68,8 +68,8 @@ Route114_FossilManiacsTunnel_Text_LookInDesertForFossils:
 	.string "But the FOSSILS around these parts all\n"
 	.string "belong to me… None for you…\p"
 	.string "If you can't bear to go without\n"
-	.string "a FOSSIL, look in the desert sand or\l"
-	.string "the deep ocean boulders that may hide\l"
+	.string "a FOSSIL, look in the DESERT sand or\l"
+	.string "the deep OCEAN boulders that may hide\l"
 	.string "FOSSILS…$"
 
 Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils:
