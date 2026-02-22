@@ -1118,7 +1118,18 @@ EventScript_Headbutt::
 	lockall
 	checkpartymove MOVE_HEADBUTT
 	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CheckZenHeadbutt
+	goto EventScript_ExecuteHeadbutt
+	end
+
+EventScript_CheckZenHeadbutt::
+	checkpartymove MOVE_ZEN_HEADBUTT
+	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq EventScript_CantHeadbutt
+	goto EventScript_ExecuteHeadbutt
+	end
+
+EventScript_ExecuteHeadbutt::
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick 0, VAR_RESULT
 	buffermovename 1, MOVE_HEADBUTT
