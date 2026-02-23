@@ -95,3 +95,53 @@ FallarborTown_Text_AbilityVendorSign:
 	.string "ABILITY AFICIONADO\n"
 	.string "“The finest in HOENN”$"
 
+FallarborTown_MeteorSign::
+	msgbox FallarborTown_Text_MeteorsHaveAnEffectonPokemon, MSGBOX_SIGN
+	end
+
+FallarborTown_Text_MeteorsHaveAnEffectonPokemon:
+	.string "It is said that recent meteor craters\n"
+	.string "have a special effect on certain POKéMON.$"
+
+ChangeDeoxysForm::
+	lockall
+	msgbox ChangeDeoxysForm_Text_Beginning, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChangeDeoxysForm_Start
+ChangeDeoxysForm_End:
+	msgbox ChangeDeoxysForm_Text_End, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ChangeDeoxysForm_Start:
+	msgbox ChangeDeoxysForm_Text_Select, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq ChangeDeoxysForm_End
+	special TryChangeDeoxysForm
+	compare VAR_RESULT, TRUE
+	goto_if_eq ChangeDeoxysForm_Success
+	goto ChangeDeoxysForm_End
+
+ChangeDeoxysForm_Success:
+	playmoncry SPECIES_DEOXYS, 0
+	msgbox ChangeDeoxysForm_Text_Success, MSGBOX_DEFAULT
+	waitmoncry
+	waitbuttonpress
+	goto ChangeDeoxysForm_End
+
+ChangeDeoxysForm_Text_Beginning:
+	.string "This meteor crater has an electric field\n"
+	.string "around it.\p"
+	.string "Do you want to bring a POKéMON closer?$"
+
+ChangeDeoxysForm_Text_End:
+	.string "The field hums in the crisp air.$"
+
+ChangeDeoxysForm_Text_Select:
+	.string "Please select a POKéMON.$"
+
+ChangeDeoxysForm_Text_Success:
+	.string "Incredible! It seems like DEOXYS can\n"
+	.string "alter its form to the field!$"

@@ -545,3 +545,4 @@ gSpecials::
 	def_special BufferUnitSystemText
 	def_special SpellUnownAlpha
 	def_special SpellUnownOmega
+	def_special TryChangeDeoxysForm
