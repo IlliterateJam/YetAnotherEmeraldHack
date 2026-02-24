@@ -69,6 +69,7 @@ static void QueueAnimTiles_Underwater_Seaweed(u8);
 static void QueueAnimTiles_Cave_Lava(u16);
 static void QueueAnimTiles_BattleFrontierOutsideWest_Flag(u16);
 static void QueueAnimTiles_BattleFrontierOutsideEast_Flag(u16);
+static void QueueAnimTiles_Slateport_Flag(u16);
 static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
@@ -406,6 +407,19 @@ const u16 *const gTilesetAnims_BattleFrontierOutsideEast_Flag[] = {
     gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame2,
     gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame3
 };
+
+const u16 gTilesetAnims_Slateport_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/flag/0.4bpp");
+const u16 gTilesetAnims_Slateport_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/flag/1.4bpp");
+const u16 gTilesetAnims_Slateport_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/flag/2.4bpp");
+const u16 gTilesetAnims_Slateport_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/flag/3.4bpp");
+
+const u16 *const gTilesetAnims_Slateport_Flag[] = {
+    gTilesetAnims_Slateport_Flag_Frame0,
+    gTilesetAnims_Slateport_Flag_Frame1,
+    gTilesetAnims_Slateport_Flag_Frame2,
+    gTilesetAnims_Slateport_Flag_Frame3
+};
+
 
 const u16 gTilesetAnims_Slateport_Balloons_Frame0[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/0.4bpp");
 const u16 gTilesetAnims_Slateport_Balloons_Frame1[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/1.4bpp");
@@ -865,6 +879,8 @@ static void TilesetAnim_Dewford(u16 timer)
 
 static void TilesetAnim_Slateport(u16 timer)
 {
+    if (timer % 8 == 0)
+        QueueAnimTiles_Slateport_Flag(timer / 8);
     if (timer % 16 == 0)
         QueueAnimTiles_Slateport_Balloons(timer / 16);
 }
@@ -1056,6 +1072,13 @@ static void QueueAnimTiles_BattleFrontierOutsideEast_Flag(u16 timer)
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_BattleFrontierOutsideEast_Flag);
     AppendTilesetAnimToBuffer(gTilesetAnims_BattleFrontierOutsideEast_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 218)), 6 * TILE_SIZE_4BPP);
 }
+
+static void QueueAnimTiles_Slateport_Flag(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Slateport_Flag);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Slateport_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 215)), 6 * TILE_SIZE_4BPP);
+}
+
 
 static void QueueAnimTiles_Slateport_Balloons(u16 timer)
 {
