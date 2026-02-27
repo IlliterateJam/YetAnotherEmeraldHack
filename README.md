@@ -1,5 +1,5 @@
 # YetAnotherEmeraldHack 
-YetAnotherEmerald is an Enhancement Hack that focuses on expanding all the attributes of Emerald in modest yet meaningful way. The goal was to make Emerald (a lot by hand) reach a modern potential without losing charm and uniqueness. As the name implies, I know that there are a lot of Enhancement hacks out there so I'll cut straight to the chase:
+(YetAnother)EmeraldHack is an Enhancement Hack that focuses on expanding all the attributes of Emerald in modest yet meaningful way. The goal was to make Emerald (a lot by hand) reach a modern potential without losing charm and uniqueness. As the name implies, I know that there are a lot of (very good) Enhancement hacks out there so I'll cut straight to the chase:
 
 
 - All Gen 3 Pokemon + cross gen evos available with Gen 3 pallets 
@@ -14,13 +14,14 @@ YetAnotherEmerald is an Enhancement Hack that focuses on expanding all the attri
     EXP candies in shop that instantly level up to comparable Gym level
     Move relearners in nearly all cities
     Improved vitamins and mochis (IV improvers) to encourage improving Mons to be Battle Frontier ready at the end
+    Plus many more I've forgotten
 
 
 While not a difficulty Hack, the base game has been updated to be a bit harder than vanilla:
 - Physical/Special Split with Emerald Learnsets as base, with 9 new TMs to compensate
 - Handpicked moves, type assignments, and ability updates for rounding out certain Pocket Monsters
 - Improved baseline Trainer AI and IVs, with Gen 3+ Pokemon
-- Certain trainers have held items and more strategy focused teams, including Team Magma/Aqua for a bit more difficulty
+- Certain trainers have held items and more strategy focused teams, including Team Magma/Aqua and Gym Trainers for a bit more difficulty
 
 
 
@@ -56,3 +57,5 @@ YetAnotherEmeraldHack is decomp rom base that primarily based off RHH's pokeemer
 Speeding up emulation will mess up HP/EXP bars if they are faster than normal in options menu. 
 
 
+## Changelog
+1.0 release
