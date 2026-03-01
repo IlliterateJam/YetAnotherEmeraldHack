@@ -1274,7 +1274,7 @@
 #define FLAG_ROUTE_101_PROTEIN                                          0x4C8 // Unused Flag
 #define FLAG_LILYCOVE_OVAL_CHARM                                         0x4C9 // Unused Flag
 #define FLAG_ITEM_SCORCHED_SLAB_EVIOLITE                                         0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
+#define FLAG_HIDE_MANIAC                                          0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag

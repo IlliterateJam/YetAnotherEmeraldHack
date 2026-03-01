@@ -23,6 +23,7 @@ OldaleTown_EventScript_SetOldaleState::
 	return
 
 OldaleTown_EventScript_BlockWestEntrance::
+	setflag FLAG_HIDE_MANIAC
 	setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 15
 	setobjectmovementtype LOCALID_FOOTPRINTS_MAN, MOVEMENT_TYPE_FACE_LEFT
 	return
@@ -403,6 +404,7 @@ OldaleTown_EventScript_TryShowSnorlax::
 	goto_if_set FLAG_DEFEATED_SNORLAX, Common_EventScript_NopReturn
 	setvar VAR_TEMP_1, 0
 	clearflag FLAG_HIDE_SNORLAX
+	clearflag FLAG_HIDE_MANIAC
 	return
 
 OldaleTown_OnResume:
