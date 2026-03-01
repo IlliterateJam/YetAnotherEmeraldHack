@@ -14,6 +14,8 @@
     EXP candies in shop that instantly level up to comparable Gym level
     Move relearners in nearly all cities
     Improved vitamins and mochis (IV improvers) to encourage improving Mons to be Battle Frontier ready at the end
+    HGSS Style Pokedex which contains all the documentation you would ever need
+    Get both bikes after becoming champion
     Plus many more I've forgotten
 
 
@@ -35,7 +37,7 @@ YetAnotherEmeraldHack is decomp rom base that primarily based off RHH's pokeemer
 - QOL Field Moves - psf, Pyredrid, NobodySociety, archie#5000
 - IV/EV Screen - Buffel Salt
 - Registered Items List (Use L + Select)
-- Improved Options Menu - TheXaman
+- Improved Options Menu and HGSS Pokedex - TheXaman
 - Improving Pace of Battles - Mkol103
 - Type Effectiveness - devolov/PokemonCrazy 
 - Throbber Animation - Meejle and Anon822 
