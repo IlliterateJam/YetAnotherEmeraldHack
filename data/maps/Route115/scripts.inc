@@ -149,4 +149,4 @@ Route115_Text_MeteorFallsSign:
 
 Route115_Text_RouteSignTracklessForest:
 	.string "TRACKLESS FOREST\n"
-	.string "Be wary of getting lost$"
+	.string "BE WARY OF GETTING LOST$"

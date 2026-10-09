@@ -16,7 +16,7 @@ RustboroCity_MoveTutorFlat_2F_EventScript_Sister::
 
 RustboroCity_MoveTutorFlat_2F_Text_MyFamilyIsCrazy::	
 	.string "In all the hustle and bustle of the city\n"
-	.string "It is sometimes very hard to take care\l"
+	.string "it is sometimes very hard to take care\l"
 	.string "of your family.\p"
 	.string "Especially if they drive you crazy.$"
 

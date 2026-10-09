@@ -4710,6 +4710,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/HiddenCondui/border.bin",
       "blockdata_filepath": "data/layouts/HiddenCondui/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEWFORD_TOWN_HOUSE3",
+      "name": "DewfordTown_House3_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DewfordTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/DewfordTown_House3/map.bin"
     }
   ]
 }

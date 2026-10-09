@@ -369,8 +369,8 @@ Route103_Text_ThisIsALargeRock:
 	.string "A large rock.$"
 
 Route103_Text_NeedMoreLand:
-	.string "My farming businnes has\n"
-	.string "been very lucrative.\p"
-	.string "The tough part is finding land\n"
-	.string "that is fertile and does not\l"
-	.string "destroy POKéMON habitats.$"
+	.string "My farming business has been very\n"
+	.string "lucrative.\p"
+	.string "The tough part is finding land that\n"
+	.string "is fertile and does not destroy\l"
+	.string "POKéMON habitats.$"

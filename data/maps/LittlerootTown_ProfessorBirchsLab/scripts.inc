@@ -817,8 +817,9 @@ LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
 	.string "Hey, your BAG's full.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
-	.string "BRENDAN: Hold down the A BUTTON when using\n"
-	.string "the DEXNAV to sneak up on POKéMON.\p"
+	.string "BRENDAN: Hold down the A BUTTON when\n"
+	.string "using the DEXNAV to sneak up on\l"
+	.string "POKéMON.\p"
 	.string "They can have rare moves or abilities\n"
 	.string "you know.$"
 

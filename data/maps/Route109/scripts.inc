@@ -578,3 +578,10 @@ Route109_Text_TrainerTipsSign:
 	.string "always have identical stats.\p"
 	.string "POKéMON raised by TRAINERS are said\n"
 	.string "to grow stronger than wild POKéMON.$"
+
+Route109_EventScript_CabanaWoman::
+	msgbox Route109_Text_WheresMyCabanaBoy, MSGBOX_NPC
+	end
+
+Route109_Text_WheresMyCabanaBoy:
+	.string "Where's my cabana boy?!$"

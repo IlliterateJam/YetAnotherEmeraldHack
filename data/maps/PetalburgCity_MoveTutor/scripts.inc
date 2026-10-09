@@ -97,6 +97,6 @@ PetalburgCity_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "Sorry… There isn't a single move that\n"
 	.string "I can teach an EGG.$"
 
-PetalburgCity_MoveRelearnersHouse_Text_TheMoveTutorGroup::
+PetalburgCity_MoveRelearnersHouse_Text_TheMoveTutorGroup:
 	.string "My mommy is part of a group that helps\n"
-	.string "trainers all around HOENN!"
+	.string "trainers all around HOENN!$"

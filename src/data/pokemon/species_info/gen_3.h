@@ -4546,7 +4546,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         FRONT_PIC(Spinda, 48, 64),
         .frontPicYOffset = 8,
         .frontAnimFrames = sAnims_Spinda,
-        .frontAnimId = ANIM_H_JUMPS,
+        .frontAnimId = ANIM_CIRCLE_INTO_BG,
         BACK_PIC(Spinda, 56, 56),
         .backPicYOffset = 4,
         .backAnimId = BACK_ANIM_CIRCLE_COUNTERCLOCKWISE,

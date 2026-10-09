@@ -39,7 +39,7 @@ YetAnotherEmeraldHack is decomp rom base that primarily based off RHH's pokeemer
 - Registered Items List (Use L + Select)
 - Improved Options Menu and HGSS Pokedex - TheXaman
 - Improving Pace of Battles - Mkol103
-- Type Effectiveness - devolov/PokemonCrazy 
+- Type Effectiveness - devolov/PokemonCrazy   
 - Throbber Animation - Meejle and Anon822 
 - Unreal RTC (Tied to 20x normal speed in play_time.c) - Anon822
 - Wrapping Summary Screen - Zeturic

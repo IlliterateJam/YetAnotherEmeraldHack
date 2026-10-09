@@ -1218,3 +1218,5 @@ Text_CantHeadbutt:
 	.include "data/maps/HollowCrater/scripts.inc"
 
 	.include "data/maps/HiddenCondui/scripts.inc"
+
+	.include "data/maps/DewfordTown_House3/scripts.inc"

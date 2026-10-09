@@ -4376,9 +4376,9 @@ static const union AnimCmd sAnim_Grumpig_1[] =
 static const union AnimCmd sAnim_Spinda_1[] =
 {
     ANIMCMD_FRAME(0, 17),
-    ANIMCMD_FRAME(1, 23),
+    ANIMCMD_FRAME(0, 23), //1
     ANIMCMD_FRAME(0, 17),
-    ANIMCMD_FRAME(1, 23),
+    ANIMCMD_FRAME(0, 23), //1
     ANIMCMD_FRAME(0, 13),
     ANIMCMD_END,
 };

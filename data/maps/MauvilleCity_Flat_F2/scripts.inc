@@ -23,7 +23,7 @@ MauvilleCity_Text_PokefanF:
 	.string "Now stop fighting and let your little\n"
 	.string "sister play on the GAMEBOY!\p"
 	.string "Also pick up your dolls or you won't\n"
-	.string "get desset tonight!$"
+	.string "get dessert tonight!$"
 
 
 MauvilleCity_Flat_F2_Twin::
