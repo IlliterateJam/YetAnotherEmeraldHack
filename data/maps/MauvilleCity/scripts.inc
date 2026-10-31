@@ -1,6 +1,6 @@
-.set LOCALID_WALLY, 6
-.set LOCALID_WALLYS_UNCLE, 7
-.set LOCALID_SCOTT, 11
+.set LOCALID_WALLY, 5
+.set LOCALID_WALLYS_UNCLE, 6
+.set LOCALID_SCOTT, 10
 
 MauvilleCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_OnTransition
@@ -205,14 +205,14 @@ MauvilleCity_EventScript_DefeatedWally::
 	end
 
 MauvilleCity_EventScript_ScottApproachPlayerNorth::
-	setobjectxyperm LOCALID_SCOTT, 12, 13
+	setobjectxyperm LOCALID_SCOTT, 15, 13
 	addobject LOCALID_SCOTT
 	applymovement LOCALID_SCOTT, MauvilleCity_Movement_ScottApproachPlayerNorth
 	waitmovement 0
 	return
 
 MauvilleCity_EventScript_ScottApproachPlayerEast::
-	setobjectxyperm LOCALID_SCOTT, 12, 13
+	setobjectxyperm LOCALID_SCOTT, 15, 13
 	addobject LOCALID_SCOTT
 	applymovement LOCALID_SCOTT, MauvilleCity_Movement_ScottApproachPlayerEast
 	waitmovement 0
