@@ -1,5 +1,5 @@
-.set LOCALID_RIVAL_ON_BIKE, 7
-.set LOCALID_RIVAL, 8
+.set LOCALID_RIVAL_ON_BIKE, 6
+.set LOCALID_RIVAL, 7
 
 LavaridgeTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_OnTransition
@@ -26,8 +26,8 @@ LavaridgeTown_EventScript_CheckSetRivalPos::
 	return
 
 LavaridgeTown_EventScript_SetRivalPos::
-	setobjectxyperm LOCALID_RIVAL, 23, 13
-	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 21, 12
+	setobjectxyperm LOCALID_RIVAL, 24, 19
+	setobjectxyperm LOCALID_RIVAL_ON_BIKE, 18, 24
 	setobjectmovementtype LOCALID_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_UP
 	clearflag FLAG_HIDE_LAVARIDGE_TOWN_RIVAL
 	return
